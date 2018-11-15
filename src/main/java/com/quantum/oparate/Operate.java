@@ -10,7 +10,7 @@ public class Operate {
         final int n = A[0].length;
         final int p = B.length;
         final int q = B[0].length;
-        double[][] result = new double[m * n][p * q];
+        double[][] result = new double[m * p][n * q];
         for (int i = 0; i < m; i++) {
 
             final int iOffset = i * p;

@@ -25,4 +25,12 @@ public class ClusterState implements QuantumState {
     public void setParticles(int particles) {
         this.particles=particles;
     }
+
+    @Override
+    public void displayState() {
+        for(int i=0;i<particles;i++){
+            System.out.println(state[i]+" ");
+        }
+        System.out.println();
+    }
 }

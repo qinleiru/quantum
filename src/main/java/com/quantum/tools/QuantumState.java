@@ -5,4 +5,5 @@ public interface QuantumState {
     void setState(double[] state);
     int getPartitles();
     void setParticles(int num);
+    void displayState();
 }

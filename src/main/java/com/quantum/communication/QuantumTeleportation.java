@@ -1,50 +1,81 @@
 package com.quantum.communication;
 
 import com.quantum.gate.QuantumGate;
-import com.quantum.oparate.Operate;
-import com.quantum.state.OneState;
-import com.quantum.state.TwoState;
-import com.quantum.tools.QuantumState;
-import org.ujmp.core.*;
+import com.quantum.measure.ProjectiveMeasure;
+import com.quantum.oparate.MathOperation;
+import com.quantum.state.DoubleState;
+import com.quantum.state.MultiState;
+import com.quantum.state.SingleState;
+import com.simulation.view.TextComponent;
 
-//下面的实例尝试实现量子隐形传态协议
+import java.text.SimpleDateFormat;
+
+//下面的实例尝试实现量子隐形传态协议,信道中已知的量子比特已经进行过归一化处理
 public class QuantumTeleportation {
-    public static void main(String[] args) {
-        //要传送的位置的量子态
-        double[] state = new double[]{Math.pow(0.5, -0.5), Math.pow(0.5, -0.5)};
-        OneState oneState=new OneState(state);
-        System.out.println("要传送的秘密单量子比特为");
+    public static void run(TextComponent textArea){
+        SimpleDateFormat df=new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+        SingleState oneState=new SingleState();
+        textArea.setCommText(df.format(System.currentTimeMillis())+" 发送者Alice共享的单量子比特为:"+oneState.showState());
         oneState.displayState();
-        //构建量子信道需要的量子纠缠态
-        double[] bellState = new double[]{Math.pow(0.5, -0.5), 0, 0, Math.pow(0.5, -0.5)};
-        TwoState twoState=new TwoState(bellState);
-        System.out.println("构造量子信道所用的纠缠态为");
-        twoState.displayState();
+        textArea.setCommText(df.format(System.currentTimeMillis())+" 发送者Alice准备Bell态构造量子信道");
+        double[] bell = new double[]{Math.pow(2, -0.5), 0, 0, Math.pow(2, -0.5)};
+        DoubleState twoState=new DoubleState(bell);
+        textArea.setCommText(df.format(System.currentTimeMillis())+" 完成构造量子信道，将Bell态其中的一个粒子发送给接收者");
         //当前系统所处的整个量子态为
-        double[] systemState = Operate.operatorTensor(state, bellState);
-        System.out.println("整个系统所处的态为");
-        for(int i=0;i<systemState.length;i++){
-            System.out.println(systemState[i]+" ");
-        }
-        System.out.println();
+        //todo：在计算系统的张量积的过程中可能还会需要归一化
+        double[] system = MathOperation.tensor(oneState.getState(), twoState.getState());
+        MultiState systemState=new MultiState(system,3);
         //对发送者手中的粒子x以及粒子A进行Bell态测量
-        //首先进行矩阵的张量积
-        double[][] u = new double[][]{{Math.pow(0.5, -0.5), 0, 0, Math.pow(0.5, -0.5)}, {0, Math.pow(0.5, -0.5), Math.pow(0.5, -0.5), 0}, {Math.pow(0.5, -0.5), 0, 0, -Math.pow(0.5, -0.5)}, {0, Math.pow(0.5, -0.5), -Math.pow(0.5, -0.5), 0}};
-        double[][] I = QuantumGate.Operator_I;
-        double operate[][] = Operate.operatorTensor(u, I);
-        //测量
-        Matrix temp = Matrix.Factory.importFromArray(operate);
-        Matrix system=Matrix.Factory.importFromArray(systemState);   //此时一维数组转换为矩阵，是一个行向量
-        Matrix result=temp.mtimes(system.transpose());
-        System.out.println("矩阵乘积之后的结果");
-        System.out.print(result.transpose());
-//        double [][] changeResult=result.transpose().toDoubleArray();
-//        for(int i=0;i<changeResult.length;i++){
-//            for(int j=0;j<changeResult[0].length;j++){
-//                System.out.print(changeResult[i][j]+" ");
-//            }
-//            System.out.println("");
-//        }
-        //产生坍缩
+        textArea.setCommText(df.format(System.currentTimeMillis())+" 发送者Alice对手中的两个粒子进行测量");
+        int pos[]=new int[]{1,2};
+        int result=ProjectiveMeasure.measureBeseBell(systemState,pos);
+        if (result==1) {
+            System.out.println("Bell态测的结果为1");
+            MathOperation.performOperator(systemState, 3, QuantumGate.Operator_I);
+            double[] secret = new double[2];
+            for (int i = 0; i < 2; i++) {
+                secret[i] = systemState.getState()[i];
+            }
+            MathOperation.normalization(secret);
+            SingleState secretState=new SingleState(secret);
+            System.out.println("得到的量子秘密态为");
+            secretState.displayState();
+        }
+        if (result==2) {
+            System.out.println("Bell态测的结果为2");
+            MathOperation.performOperator(systemState, 3, QuantumGate.Operator_X);
+            double[] secret = new double[2];
+            for (int i = 0; i < 2; i++) {
+                secret[i] = systemState.getState()[i+2];
+            }
+            MathOperation.normalization(secret);
+            SingleState secretState=new SingleState(secret);
+            System.out.println("得到的量子秘密态为");
+            secretState.displayState();
+        }
+        if (result==3) {
+            System.out.println("Bell态测的结果为3");
+            MathOperation.performOperator(systemState, 3, QuantumGate.Operator_Z);
+            double[] secret = new double[2];
+            for (int i = 0; i < 2; i++) {
+                secret[i] = systemState.getState()[i+4];
+            }
+            MathOperation.normalization(secret);
+            SingleState secretState=new SingleState(secret);
+            System.out.println("得到的量子秘密态为");
+            secretState.displayState();
+        }
+        if (result==4) {
+            System.out.println("Bell态测的结果为4");
+            MathOperation.performOperator(systemState, 3, QuantumGate.Operator_iY);
+            double[] secret = new double[2];
+            for (int i = 0; i < 2; i++) {
+                secret[i] = systemState.getState()[i+6];
+            }
+            MathOperation.normalization(secret);
+            SingleState secretState=new SingleState(secret);
+            System.out.println("得到的量子秘密态为");
+            secretState.displayState();
+        }
     }
 }

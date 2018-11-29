@@ -5,10 +5,10 @@ import com.quantum.tools.QuantumState;
 /**
  * 两粒子纠缠态
  */
-public class TwoState implements QuantumState {
-    private int particles=2;
+public class DoubleState implements QuantumState {
+    public final int particles=2;
     private double[] state;
-    public TwoState(double[] state){
+    public DoubleState(double[] state){
         this.state=state;
     }
 
@@ -23,13 +23,8 @@ public class TwoState implements QuantumState {
     }
 
     @Override
-    public int getPartitles() {
+    public int getParticles() {
         return this.particles;
-    }
-
-    @Override
-    public void setParticles(int particles) {
-        this.particles = particles;
     }
 
     @Override
@@ -38,5 +33,18 @@ public class TwoState implements QuantumState {
             System.out.println(state[i]+" ");
         }
         System.out.println();
+    }
+
+    @Override
+    public String showState() {
+        String result=null;
+        for(int i=0;i<Math.pow(2,particles);i++){
+            String str=Integer.toBinaryString(i);
+            if(str.length()<particles){
+                str="0"+str;
+            }
+            result+=state[i]+"|"+str+">";
+        }
+        return result;
     }
 }

@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /**
  * A class that implements the Kronecker product and Kronecker sum matrix operations
- *
+ * 临时存放的文件
  *
  */
 

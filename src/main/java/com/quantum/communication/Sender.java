@@ -1,9 +1,7 @@
 package com.quantum.communication;
 
-import com.quantum.tools.QuantumState;
-
 public interface Sender {
     public void secret();
-    public void send(Reciever reciever);
+    public void send(Receiver receiver, String particles);
     public void measure();
 }

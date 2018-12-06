@@ -1,15 +1,40 @@
 package com.quantum.state;
 
+import com.quantum.oparate.MathOperation;
 import com.quantum.tools.QuantumState;
+
+import java.util.ArrayList;
 
 /**
  * 两粒子纠缠态
  */
-public class DoubleState implements QuantumState {
-    public final int particles=2;
+public class DoubleState extends QuantumState {
+    private int particles;
     private double[] state;
+    private ArrayList<String> particlesName;
+
+    /**
+     * 随机生成任意的两量子比特
+     */
+    public DoubleState(){
+        state=new double[4];
+        for (int i=0;i<4;i++){
+            state[i]=Math.random();
+        }
+        //进行归一化操作
+        MathOperation.normalization(state);
+        particles=2;
+        initParticlesName();
+    }
+
+    /**
+     * 生成指定的两量子比特
+     * @param state
+     */
     public DoubleState(double[] state){
         this.state=state;
+        particles=2;
+        initParticlesName();
     }
 
     @Override
@@ -28,23 +53,31 @@ public class DoubleState implements QuantumState {
     }
 
     @Override
-    public void displayState() {
-        for(int i=0;i<Math.pow(2,particles);i++){
-            System.out.println(state[i]+" ");
-        }
-        System.out.println();
+    public void setParticles(int particles) {
+        this.particles=particles;
     }
 
     @Override
-    public String showState() {
-        String result=null;
-        for(int i=0;i<Math.pow(2,particles);i++){
-            String str=Integer.toBinaryString(i);
-            if(str.length()<particles){
-                str="0"+str;
-            }
-            result+=state[i]+"|"+str+">";
+    public ArrayList<String> getParticlesName() {
+        return this.particlesName;
+    }
+
+    /**
+     * 初始化量子态粒子的名字为数字
+     */
+    public void initParticlesName(){
+        particlesName=new ArrayList<>();
+        for(int i=1;i<=particles;i++){
+            particlesName.add(""+i);
         }
-        return result;
+    }
+
+    /**
+     * 设置粒子的名字
+     * @param pos
+     * @param name
+     */
+    public void setParticlesName(int pos, String name) {
+        getParticlesName().set(pos-1,name);
     }
 }

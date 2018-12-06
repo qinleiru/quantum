@@ -5,6 +5,7 @@ import com.quantum.tools.QuantumState;
 import org.ujmp.core.Matrix;
 
 public class MathOperation {
+
     //张量积的运算,矩阵之间的张量积，因为会量子门的操作也会使用张量积
     public static double[][] tensor(double[][] A, double[][] B) {
 
@@ -99,60 +100,6 @@ public class MathOperation {
         }
         return result;
     }
-    /**
-     *@Description:方法更通用，适合对多个量子比特进行操作
-     *@Param: [state, pos, operator]  state要进行操作的量子态，pos进行操作的粒子的位置，支持一个或者多个粒子操作，operator操作算子
-     *@return:
-     *@Author:leiru
-     *@date:2018/11/22
-     */
-    //todo：默认对多个粒子操作这几个粒子是相邻的
-    public static void performOperator(QuantumState state,int[] pos,double[][] operator){
-        double[] targetState=state.getState();
-        double[][] temp=null;
-        int i=1;
-        if(isExist(1,pos)){
-            temp=operator;
-            i+=pos.length;
-        }
-        else{
-            temp= QuantumGate.Operator_I;
-            i++;
-        }
-        for(int j=i;j<=state.getParticles();){
-            if (!isExist(j,pos)){
-                temp=tensor(temp,QuantumGate.Operator_I);
-                j++;
-            }
-            else {
-                temp = tensor(temp, operator);
-                j+=pos.length;
-            }
-
-        }
-        Matrix result= (Matrix.Factory.importFromArray(temp)).mtimes((Matrix.Factory.importFromArray(targetState).transpose()));
-        state.setState(vecToArray(result.toDoubleArray()));
-    }
-
-    //对单量子比特进行操作
-    public static void performOperator(QuantumState state,int pos,double[][] operator){
-        double[] targetState=state.getState();
-        double[][] temp=null;
-        if(pos==1){
-            temp=operator;
-        }
-        else
-            temp= QuantumGate.Operator_I;
-        for(int i=2;i<=state.getParticles();i++){
-            if (i!=pos){
-                temp=tensor(temp,QuantumGate.Operator_I);
-            }
-            else
-                temp=tensor(temp,operator);
-        }
-        Matrix result= (Matrix.Factory.importFromArray(temp)).mtimes((Matrix.Factory.importFromArray(targetState).transpose()));
-        state.setState(vecToArray(result.toDoubleArray()));
-    }
 
     //用于将列向量转换为数组
     public static double[] vecToArray(double[][] vector){
@@ -171,7 +118,7 @@ public class MathOperation {
         return false;
     }
 
-    //归一化操作
+    //归一化操作+第一位的正定操作
     public static void normalization(double[] states){
         double sum=0;
         for (int i=0;i<states.length;i++){
@@ -179,6 +126,18 @@ public class MathOperation {
         }
         for (int i=0;i<states.length;i++){
             states[i]=states[i]/Math.pow(sum,0.5);
+        }
+        boolean tag=false;
+        for (int i=0;i<states.length;i++){
+            if (states[i]<0&&tag==false){
+                for(int j=0;j<states.length;j++){
+                    states[j]*=-1;
+                }
+                break;
+            }
+            if (states[i]>0){
+                tag=true;
+            }
         }
     }
 }

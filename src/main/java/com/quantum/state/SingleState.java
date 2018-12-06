@@ -2,18 +2,32 @@ package com.quantum.state;
 
 import com.quantum.tools.QuantumState;
 
-public class SingleState implements QuantumState {
-    public final int particles=1;
+import java.util.ArrayList;
+
+/**
+ * 单量子态
+ */
+public class SingleState extends QuantumState {
+
+    private int particles;
     private double[] state;
-    //随机生成一个单量子比特
+    private ArrayList<String> particlesName;
+
+    //随机生成一个单量子比特,初始化粒子的名称为数字
     public SingleState(){
         double a=Math.random();
-        state=new double[]{a,Math.sqrt(1-Math.pow(a,2))};
+        this.state=new double[]{a,Math.sqrt(1-Math.pow(a,2))};
+        setParticles(1);
+        initParticlesName();
     }
-    //生成指定的单量子比特
+
+    //生成指定的单量子比特，初始化粒子的名称为数字
     public SingleState(double[] state){
         this.state=state;
+        setParticles(1);
+        initParticlesName();
     }
+
     @Override
     public double[] getState() {
         return this.state;
@@ -30,28 +44,31 @@ public class SingleState implements QuantumState {
     }
 
     @Override
-    public void displayState() {
-        for(int i=0;i<Math.pow(2,particles);i++){
-            System.out.println(state[i]+" ");
-        }
-        System.out.println();
+    public void setParticles(int particles) {
+        this.particles=particles;
     }
 
     @Override
-    public String showState() {
-        String result="";
-        for(int i=0;i<Math.pow(2,particles);i++){
-            String str=Integer.toBinaryString(i);
-            if(str.length()<particles){
-                str="0"+str;
-            }
-            if(state[i]>0&&i!=0) {
-                result =result+"+"+ state[i] + "|" + str + ">";
-            }
-            else{
-                result =result+ state[i] + "|" + str + ">";
-            }
+    public ArrayList<String> getParticlesName() {
+        return this.particlesName;
+    }
+
+    /**
+     * 初始化量子态粒子的名字为数字
+     */
+    public void initParticlesName(){
+        particlesName =new ArrayList<>();
+        for(int i=1;i<=particles;i++){
+            particlesName.add(""+i);
         }
-        return result;
+    }
+
+    /**
+     * 设置粒子的名字
+     * @param pos
+     * @param name
+     */
+    public void setParticlesName(int pos, String name) {
+        getParticlesName().set(pos-1,name);
     }
 }

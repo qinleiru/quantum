@@ -2,13 +2,17 @@ package com.quantum.state;
 
 import com.quantum.tools.QuantumState;
 
-public class ClusterState implements QuantumState {
+import java.util.ArrayList;
+
+public class ClusterState extends QuantumState {
     private int particles;
     private double[] state;
+    private ArrayList<String> particlesName;
 
     public ClusterState(double[] state,int particles){
         this.particles=particles;
         this.state=state;
+        initParticlesName();
     }
 
     @Override
@@ -31,23 +35,26 @@ public class ClusterState implements QuantumState {
     }
 
     @Override
-    public void displayState() {
-        for(int i=0;i<Math.pow(2,particles);i++){
-            System.out.println(state[i]+" ");
-        }
-        System.out.println();
+    public ArrayList<String> getParticlesName() {
+        return this.particlesName;
     }
 
-    @Override
-    public String showState() {
-        String result=null;
-        for(int i=0;i<Math.pow(2,particles);i++){
-            String str=Integer.toBinaryString(i);
-            if(str.length()<particles){
-                str="0"+str;
-            }
-            result+=state[i]+"|"+str+">";
+    /**
+     * 初始化量子态粒子的名字为数字
+     */
+    public void initParticlesName(){
+        particlesName=new ArrayList<>();
+        for(int i=1;i<=particles;i++){
+            particlesName.add(""+i);
         }
-        return result;
+    }
+
+    /**
+     * 设置粒子的名字
+     * @param pos
+     * @param name
+     */
+    public void setParticlesName(int pos, String name) {
+        getParticlesName().set(pos-1,name);
     }
 }

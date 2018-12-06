@@ -44,26 +44,37 @@ public class MathOperationTest {
         double[] expectResult=new double[]{1,0,0,0,0,0,0,0};
         assertArrayEquals(expectResult,MathOperation.tensor(A),0);
     }
+
     /**
-     * 测试对单个粒子进行幺正操作
+     * 测试向量的乘法运算
      */
     @Test
-    public void testSinglePerformOperation(){
-        double[] A=new double[]{Math.pow(2,-0.5),0,0,Math.pow(2,-0.5)};
-        DoubleState doubleState=new DoubleState(A);
-        MathOperation.performOperator(doubleState,2, QuantumGate.Operator_X);
-        doubleState.displayState();
+    public void testMultiple(){
+        double A[]=new double[]{1,0,0,1,0,0,0,0,0,0,0,0,1,0,0,-1};
+        double expectResult[]=new double[]{-1,0,0,-1,0,0,0,0,0,0,0,0,-1,0,0,1};
+        assertArrayEquals(expectResult,MathOperation.multiple(A,-1),0);
     }
 
     /**
-     * 测试对多个粒子进行操作
+     * 对向量进行归一化操作
      */
     @Test
-    public void testMulitPerformOperation(){
-        double A[]=new double[]{0.5,0,0,0.5,0,0,0,0,0,0,0,0,0.5,0,0,-0.5};//一个四粒子簇态
-        ClusterState clusterState=new ClusterState(A,4);
-        int[]pos=new int[]{3,4};
-        MathOperation.performOperator(clusterState,pos,QuantumGate.Operator_CNOT);
-        clusterState.displayState();
+    public void testNormalization(){
+        double A[]=new double[]{1,0,0,1,0,0,0,0,0,0,0,0,1,0,0,-1};
+        MathOperation.normalization(A);
+        double expectResult[]=new double[]{0.5,0,0,0.5,0,0,0,0,0,0,0,0,0.5,0,0,-0.5};
+        assertArrayEquals(expectResult,A,0);
     }
+
+    /**
+     * 对向量进行归一化操作，并改变相应的符号
+     */
+    @Test
+    public void testNormalizationNegative(){
+        double A[]=new double[]{-1,0,0,-1,0,0,0,0,0,0,0,0,-1,0,0,1};
+        MathOperation.normalization(A);
+        double expectResult[]=new double[]{0.5,0,0,0.5,0,0,0,0,0,0,0,0,0.5,0,0,-0.5};
+        assertArrayEquals(expectResult,A,0);
+    }
+
 }

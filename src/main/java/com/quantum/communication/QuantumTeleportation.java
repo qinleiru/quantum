@@ -3,79 +3,84 @@ package com.quantum.communication;
 import com.quantum.gate.QuantumGate;
 import com.quantum.measure.ProjectiveMeasure;
 import com.quantum.oparate.MathOperation;
+import com.quantum.oparate.QuantumOperation;
 import com.quantum.state.DoubleState;
 import com.quantum.state.MultiState;
 import com.quantum.state.SingleState;
-import com.simulation.view.TextComponent;
+import com.quantum.tools.QuantumState;
 
-import java.text.SimpleDateFormat;
-
-//下面的实例尝试实现量子隐形传态协议,信道中已知的量子比特已经进行过归一化处理
+/**
+ * 实现了量子分层信息拆分协议的基础，量子隐形传态协议
+ */
+//todo：在最后计算粒子手中自己的状态的过程中可能存在问题
 public class QuantumTeleportation {
-    public static void run(TextComponent textArea){
-        SimpleDateFormat df=new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
-        SingleState oneState=new SingleState();
-        textArea.setCommText(df.format(System.currentTimeMillis())+" 发送者Alice共享的单量子比特为:"+oneState.showState());
-        oneState.displayState();
-        textArea.setCommText(df.format(System.currentTimeMillis())+" 发送者Alice准备Bell态构造量子信道");
+    public static void run() {
+        SingleState oneState = new SingleState();
+        oneState.setParticlesName(1, "x");
+        System.out.println("要传送的秘密单量子比特为：" + oneState.showBinaryState());
+        oneState.showParticleName();
+        System.out.println();
         double[] bell = new double[]{Math.pow(2, -0.5), 0, 0, Math.pow(2, -0.5)};
-        DoubleState twoState=new DoubleState(bell);
-        textArea.setCommText(df.format(System.currentTimeMillis())+" 完成构造量子信道，将Bell态其中的一个粒子发送给接收者");
+        DoubleState twoState = new DoubleState(bell);
+        twoState.setParticlesName(1,"1");
+        twoState.setParticlesName(2,"2");
+//        System.out.println("用于构成量子信道的Bell态为：" + twoState.showBinaryState());
+//        twoState.showParticleName();
+//        System.out.println();
         //当前系统所处的整个量子态为
         //todo：在计算系统的张量积的过程中可能还会需要归一化
-        double[] system = MathOperation.tensor(oneState.getState(), twoState.getState());
-        MultiState systemState=new MultiState(system,3);
-        //对发送者手中的粒子x以及粒子A进行Bell态测量
-        textArea.setCommText(df.format(System.currentTimeMillis())+" 发送者Alice对手中的两个粒子进行测量");
-        int pos[]=new int[]{1,2};
-        int result=ProjectiveMeasure.measureBeseBell(systemState,pos);
-        if (result==1) {
+        MultiState systemState = QuantumOperation.quantumTensor(oneState, twoState);
+//        System.out.println("此时系统的态为：" + systemState.showBinaryState());
+//        systemState.showParticleName();
+//        System.out.println();
+        //对发送者手中的粒子x以及粒子1进行Bell态测量
+        int result = ProjectiveMeasure.measureBeseBell(systemState, "x", "1");
+        System.out.println("测量完成后系统的态为" + systemState.showBinaryState());
+        systemState.showParticleName();
+        System.out.println();
+        if (result == 1) {
             System.out.println("Bell态测的结果为1");
-            MathOperation.performOperator(systemState, 3, QuantumGate.Operator_I);
-            double[] secret = new double[2];
-            for (int i = 0; i < 2; i++) {
-                secret[i] = systemState.getState()[i];
-            }
-            MathOperation.normalization(secret);
-            SingleState secretState=new SingleState(secret);
-            System.out.println("得到的量子秘密态为");
-            secretState.displayState();
+            QuantumOperation.quantumSinglePerform(systemState, "2", QuantumGate.Operator_I);
         }
-        if (result==2) {
+        if (result == 2) {
             System.out.println("Bell态测的结果为2");
-            MathOperation.performOperator(systemState, 3, QuantumGate.Operator_X);
-            double[] secret = new double[2];
-            for (int i = 0; i < 2; i++) {
-                secret[i] = systemState.getState()[i+2];
-            }
-            MathOperation.normalization(secret);
-            SingleState secretState=new SingleState(secret);
-            System.out.println("得到的量子秘密态为");
-            secretState.displayState();
+            QuantumOperation.quantumSinglePerform(systemState, "2", QuantumGate.Operator_X);
         }
-        if (result==3) {
+        if (result == 3) {
             System.out.println("Bell态测的结果为3");
-            MathOperation.performOperator(systemState, 3, QuantumGate.Operator_Z);
-            double[] secret = new double[2];
-            for (int i = 0; i < 2; i++) {
-                secret[i] = systemState.getState()[i+4];
-            }
-            MathOperation.normalization(secret);
-            SingleState secretState=new SingleState(secret);
-            System.out.println("得到的量子秘密态为");
-            secretState.displayState();
+            QuantumOperation.quantumSinglePerform(systemState, "2", QuantumGate.Operator_Z);
         }
-        if (result==4) {
+        if (result == 4) {
             System.out.println("Bell态测的结果为4");
-            MathOperation.performOperator(systemState, 3, QuantumGate.Operator_iY);
-            double[] secret = new double[2];
-            for (int i = 0; i < 2; i++) {
-                secret[i] = systemState.getState()[i+6];
-            }
-            MathOperation.normalization(secret);
-            SingleState secretState=new SingleState(secret);
-            System.out.println("得到的量子秘密态为");
-            secretState.displayState();
+            QuantumOperation.quantumSinglePerform(systemState, "2", QuantumGate.Operator_iY);
         }
+        double[] secret=getOwnState(systemState,"2");
+        MathOperation.normalization(secret);
+        SingleState secretState = new SingleState(secret);
+        secretState.setParticlesName(1,"2");
+        System.out.println("得到的量子秘密态为" + secretState.showBinaryState());
+    }
+    public static double[] getOwnState(QuantumState quantumState,String particle){
+        int index=quantumState.getParticlesName().indexOf(particle);
+        double[] result=new double[2];
+        int num=quantumState.getParticles();
+        for (int i=0;i<Math.pow(2,num);i++){
+            if (isBitZero(i,index+1,num)){
+                result[0]+=quantumState.getState()[i];
+            }
+            else
+                result[1]+=quantumState.getState()[i];
+        }
+        return result;
+    }
+    public static boolean isBitZero(int decNum,int pos,int particles){
+        String binStr = "";
+        for(int i= particles-1;i>=0;i--) {
+            binStr +=(decNum>>i)&1;
+        }
+        return binStr.charAt(pos-1)=='0';
+    }
+    public  static void main(String[] args){
+        run();
     }
 }

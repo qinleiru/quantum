@@ -1,8 +1,6 @@
 package com.simulation.view;
 
 import com.gui.tools.dialogFram.ExDialog;
-import com.quantum.communication.HQIS;
-import com.quantum.communication.QuantumTeleportation;
 
 import java.text.SimpleDateFormat;
 
@@ -25,10 +23,10 @@ public class DoComm {
     private void comm(){
         switch(protocolType){
             case "量子隐形传态协议":
-                QuantumTeleportation.run(textArea);
+//                QuantumTeleportation.run(textArea);
                 break;
             case "分层量子信息拆分协议":
-                HQIS.run(textArea);
+//                HQIS.run(textArea);
                 break;
 
         }

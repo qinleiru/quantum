@@ -2,12 +2,17 @@ package com.quantum.state;
 
 import com.quantum.tools.QuantumState;
 
-public class MultiState implements QuantumState {
+import java.util.ArrayList;
+
+public class MultiState extends QuantumState {
     private int particles;
-    private double [] state;
+    private double[] state;
+    private ArrayList<String> particlesName;
+
     public MultiState(double[] state,int particles){
         this.state=state;
         this.particles=particles;
+        initParticlesName();
     }
     @Override
     public double[] getState() {
@@ -24,28 +29,33 @@ public class MultiState implements QuantumState {
         return this.particles;
     }
 
-    public void setParticle(int particles){
-        this.particles=particles;
-    }
     @Override
-    public void displayState() {
-        for(int i=0;i<Math.pow(2,particles);i++){
-            System.out.println(state[i]+" ");
-        }
-        System.out.println();
+    public void setParticles(int particles) {
+        this.particles=particles;
     }
 
     @Override
-    public String showState() {
-        String result=null;
-        for(int i=0;i<Math.pow(2,particles);i++){
-            String str=Integer.toBinaryString(i);
-            if(str.length()<particles){
-                str="0"+str;
-            }
-            result+=state[i]+"|"+str+">";
+    public ArrayList<String> getParticlesName() {
+        return this.particlesName;
+    }
+
+    /**
+     * 初始化量子态粒子的名字为数字
+     */
+    public void initParticlesName(){
+        particlesName=new ArrayList<>();
+        for(int i=1;i<=particles;i++){
+            this.particlesName.add(""+i);
         }
-        return result;
+    }
+
+    /**
+     * 设置粒子的名字
+     * @param pos
+     * @param name
+     */
+    public void setParticlesName(int pos, String name) {
+        getParticlesName().set(pos-1,name);
     }
 
 }

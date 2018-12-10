@@ -47,7 +47,7 @@ public class HDQIS {
         System.out.println("Alice对手中的粒子进行两次Bell态的测量系统的态为：" + systemState.showBinaryState());
         systemState.showParticleName();
         System.out.println();
-        int select = 1;
+        int select = 2;
         //权限高的代理者恢复秘密量子比特，这里Bob是权限高的代理者
         if (select == 1) {
             int resultCharlie3 = ProjectiveMeasure.measureBaseZ(systemState, "3");
@@ -361,983 +361,1199 @@ public class HDQIS {
             int resultBob6=ProjectiveMeasure.measureBaseX(systemState,"6");
             int resultDavid4=ProjectiveMeasure.measureBaseX(systemState,"4");
             int resultDavid8=ProjectiveMeasure.measureBaseX(systemState,"8");
+            //无论测量结果是恢复秘密消息的代理者都会对手中的粒子先进行H门的操作
+            QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_H);
+            QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_H);
             if (resultAliceX==1&&resultAliceY==1) {
                 if (resultBob2 == 0 && resultBob6 == 0) {
                     if (resultDavid4 == 0 && resultDavid8 == 0) {
-                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_H);
-                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_H);
                         QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_I);
                         QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_I);
                     }
                     if (resultDavid4 == 0 && resultDavid8 == 1) {
-                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_H);
-                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_H);
                         QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_I);
                         QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_X);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 0) {
-                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_H);
-                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_H);
                         QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_X);
                         QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_I);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 1) {
-                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_H);
-                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_H);
                         QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_X);
                         QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_X);
                     }
                 }
                 if (resultBob2 == 0 && resultBob6 == 1) {
                     if (resultDavid4 == 0 && resultDavid8 == 0) {
-                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_H);
-                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_H);
                         QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_I);
                         QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_Z);
                     }
                     if (resultDavid4 == 0 && resultDavid8 == 1) {
-                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_H);
-                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_H);
                         QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_I);
                         QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_iY);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 0) {
-                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_H);
-                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_H);
                         QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_X);
                         QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_Z);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 1) {
-                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_H);
-                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_H);
                         QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_X);
                         QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_iY);
                     }
                 }
                 if (resultBob2 == 1 && resultBob6 == 0) {
                     if (resultDavid4 == 0 && resultDavid8 == 0) {
-                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_H);
-                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_H);
                         QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_Z);
                         QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_I);
                     }
                     if (resultDavid4 == 0 && resultDavid8 == 1) {
-                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_H);
-                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_H);
                         QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_Z);
                         QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_X);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 0) {
-                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_H);
-                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_H);
                         QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_iY);
                         QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_I);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 1) {
-                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_H);
-                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_H);
                         QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_iY);
                         QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_X);
                     }
                 }
                 if (resultBob2 == 1 && resultBob6 == 1) {
                     if (resultDavid4 == 0 && resultDavid8 == 0) {
-                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_H);
-                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_H);
                         QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_Z);
                         QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_Z);
                     }
                     if (resultDavid4 == 0 && resultDavid8 == 1) {
-                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_H);
-                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_H);
                         QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_Z);
                         QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_iY);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 0) {
-                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_H);
-                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_H);
                         QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_iY);
                         QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_Z);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 1) {
-                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_H);
-                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_H);
                         QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_iY);
                         QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_iY);
                     }
                 }
             }
-            //todo:代码暂时更改到这哩
             if (resultAliceX==1&&resultAliceY==3) {
                 if (resultBob2 == 0 && resultBob6 == 0) {
                     if (resultDavid4 == 0 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_I);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_Z);
                     }
                     if (resultDavid4 == 0 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_I);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_iY);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_X);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_Z);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_X);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_iY);
                     }
                 }
                 if (resultBob2 == 0 && resultBob6 == 1) {
                     if (resultDavid4 == 0 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_I);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_I);
                     }
                     if (resultDavid4 == 0 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_I);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_X);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_X);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_I);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_X);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_X);
                     }
                 }
                 if (resultBob2 == 1 && resultBob6 == 0) {
                     if (resultDavid4 == 0 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_Z);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_Z);
                     }
                     if (resultDavid4 == 0 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_Z);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_iY);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_iY);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_Z);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_iY);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_iY);
                     }
                 }
                 if (resultBob2 == 1 && resultBob6 == 1) {
                     if (resultDavid4 == 0 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_Z);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_I);
                     }
                     if (resultDavid4 == 0 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_Z);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_X);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_iY);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_I);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_iY);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_X);
                     }
                 }
             }
             if (resultAliceX==1&&resultAliceY==2) {
                 if (resultBob2 == 0 && resultBob6 == 0) {
                     if (resultDavid4 == 0 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_I);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_X);
                     }
                     if (resultDavid4 == 0 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_I);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_I);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_X);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_X);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_X);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_I);
                     }
                 }
                 if (resultBob2 == 0 && resultBob6 == 1) {
                     if (resultDavid4 == 0 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_I);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_iY);
                     }
                     if (resultDavid4 == 0 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_I);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_Z);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_X);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_iY);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_X);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_Z);
                     }
                 }
                 if (resultBob2 == 1 && resultBob6 == 0) {
                     if (resultDavid4 == 0 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_Z);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_X);
                     }
                     if (resultDavid4 == 0 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_Z);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_I);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_iY);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_X);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_iY);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_I);
                     }
                 }
                 if (resultBob2 == 1 && resultBob6 == 1) {
                     if (resultDavid4 == 0 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_Z);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_iY);
                     }
                     if (resultDavid4 == 0 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_Z);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_Z);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_iY);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_iY);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_iY);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_Z);
                     }
                 }
             }
             if (resultAliceX==1&&resultAliceY==4) {
                 if (resultBob2 == 0 && resultBob6 == 0) {
                     if (resultDavid4 == 0 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_I);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_iY);
                     }
                     if (resultDavid4 == 0 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_I);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_Z);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_X);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_iY);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_X);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_Z);
                     }
                 }
                 if (resultBob2 == 0 && resultBob6 == 1) {
                     if (resultDavid4 == 0 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_I);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_X);
                     }
                     if (resultDavid4 == 0 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_I);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_I);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_X);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_X);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_X);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_I);
                     }
                 }
                 if (resultBob2 == 1 && resultBob6 == 0) {
                     if (resultDavid4 == 0 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_Z);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_iY);
                     }
                     if (resultDavid4 == 0 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_Z);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_Z);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_iY);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_iY);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_iY);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_Z);
                     }
                 }
                 if (resultBob2 == 1 && resultBob6 == 1) {
                     if (resultDavid4 == 0 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_Z);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_X);
                     }
                     if (resultDavid4 == 0 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_Z);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_I);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_iY);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_X);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_iY);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_I);
                     }
                 }
             }
             if (resultAliceX==3&&resultAliceY==1) {
                 if (resultBob2 == 0 && resultBob6 == 0) {
                     if (resultDavid4 == 0 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_Z);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_I);
                     }
                     if (resultDavid4 == 0 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_Z);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_X);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_iY);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_I);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_iY);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_X);
                     }
                 }
                 if (resultBob2 == 0 && resultBob6 == 1) {
                     if (resultDavid4 == 0 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_Z);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_Z);
                     }
                     if (resultDavid4 == 0 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_Z);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_iY);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_iY);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_Z);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_iY);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_iY);
                     }
                 }
                 if (resultBob2 == 1 && resultBob6 == 0) {
                     if (resultDavid4 == 0 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_I);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_I);
                     }
                     if (resultDavid4 == 0 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_I);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_X);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_X);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_I);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_X);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_X);
                     }
                 }
                 if (resultBob2 == 1 && resultBob6 == 1) {
                     if (resultDavid4 == 0 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_I);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_Z);
                     }
                     if (resultDavid4 == 0 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_I);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_iY);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_X);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_Z);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_X);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_iY);
                     }
                 }
             }
             if (resultAliceX==3&&resultAliceY==3) {
                 if (resultBob2 == 0 && resultBob6 == 0) {
                     if (resultDavid4 == 0 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_Z);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_Z);
                     }
                     if (resultDavid4 == 0 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_Z);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_iY);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_iY);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_Z);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_iY);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_iY);
                     }
                 }
                 if (resultBob2 == 0 && resultBob6 == 1) {
                     if (resultDavid4 == 0 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_Z);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_I);
                     }
                     if (resultDavid4 == 0 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_Z);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_X);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_iY);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_I);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_iY);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_X);
                     }
                 }
                 if (resultBob2 == 1 && resultBob6 == 0) {
                     if (resultDavid4 == 0 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_I);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_Z);
                     }
                     if (resultDavid4 == 0 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_I);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_iY);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_X);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_Z);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_X);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_iY);
                     }
                 }
                 if (resultBob2 == 1 && resultBob6 == 1) {
                     if (resultDavid4 == 0 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_I);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_I);
                     }
                     if (resultDavid4 == 0 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_I);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_X);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_X);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_I);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_X);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_X);
                     }
                 }
             }
             if (resultAliceX==3&&resultAliceY==2) {
                 if (resultBob2 == 0 && resultBob6 == 0) {
                     if (resultDavid4 == 0 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_Z);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_X);
                     }
                     if (resultDavid4 == 0 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_Z);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_I);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_iY);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_X);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_iY);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_I);
                     }
                 }
                 if (resultBob2 == 0 && resultBob6 == 1) {
                     if (resultDavid4 == 0 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_Z);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_iY);
                     }
                     if (resultDavid4 == 0 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_Z);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_Z);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_iY);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_iY);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_iY);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_Z);
                     }
                 }
                 if (resultBob2 == 1 && resultBob6 == 0) {
                     if (resultDavid4 == 0 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_I);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_X);
                     }
                     if (resultDavid4 == 0 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_I);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_I);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_X);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_X);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_X);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_I);
                     }
                 }
                 if (resultBob2 == 1 && resultBob6 == 1) {
                     if (resultDavid4 == 0 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_I);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_iY);
                     }
                     if (resultDavid4 == 0 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_I);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_Z);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_X);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_iY);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_X);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_Z);
                     }
                 }
             }
             if (resultAliceX==3&&resultAliceY==4) {
                 if (resultBob2 == 0 && resultBob6 == 0) {
                     if (resultDavid4 == 0 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_Z);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_iY);
                     }
                     if (resultDavid4 == 0 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_Z);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_Z);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_iY);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_iY);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_iY);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_Z);
                     }
                 }
                 if (resultBob2 == 0 && resultBob6 == 1) {
                     if (resultDavid4 == 0 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_Z);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_X);
                     }
                     if (resultDavid4 == 0 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_Z);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_I);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_iY);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_X);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_iY);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_I);
                     }
                 }
                 if (resultBob2 == 1 && resultBob6 == 0) {
                     if (resultDavid4 == 0 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_I);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_iY);
                     }
                     if (resultDavid4 == 0 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_I);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_Z);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_X);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_iY);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_X);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_Z);
                     }
                 }
                 if (resultBob2 == 1 && resultBob6 == 1) {
                     if (resultDavid4 == 0 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_I);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_X);
                     }
                     if (resultDavid4 == 0 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_I);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_I);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_X);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_X);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_X);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_I);
                     }
                 }
             }
             if (resultAliceX==2&&resultAliceY==1) {
                 if (resultBob2 == 0 && resultBob6 == 0) {
                     if (resultDavid4 == 0 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_X);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_I);
                     }
                     if (resultDavid4 == 0 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_X);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_X);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_I);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_I);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_I);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_X);
                     }
                 }
                 if (resultBob2 == 0 && resultBob6 == 1) {
                     if (resultDavid4 == 0 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_X);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_Z);
                     }
                     if (resultDavid4 == 0 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_X);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_iY);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_I);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_Z);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_I);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_iY);
                     }
                 }
                 if (resultBob2 == 1 && resultBob6 == 0) {
                     if (resultDavid4 == 0 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_iY);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_I);
                     }
                     if (resultDavid4 == 0 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_iY);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_X);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_Z);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_I);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_Z);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_X);
                     }
                 }
                 if (resultBob2 == 1 && resultBob6 == 1) {
                     if (resultDavid4 == 0 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_iY);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_Z);
                     }
                     if (resultDavid4 == 0 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_iY);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_iY);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_Z);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_Z);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_Z);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_iY);
                     }
                 }
             }
             if (resultAliceX==2&&resultAliceY==3) {
                 if (resultBob2 == 0 && resultBob6 == 0) {
                     if (resultDavid4 == 0 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_X);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_Z);
                     }
                     if (resultDavid4 == 0 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_X);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_iY);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_I);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_Z);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_I);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_iY);
                     }
                 }
                 if (resultBob2 == 0 && resultBob6 == 1) {
                     if (resultDavid4 == 0 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_X);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_I);
                     }
                     if (resultDavid4 == 0 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_X);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_X);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_I);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_I);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_I);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_X);
                     }
                 }
                 if (resultBob2 == 1 && resultBob6 == 0) {
                     if (resultDavid4 == 0 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_iY);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_Z);
                     }
                     if (resultDavid4 == 0 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_iY);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_iY);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_Z);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_Z);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_Z);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_iY);
                     }
                 }
                 if (resultBob2 == 1 && resultBob6 == 1) {
                     if (resultDavid4 == 0 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_iY);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_I);
                     }
                     if (resultDavid4 == 0 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_iY);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_X);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_Z);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_I);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_Z);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_X);
                     }
                 }
             }
             if (resultAliceX==2&&resultAliceY==2) {
                 if (resultBob2 == 0 && resultBob6 == 0) {
                     if (resultDavid4 == 0 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_X);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_X);
                     }
                     if (resultDavid4 == 0 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_X);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_I);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_I);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_X);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_I);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_I);
                     }
                 }
                 if (resultBob2 == 0 && resultBob6 == 1) {
                     if (resultDavid4 == 0 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_X);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_iY);
                     }
                     if (resultDavid4 == 0 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_X);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_Z);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_I);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_iY);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_I);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_Z);
                     }
                 }
                 if (resultBob2 == 1 && resultBob6 == 0) {
                     if (resultDavid4 == 0 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_iY);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_X);
                     }
                     if (resultDavid4 == 0 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_iY);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_I);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_Z);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_X);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_Z);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_I);
                     }
                 }
                 if (resultBob2 == 1 && resultBob6 == 1) {
                     if (resultDavid4 == 0 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_iY);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_iY);
                     }
                     if (resultDavid4 == 0 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_iY);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_Z);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_Z);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_iY);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_Z);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_Z);
                     }
                 }
             }
             if (resultAliceX==2&&resultAliceY==4) {
                 if (resultBob2 == 0 && resultBob6 == 0) {
                     if (resultDavid4 == 0 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_X);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_iY);
                     }
                     if (resultDavid4 == 0 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_X);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_Z);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_I);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_iY);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_I);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_Z);
                     }
                 }
                 if (resultBob2 == 0 && resultBob6 == 1) {
                     if (resultDavid4 == 0 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_X);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_X);
                     }
                     if (resultDavid4 == 0 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_X);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_I);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_I);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_X);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_I);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_I);
                     }
                 }
                 if (resultBob2 == 1 && resultBob6 == 0) {
                     if (resultDavid4 == 0 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_iY);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_iY);
                     }
                     if (resultDavid4 == 0 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_iY);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_Z);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_Z);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_iY);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_Z);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_Z);
                     }
                 }
                 if (resultBob2 == 1 && resultBob6 == 1) {
                     if (resultDavid4 == 0 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_iY);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_X);
                     }
                     if (resultDavid4 == 0 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_iY);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_I);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_Z);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_X);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_Z);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_I);
                     }
                 }
             }
             if (resultAliceX==4&&resultAliceY==1) {
                 if (resultBob2 == 0 && resultBob6 == 0) {
                     if (resultDavid4 == 0 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_iY);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_I);
                     }
                     if (resultDavid4 == 0 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_iY);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_X);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_Z);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_I);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_Z);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_X);
                     }
                 }
                 if (resultBob2 == 0 && resultBob6 == 1) {
                     if (resultDavid4 == 0 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_iY);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_Z);
                     }
                     if (resultDavid4 == 0 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_iY);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_iY);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_Z);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_Z);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_Z);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_iY);
                     }
                 }
                 if (resultBob2 == 1 && resultBob6 == 0) {
                     if (resultDavid4 == 0 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_X);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_I);
                     }
                     if (resultDavid4 == 0 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_X);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_X);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_I);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_I);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_I);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_X);
                     }
                 }
                 if (resultBob2 == 1 && resultBob6 == 1) {
                     if (resultDavid4 == 0 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_X);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_Z);
                     }
                     if (resultDavid4 == 0 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_X);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_iY);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_I);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_Z);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_I);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_iY);
                     }
                 }
             }
             if (resultAliceX==4&&resultAliceY==3) {
                 if (resultBob2 == 0 && resultBob6 == 0) {
                     if (resultDavid4 == 0 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_iY);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_Z);
                     }
                     if (resultDavid4 == 0 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_iY);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_iY);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_Z);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_Z);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_Z);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_iY);
                     }
                 }
                 if (resultBob2 == 0 && resultBob6 == 1) {
                     if (resultDavid4 == 0 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_iY);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_I);
                     }
                     if (resultDavid4 == 0 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_iY);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_X);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_Z);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_I);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_Z);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_X);
                     }
                 }
                 if (resultBob2 == 1 && resultBob6 == 0) {
                     if (resultDavid4 == 0 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_X);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_Z);
                     }
                     if (resultDavid4 == 0 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_X);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_iY);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_I);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_Z);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_I);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_iY);
                     }
                 }
                 if (resultBob2 == 1 && resultBob6 == 1) {
                     if (resultDavid4 == 0 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_X);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_I);
                     }
                     if (resultDavid4 == 0 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_X);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_X);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_I);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_I);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_I);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_X);
                     }
                 }
             }
             if (resultAliceX==4&&resultAliceY==2) {
                 if (resultBob2 == 0 && resultBob6 == 0) {
                     if (resultDavid4 == 0 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_iY);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_X);
                     }
                     if (resultDavid4 == 0 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_iY);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_I);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_Z);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_X);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_Z);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_I);
                     }
                 }
                 if (resultBob2 == 0 && resultBob6 == 1) {
                     if (resultDavid4 == 0 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_iY);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_iY);
                     }
                     if (resultDavid4 == 0 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_iY);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_Z);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_Z);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_iY);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_Z);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_Z);
                     }
                 }
                 if (resultBob2 == 1 && resultBob6 == 0) {
                     if (resultDavid4 == 0 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_X);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_X);
                     }
                     if (resultDavid4 == 0 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_X);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_I);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_I);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_X);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_I);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_I);
                     }
                 }
                 if (resultBob2 == 1 && resultBob6 == 1) {
                     if (resultDavid4 == 0 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_X);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_iY);
                     }
                     if (resultDavid4 == 0 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_X);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_Z);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_I);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_iY);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_I);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_Z);
                     }
                 }
             }
             if (resultAliceX==4&&resultAliceY==4) {
                 if (resultBob2 == 0 && resultBob6 == 0) {
                     if (resultDavid4 == 0 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_iY);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_iY);
                     }
                     if (resultDavid4 == 0 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_iY);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_Z);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_Z);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_iY);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_Z);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_Z);
                     }
                 }
                 if (resultBob2 == 0 && resultBob6 == 1) {
                     if (resultDavid4 == 0 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_iY);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_X);
                     }
                     if (resultDavid4 == 0 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_iY);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_I);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_Z);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_X);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_Z);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_I);
                     }
                 }
                 if (resultBob2 == 1 && resultBob6 == 0) {
                     if (resultDavid4 == 0 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_X);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_iY);
                     }
                     if (resultDavid4 == 0 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_X);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_Z);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_I);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_iY);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_I);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_Z);
                     }
                 }
                 if (resultBob2 == 1 && resultBob6 == 1) {
                     if (resultDavid4 == 0 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_X);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_X);
                     }
                     if (resultDavid4 == 0 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_X);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_I);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 0) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_I);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_X);
                     }
                     if (resultDavid4 == 1 && resultDavid8 == 1) {
-
+                        QuantumOperation.quantumSinglePerform(systemState,"3",QuantumGate.Operator_I);
+                        QuantumOperation.quantumSinglePerform(systemState,"7",QuantumGate.Operator_I);
                     }
                 }
             }
+            DoubleState doubleState1=new DoubleState(getOwnState(systemState,"3","7"));
+            doubleState1.setParticlesName(1,"3");
+            doubleState1.setParticlesName(2,"7");
+            System.out.println("权限低的粒子的态为" + doubleState1.showBinaryState());
+            doubleState1.showParticleName();
+            System.out.println();
         }
     }
     public static double[] getOwnState(QuantumState quantumState, String particle1,String particle2){

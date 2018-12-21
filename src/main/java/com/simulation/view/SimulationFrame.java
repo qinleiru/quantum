@@ -13,7 +13,7 @@ public class SimulationFrame extends JFrame {
         //设置内容面板
         SimulationPanel simulationPanel=new SimulationPanel();
         setContentPane(simulationPanel);
-        setLocation(200,200);
+        setBounds(200,200,200,200);
         pack();
     }
     /**

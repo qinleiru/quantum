@@ -244,7 +244,7 @@ public class HQIS {
         }
         return binStr.charAt(pos-1)=='0';
     }
-    public static void main(String[] args){
-        run();
-    }
+//    public static void main(String [] args){
+//        run();
+//    }
 }

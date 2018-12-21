@@ -2,6 +2,7 @@ package com.quantum.state;
 
 import com.quantum.oparate.MathOperation;
 import com.quantum.tools.QuantumState;
+import com.quantum.tools.Tools;
 
 import java.util.ArrayList;
 
@@ -9,7 +10,7 @@ import java.util.ArrayList;
  * 两粒子纠缠态
  */
 public class DoubleState extends QuantumState {
-    private int particles;
+    private final int particles=2;
     private double[] state;
     private ArrayList<String> particlesName;
 
@@ -19,11 +20,15 @@ public class DoubleState extends QuantumState {
     public DoubleState(){
         state=new double[4];
         for (int i=0;i<4;i++){
-            state[i]=Math.random();
+            int symbol= Tools.randInt(1,2);
+            if(symbol==1) {
+                state[i] = Math.random();
+            }
+            else
+                state[i]=-Math.random();
         }
         //进行归一化操作
         MathOperation.normalization(state);
-        particles=2;
         initParticlesName();
     }
 
@@ -33,7 +38,6 @@ public class DoubleState extends QuantumState {
      */
     public DoubleState(double[] state){
         this.state=state;
-        particles=2;
         initParticlesName();
     }
 
@@ -54,7 +58,7 @@ public class DoubleState extends QuantumState {
 
     @Override
     public void setParticles(int particles) {
-        this.particles=particles;
+
     }
 
     @Override

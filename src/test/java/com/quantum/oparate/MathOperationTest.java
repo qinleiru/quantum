@@ -71,9 +71,9 @@ public class MathOperationTest {
      */
     @Test
     public void testNormalizationNegative(){
-        double A[]=new double[]{-1,0,0,-1,0,0,0,0,0,0,0,0,-1,0,0,1};
+        double A[]=new double[]{0,0,-1,-1,0,0,0,0,0,0,0,0,-1,0,0,1};
         MathOperation.normalization(A);
-        double expectResult[]=new double[]{0.5,0,0,0.5,0,0,0,0,0,0,0,0,0.5,0,0,-0.5};
+        double expectResult[]=new double[]{0,0,0.5,0.5,0,0,0,0,0,0,0,0,0.5,0,0,-0.5};
         assertArrayEquals(expectResult,A,0);
     }
 

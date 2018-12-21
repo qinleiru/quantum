@@ -14,7 +14,7 @@ public class CommonState {
     //|->态
     public  static final SingleState Minus_State=new SingleState(new double[]{Math.pow(2,-0.5),-Math.pow(2,-0.5)});
 
-    //常见的两粒子态，Bell态
+    //常见的两粒子态，Bell态oi
     //|𝝭>+态
     public static final DoubleState PsiPlus_State=new DoubleState(MathOperation.multiple(MathOperation.add(MathOperation.tensor(Zero_State.getState(),One_State.getState()),MathOperation.tensor(One_State.getState(),Zero_State.getState())),Math.pow(2,-0.5)));
     //|𝝭>-态

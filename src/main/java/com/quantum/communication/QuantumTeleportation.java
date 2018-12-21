@@ -17,48 +17,55 @@ public class QuantumTeleportation {
     public static void run() {
         SingleState oneState = new SingleState();
         oneState.setParticlesName(1, "x");
-        System.out.println("要传送的秘密单量子比特为：" + oneState.showBinaryState());
-        oneState.showParticleName();
-        System.out.println();
+        System.out.println("发送者要传送粒子x的量子态为：" + oneState.showBinaryState());
         double[] bell = new double[]{Math.pow(2, -0.5), 0, 0, Math.pow(2, -0.5)};
         DoubleState twoState = new DoubleState(bell);
         twoState.setParticlesName(1,"1");
         twoState.setParticlesName(2,"2");
-//        System.out.println("用于构成量子信道的Bell态为：" + twoState.showBinaryState());
-//        twoState.showParticleName();
-//        System.out.println();
+        System.out.println("发送者准备用于构造量子信道粒子1和粒子2的Bell态为：" + twoState.showBinaryState());
         //当前系统所处的整个量子态为
         //todo：在计算系统的张量积的过程中可能还会需要归一化
         MultiState systemState = QuantumOperation.quantumTensor(oneState, twoState);
 //        System.out.println("此时系统的态为：" + systemState.showBinaryState());
+//        System.out.print("粒子的下标为：");
 //        systemState.showParticleName();
 //        System.out.println();
+        System.out.println("发送者将粒子2发送给接收者");
         //对发送者手中的粒子x以及粒子1进行Bell态测量
+        System.out.println("发送者将手中的粒子x及粒子1进行Bell态的测量,并公布测量结果");
         int result = ProjectiveMeasure.measureBeseBell(systemState, "x", "1");
-        System.out.println("测量完成后系统的态为" + systemState.showBinaryState());
-        systemState.showParticleName();
-        System.out.println();
+        switch(result){
+            case 1:
+                System.out.println("发送者测量结果|Ф>+态");
+                break;
+            case 2:
+                System.out.println("发送者测量结果|\uD835\uDF6D>+态");
+                break;
+            case 3:
+                System.out.println("发送者测量结果|Ф>-态");
+                break;
+            case 4:
+                System.out.println("发送者测量结果|\uD835\uDF6D>-态");
+                break;
+        }
+        System.out.println("接收者根据发送者的测量结果，接收者对手中的粒子2进行操作");
         if (result == 1) {
-            System.out.println("Bell态测的结果为1");
             QuantumOperation.quantumSinglePerform(systemState, "2", QuantumGate.Operator_I);
         }
         if (result == 2) {
-            System.out.println("Bell态测的结果为2");
             QuantumOperation.quantumSinglePerform(systemState, "2", QuantumGate.Operator_X);
         }
         if (result == 3) {
-            System.out.println("Bell态测的结果为3");
             QuantumOperation.quantumSinglePerform(systemState, "2", QuantumGate.Operator_Z);
         }
         if (result == 4) {
-            System.out.println("Bell态测的结果为4");
             QuantumOperation.quantumSinglePerform(systemState, "2", QuantumGate.Operator_iY);
         }
         double[] secret=getOwnState(systemState,"2");
         MathOperation.normalization(secret);
         SingleState secretState = new SingleState(secret);
         secretState.setParticlesName(1,"2");
-        System.out.println("得到的量子秘密态为" + secretState.showBinaryState());
+        System.out.println("接收者得到的量子秘密态为" + secretState.showBinaryState());
     }
     public static double[] getOwnState(QuantumState quantumState,String particle){
         int index=quantumState.getParticlesName().indexOf(particle);
@@ -80,7 +87,7 @@ public class QuantumTeleportation {
         }
         return binStr.charAt(pos-1)=='0';
     }
-    public  static void main(String[] args){
-        run();
-    }
+//    public static void main(String[] args){
+//        run();
+//    }
 }

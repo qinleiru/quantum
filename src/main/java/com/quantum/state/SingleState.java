@@ -9,7 +9,7 @@ import java.util.ArrayList;
  */
 public class SingleState extends QuantumState {
 
-    private int particles;
+    private final int particles=1;
     private double[] state;
     private ArrayList<String> particlesName;
 
@@ -45,7 +45,6 @@ public class SingleState extends QuantumState {
 
     @Override
     public void setParticles(int particles) {
-        this.particles=particles;
     }
 
     @Override

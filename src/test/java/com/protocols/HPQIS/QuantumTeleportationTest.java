@@ -1,8 +1,6 @@
-package com.quantum.communication;
+package com.protocols.HPQIS;
 
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class QuantumTeleportationTest {
     @Test

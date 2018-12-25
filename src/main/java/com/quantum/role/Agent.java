@@ -1,21 +1,18 @@
 package com.quantum.role;
 
 import com.quantum.measure.Measures;
-import com.quantum.measure.ProjectiveMeasure;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import static com.quantum.communication.HPQIS.systemState;
-
 
 //代理者角色
-//todo:代理者对手中的粒子进行的都是单粒子的测量，且每个粒子进行的测量都是一致的
+//todo:代理者对手中的粒子进行的操作都是一致的
 public interface Agent {
     /**
      * 代理者对手中的所有粒子进行单粒子测量
      */
-    int measure(Measures measures);
+    void measure(Measures measures);
 
     /**
      * 将测量结果发送给要恢复秘密消息的代理者

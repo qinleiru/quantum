@@ -1,4 +1,4 @@
-package com.quantum.communication;
+package com.protocols;
 
 import com.quantum.gate.QuantumGate;
 import com.quantum.measure.ProjectiveMeasure;

@@ -1,60 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/main/java/com/quantum/communication/QuantumTeleportation.java" line="92" />
-    <bookmark url="file://$PROJECT_DIR$/src/main/java/com/quantum/role/Sender.java" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/com/protocols/QuantumTeleportation.java" line="92" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/com/protocols/HPQIS/Sender.java" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0107f73b-b637-466b-ab78-4661faee2752" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/quantum/communication/HPQIS.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/quantum/communication/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/quantum/role/Agent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/quantum/role/HighAgent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/quantum/role/LowAgent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/simulation/view/RadioComponent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/quantum/tools/ToolsTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/quantum/communication/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/quantum/role/Agent.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/quantum/role/HighAgent.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/quantum/role/LowAgent.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/quantum/role/Sender.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/simulation/view/RadioComponent.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/quantum/tools/ToolsTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/protocols/HDQIS/HighAgent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/protocols/HDQIS/LowAgent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/protocols/HDQIS/Sender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/protocols/HPQIS/Sender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/quantum/measure/POVMMeasure.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/quantum/tools/Range.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/quantum/measure/POVMMeasureTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantum/communication/Alice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quantum/role/Sender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantum/communication/HDQIS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quantum/communication/HDQIS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantum/communication/HPOIS.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantum/communication/HQIS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quantum/communication/HQIS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantum/communication/Proxy.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantum/communication/QuantumTeleportation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quantum/communication/QuantumTeleportation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantum/communication/Receiver.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantum/communication/Sender.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantum/state/CommonState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quantum/state/CommonState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantum/state/DoubleState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quantum/state/DoubleState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantum/state/SingleState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quantum/state/SingleState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantum/tools/Tools.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quantum/tools/Tools.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/simulation/view/QuantumSimulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simulation/view/QuantumSimulation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/simulation/view/SimulationFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simulation/view/SimulationFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/simulation/view/SimulationPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simulation/view/SimulationPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/quantum/communication/AliceTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/quantum/communication/ProxyTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/quantum/oparate/MathOperationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/quantum/oparate/MathOperationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quantum/communication/Alice.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quantum/communication/HDQIS.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quantum/communication/HDQIS.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quantum/communication/HPOIS.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quantum/communication/HQIS.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quantum/communication/HQIS.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quantum/communication/Proxy.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quantum/communication/QuantumTeleportation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quantum/communication/QuantumTeleportation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quantum/communication/Receiver.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quantum/communication/Sender.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quantum/state/DoubleState.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quantum/state/DoubleState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quantum/state/SingleState.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quantum/state/SingleState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quantum/tools/Tools.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quantum/tools/Tools.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/simulation/view/QuantumSimulation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/simulation/view/SimulationFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/simulation/view/SimulationFrame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/simulation/view/SimulationPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/simulation/view/SimulationPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/quantum/communication/AliceTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/quantum/communication/ProxyTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantum/communication/HDQIS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/protocols/HDQIS2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantum/communication/HPQIS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/protocols/HPQIS/HPQIS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantum/communication/HQIS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/protocols/HDQIS/HDQIS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantum/communication/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantum/communication/QuantumTeleportation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/protocols/QuantumTeleportation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantum/role/Agent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quantum/role/Agent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantum/role/HighAgent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/protocols/HPQIS/HighAgent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantum/role/LowAgent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/protocols/HPQIS/LowAgent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantum/role/Sender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quantum/role/Sender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/quantum/communication/QuantumTeleportationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/protocols/HPQIS/QuantumTeleportationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quantum/communication/HDQIS.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quantum/communication/HPQIS.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quantum/communication/HQIS.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quantum/communication/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quantum/communication/QuantumTeleportation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quantum/role/Agent.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quantum/role/Agent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quantum/role/HighAgent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quantum/role/LowAgent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quantum/role/OperateRule.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quantum/role/Sender.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quantum/role/Sender.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/quantum/communication/QuantumTeleportationTest.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -68,9 +48,9 @@
     <session id="700561954">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="22" />
+          <entry key="project.closed" value="24" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.10" value="3" />
+          <entry key="project.open.time.10" value="4" />
           <entry key="project.open.time.11" value="6" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.14" value="1" />
@@ -82,8 +62,8 @@
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.73" value="1" />
           <entry key="project.open.time.8" value="5" />
-          <entry key="project.open.time.9" value="10" />
-          <entry key="project.opened" value="34" />
+          <entry key="project.open.time.9" value="12" />
+          <entry key="project.opened" value="37" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -92,7 +72,7 @@
           <entry key="form" value="2" />
           <entry key="fxml" value="1" />
           <entry key="groovy" value="1" />
-          <entry key="java" value="333" />
+          <entry key="java" value="377" />
           <entry key="xml" value="3" />
         </counts>
       </usages-collector>
@@ -101,7 +81,7 @@
           <entry key="CLASS" value="20" />
           <entry key="GUI_DESIGNER_FORM" value="2" />
           <entry key="Groovy" value="1" />
-          <entry key="JAVA" value="333" />
+          <entry key="JAVA" value="377" />
           <entry key="XML" value="4" />
         </counts>
       </usages-collector>
@@ -109,14 +89,14 @@
         <counts>
           <entry key="dummy" value="92" />
           <entry key="groovy" value="1" />
-          <entry key="java" value="44256" />
+          <entry key="java" value="48135" />
           <entry key="xml" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Groovy" value="1" />
-          <entry key="JAVA" value="44256" />
+          <entry key="JAVA" value="48135" />
           <entry key="PLAIN_TEXT" value="92" />
           <entry key="XML" value="11" />
         </counts>
@@ -126,14 +106,24 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/communication/HPQIS.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/measure/POVMMeasure.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="140" column="32" lean-forward="true" selection-start-line="140" selection-start-column="32" selection-end-line="140" selection-end-column="32" />
+            <state relative-caret-position="244">
+              <caret line="22" column="58" selection-start-line="22" selection-start-column="58" selection-end-line="22" selection-end-column="85" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1545394352850" expanded="true" signature="1315:2797" ph="{...}" />
-                <marker date="1545394352850" expanded="true" signature="2810:4702" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/quantum/measure/POVMMeasureTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="128">
+              <caret line="39" column="38" lean-forward="true" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -142,246 +132,82 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/state/DoubleState.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="27" column="40" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="40" />
+            <state relative-caret-position="-60">
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
               <folding>
-                <element signature="e#905#906#0" expanded="true" />
-                <element signature="e#938#939#0" expanded="true" />
+                <element signature="e#963#964#0" expanded="true" />
                 <element signature="e#996#997#0" expanded="true" />
-                <element signature="e#1030#1031#0" expanded="true" />
-                <element signature="e#1077#1078#0" expanded="true" />
-                <element signature="e#1114#1115#0" expanded="true" />
-                <element signature="e#1247#1248#0" expanded="true" />
-                <element signature="e#1288#1289#0" expanded="true" />
-                <element signature="e#1623#1624#0" expanded="true" />
-                <element signature="e#1673#1674#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/state/SingleState.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/quantum/measure/ProjectiveMeasureTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="18" column="48" selection-start-line="18" selection-start-column="48" selection-end-line="18" selection-end-column="48" />
+            <state relative-caret-position="1140">
+              <caret line="61" column="38" lean-forward="true" selection-start-line="61" selection-start-column="38" selection-end-line="61" selection-end-column="38" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/state/ClusterState.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/tools/QuantumState.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="48" column="9" lean-forward="true" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
+            <state relative-caret-position="780">
+              <caret line="41" selection-start-line="41" selection-end-line="41" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/communication/HDQIS.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/tools/Range.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
-              <caret line="1585" column="5" lean-forward="true" selection-start-line="1558" selection-start-column="3" selection-end-line="1585" selection-end-column="5" />
+            <state relative-caret-position="200">
+              <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/oparate/QuantumOperation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="560">
+              <caret line="34" column="125" selection-start-line="34" selection-start-column="70" selection-end-line="34" selection-end-column="125" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/measure/ProjectiveMeasure.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="139">
+              <caret line="33" column="33" selection-start-line="33" selection-end-line="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/protocols/HDQIS/HDQIS.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2400">
+              <caret line="131" column="18" selection-start-line="131" selection-start-column="18" selection-end-line="131" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#106421#106422#0" expanded="true" />
-                <element signature="e#106442#106443#0" expanded="true" />
-                <marker date="1545360757649" expanded="true" signature="2508:22860" ph="{...}" />
-                <marker date="1545360757649" expanded="false" signature="2908:4067" ph="{...}" />
-                <marker date="1545360757649" expanded="false" signature="4124:5283" ph="{...}" />
-                <marker date="1545360757649" expanded="false" signature="5340:6501" ph="{...}" />
-                <marker date="1545360757649" expanded="false" signature="6558:7719" ph="{...}" />
-                <marker date="1545360757649" expanded="false" signature="7776:8935" ph="{...}" />
-                <marker date="1545360757649" expanded="false" signature="8992:10152" ph="{...}" />
-                <marker date="1545360757649" expanded="false" signature="10209:11370" ph="{...}" />
-                <marker date="1545360757649" expanded="false" signature="11427:12588" ph="{...}" />
-                <marker date="1545360757649" expanded="false" signature="12645:13806" ph="{...}" />
-                <marker date="1545360757649" expanded="false" signature="13863:15024" ph="{...}" />
-                <marker date="1545360757649" expanded="false" signature="15081:16244" ph="{...}" />
-                <marker date="1545360757649" expanded="false" signature="16301:17464" ph="{...}" />
-                <marker date="1545360757649" expanded="false" signature="17521:18683" ph="{...}" />
-                <marker date="1545360757649" expanded="false" signature="18740:19901" ph="{...}" />
-                <marker date="1545360757649" expanded="false" signature="19958:21121" ph="{...}" />
-                <marker date="1545360757649" expanded="false" signature="21178:22341" ph="{...}" />
-                <marker date="1545360757649" expanded="true" signature="22886:105159" ph="{...}" />
-                <marker date="1545360757649" expanded="false" signature="23543:28574" ph="{...}" />
-                <marker date="1545360757649" expanded="true" signature="23601:24796" ph="{...}" />
-                <marker date="1545360757649" expanded="false" signature="24853:26050" ph="{...}" />
-                <marker date="1545360757649" expanded="false" signature="26107:27304" ph="{...}" />
-                <marker date="1545360757649" expanded="false" signature="27361:28560" ph="{...}" />
-                <marker date="1545360757649" expanded="false" signature="28625:33656" ph="{...}" />
-                <marker date="1545360757649" expanded="false" signature="33707:38738" ph="{...}" />
-                <marker date="1545360757649" expanded="false" signature="38789:43820" ph="{...}" />
-                <marker date="1545360757649" expanded="false" signature="43871:48902" ph="{...}" />
-                <marker date="1545360757649" expanded="false" signature="48953:53984" ph="{...}" />
-                <marker date="1545360757649" expanded="false" signature="54035:59066" ph="{...}" />
-                <marker date="1545360757649" expanded="false" signature="59117:64148" ph="{...}" />
-                <marker date="1545360757649" expanded="false" signature="64199:69230" ph="{...}" />
-                <marker date="1545360757649" expanded="false" signature="69281:74312" ph="{...}" />
-                <marker date="1545360757649" expanded="false" signature="74363:79394" ph="{...}" />
-                <marker date="1545360757649" expanded="false" signature="79445:84476" ph="{...}" />
-                <marker date="1545360757649" expanded="false" signature="82009:83208" ph="{...}" />
-                <marker date="1545360757649" expanded="false" signature="83265:84462" ph="{...}" />
-                <marker date="1545360757649" expanded="false" signature="84527:89558" ph="{...}" />
-                <marker date="1545360757649" expanded="false" signature="89609:94640" ph="{...}" />
-                <marker date="1545360757649" expanded="false" signature="94691:99722" ph="{...}" />
-                <marker date="1545360757649" expanded="false" signature="99773:104804" ph="{...}" />
+                <marker date="1545627833904" expanded="true" signature="1291:2904" ph="{...}" />
+                <marker date="1545627833904" expanded="true" signature="2917:4612" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/role/Agent.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/protocols/HDQIS/HighAgent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="617">
-              <caret line="39" column="20" lean-forward="true" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
+            <state relative-caret-position="1520">
+              <caret line="93" column="70" selection-start-line="92" selection-start-column="7" selection-end-line="93" selection-end-column="70" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/role/HighAgent.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="63" column="13" lean-forward="true" selection-start-line="63" selection-start-column="13" selection-end-line="63" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2004#2005#0" expanded="true" />
-                <element signature="e#2039#2040#0" expanded="true" />
-                <marker date="1545394046387" expanded="false" signature="2933:4048" ph="{...}" />
-                <marker date="1545394046387" expanded="false" signature="4101:5216" ph="{...}" />
-                <marker date="1545394046387" expanded="false" signature="5269:6386" ph="{...}" />
-                <marker date="1545394046387" expanded="false" signature="6439:7556" ph="{...}" />
-                <marker date="1545394046387" expanded="false" signature="7609:8724" ph="{...}" />
-                <marker date="1545394046387" expanded="false" signature="8777:9893" ph="{...}" />
-                <marker date="1545394046387" expanded="false" signature="9946:11063" ph="{...}" />
-                <marker date="1545394046387" expanded="false" signature="11116:12233" ph="{...}" />
-                <marker date="1545394046387" expanded="false" signature="12286:13403" ph="{...}" />
-                <marker date="1545394046387" expanded="false" signature="13456:14573" ph="{...}" />
-                <marker date="1545394046387" expanded="false" signature="14626:15745" ph="{...}" />
-                <marker date="1545394046387" expanded="false" signature="15798:16917" ph="{...}" />
-                <marker date="1545394046387" expanded="false" signature="16970:18088" ph="{...}" />
-                <marker date="1545394046387" expanded="false" signature="18141:19258" ph="{...}" />
-                <marker date="1545394046387" expanded="false" signature="19311:20430" ph="{...}" />
-                <marker date="1545394046387" expanded="false" signature="20483:21602" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/role/Sender.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/role/LowAgent.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="66" selection-start-line="66" selection-end-line="67" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1407#1408#0" expanded="true" />
-                <element signature="e#1457#1458#0" expanded="true" />
-                <element signature="e#1823#1824#0" expanded="true" />
-                <element signature="e#1871#1872#0" expanded="true" />
-                <element signature="e#1995#1996#0" expanded="true" />
-                <element signature="e#2030#2031#0" expanded="true" />
-                <marker date="1545394046403" expanded="true" signature="3017:7980" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="3087:4254" ph="{...}" />
-                <marker date="1545394046403" expanded="true" signature="3159:3376" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="4323:5492" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="5561:6730" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="6799:7970" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="8097:9266" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="9335:10502" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="10571:11742" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="11811:12980" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="13107:14274" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="14343:15512" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="15581:16750" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="16819:17990" ph="{...}" />
-                <marker date="1545394046403" expanded="true" signature="18117:19286" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="19355:20522" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="20591:21762" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="21831:23000" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="23127:24296" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="24365:25536" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="25605:26772" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="26841:28010" ph="{...}" />
-                <marker date="1545394046403" expanded="true" signature="28067:33030" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="28137:29308" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="29377:30546" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="30615:31784" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="31853:33020" ph="{...}" />
-                <marker date="1545394046403" expanded="true" signature="33077:38040" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="33147:34316" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="34385:35556" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="35625:36792" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="36861:38030" ph="{...}" />
-                <marker date="1545394046403" expanded="true" signature="38087:43050" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="38157:39328" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="39397:40566" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="40635:41804" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="41873:43040" ph="{...}" />
-                <marker date="1545394046403" expanded="true" signature="43097:48060" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="43167:44334" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="44403:45572" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="45641:46810" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="46879:48050" ph="{...}" />
-                <marker date="1545394046403" expanded="true" signature="48107:53070" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="48177:49346" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="49415:50582" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="50651:51822" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="51891:53060" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="53187:54354" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="54423:55592" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="55661:56830" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="56899:58070" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="58197:59366" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="59435:60602" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="60671:61842" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="61911:63080" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="63207:64376" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="64445:65616" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="65685:66852" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="66921:68090" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="68217:69388" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="68289:68507" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="68578:68797" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="68868:69085" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="69156:69374" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="69457:70626" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="69529:69747" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="69818:70036" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="70107:70324" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="70395:70612" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="70695:71864" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="70767:70984" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="71055:71273" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="71344:71561" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="71632:71850" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="71933:73100" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="73227:74396" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="74465:75636" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="75705:76872" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="76941:78110" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="78237:79408" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="79477:80646" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="80715:81884" ph="{...}" />
-                <marker date="1545394046403" expanded="false" signature="81953:83120" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -393,10 +219,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
-        <option value="Interface" />
         <option value="Enum" />
-        <option value="JUnit4 Test Class" />
+        <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -414,10 +240,19 @@
       <find>Matrix</find>
       <find>tensor</find>
       <find>select==2</find>
-      <find>measure</find>
       <find>show</find>
       <find>own</find>
+      <find>measure</find>
+      <find>restore</find>
+      <find>&quot;B&quot;</find>
+      <find>send</find>
+      <find>isBi</find>
+      <find>isBitZero</find>
     </findStrings>
+    <replaceStrings>
+      <replace>particle2Name</replace>
+      <replace>particle1Name</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -425,20 +260,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/quantum/communication/AbstractSender.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/quantum/tools/AbstractQuantumState.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/quantum/state/ClusterState.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/quantum/state/MultiState.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/quantum/tools/MultiState.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/quantum/MainTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/simulation/view/DoComm.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/quantum/tools/QuantumState.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/quantum/measure/Mesures.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/quantum/communication/Reciever.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/quantum/communication/Bob.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/quantum/measure/Measures.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/quantum/measure/ProjectiveMeasure.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/quantum/communication/QuantumTeleportationTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/quantum/communication/ProxyTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/quantum/communication/AliceTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/quantum/oparate/QuantumOperation.java" />
@@ -469,13 +290,27 @@
         <option value="$PROJECT_DIR$/src/main/java/com/quantum/role/OperateRule.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/quantum/communication/HDQIS.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/quantum/communication/HPOIS.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/quantum/role/Agent.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/quantum/oparate/MathOperationTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/quantum/role/HighAgent.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/quantum/role/LowAgent.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/quantum/role/Sender.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/quantum/communication/HPQIS.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/quantum/state/DoubleState.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/quantum/role/HighAgent.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/quantum/role/Sender.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/protocols/HDQIS/HDQIS2.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/protocols/HDQIS/HQIS.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/quantum/role/Agent.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/protocols/HDQIS/HighAgent.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/protocols/HDQIS/Sender.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/protocols/HDQIS/LowAgent.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/protocols/HDQIS/HDQIS.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/protocols/HPQIS/HighAgent.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/protocols/HPQIS/Sender.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/protocols/HDQIS2.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/protocols/HPQIS/LowAgent.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/protocols/HPQIS/HPQIS.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/quantum/tools/Range.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/quantum/measure/POVMMeasure.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/quantum/measure/POVMMeasureTest.java" />
       </list>
     </option>
   </component>
@@ -505,10 +340,10 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="100" />
-    <option name="y" value="244" />
-    <option name="width" value="1271" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="274" />
+    <option name="y" value="47" />
+    <option name="width" value="1386" />
     <option name="height" value="735" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -537,6 +372,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -586,7 +422,27 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="quantum" type="462c0819:PsiDirectoryNode" />
+              <item name="protocols" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="protocols" type="462c0819:PsiDirectoryNode" />
+              <item name="HDQIS" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="protocols" type="462c0819:PsiDirectoryNode" />
+              <item name="HPQIS" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="project" type="b2602c69:ProjectViewProjectNode" />
@@ -596,7 +452,6 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="quantum" type="462c0819:PsiDirectoryNode" />
-              <item name="communication" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="project" type="b2602c69:ProjectViewProjectNode" />
@@ -686,6 +541,24 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="HPQIS" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="quantum" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -694,44 +567,9 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="quantum" type="462c0819:PsiDirectoryNode" />
-              <item name="communication" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="quantum" type="462c0819:PsiDirectoryNode" />
               <item name="measure" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="quantum" type="462c0819:PsiDirectoryNode" />
-              <item name="oparate" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="quantum" type="462c0819:PsiDirectoryNode" />
-              <item name="state" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="quantum" type="462c0819:PsiDirectoryNode" />
-              <item name="tools" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="project" type="b2602c69:ProjectViewProjectNode" />
@@ -741,7 +579,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -750,7 +587,7 @@
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH" value="8" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.STATE" value="left" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="409" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545394602658" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545706290834" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Groovy JUnit" value="groovy.util.GroovyTestCase" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
@@ -758,15 +595,21 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.quantum.measure" />
       <recent name="com.quantum.tools" />
       <recent name="com.quantum.communication" />
       <recent name="com.quantum.oparate" />
-      <recent name="com.quantum.measure" />
       <recent name="com.quantum.state" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.protocols" />
+      <recent name="com.protocols.HPQIS" />
+      <recent name="com" />
+      <recent name="com.protocols.HDQIS" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -785,13 +628,39 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="HDQIS" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.quantum.communication.HDQIS" />
+  <component name="RunManager" selected="JUnit.POVMMeasureTest.measurePOVMTest">
+    <configuration name="HDQIS (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.protocols.HDQIS.HDQIS" />
       <module name="project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.quantum.communication.*" />
+          <option name="PATTERN" value="com.protocols.HDQIS.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HDQIS2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.protocols.HDQIS2" />
+      <module name="project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.protocols.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HPQIS (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.protocols.HPQIS.HPQIS" />
+      <module name="project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.protocols.HPQIS.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -800,11 +669,11 @@
       </method>
     </configuration>
     <configuration name="HPQIS" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.quantum.communication.HPQIS" />
+      <option name="MAIN_CLASS_NAME" value="com.quantum.protocols.HPQIS" />
       <module name="project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.quantum.communication.*" />
+          <option name="PATTERN" value="com.quantum.protocols.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -812,65 +681,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Sender" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.quantum.role.Sender" />
+    <configuration name="POVMMeasureTest.measurePOVMTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.quantum.role.*" />
+          <option name="PATTERN" value="com.quantum.measure.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MathOperationTest.testNormalizationNegative" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.quantum.oparate.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.quantum.oparate" />
-      <option name="MAIN_CLASS_NAME" value="com.quantum.oparate.MathOperationTest" />
-      <option name="METHOD_NAME" value="testNormalizationNegative" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ToolsTest.testRandInt" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.quantum.tools.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.quantum.tools" />
-      <option name="MAIN_CLASS_NAME" value="com.quantum.tools.ToolsTest" />
-      <option name="METHOD_NAME" value="testRandInt" />
+      <option name="PACKAGE_NAME" value="com.quantum.measure" />
+      <option name="MAIN_CLASS_NAME" value="com.quantum.measure.POVMMeasureTest" />
+      <option name="METHOD_NAME" value="measurePOVMTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Sender" />
       <item itemvalue="Application.HPQIS" />
-      <item itemvalue="JUnit.ToolsTest.testRandInt" />
-      <item itemvalue="Application.HDQIS" />
-      <item itemvalue="JUnit.MathOperationTest.testNormalizationNegative" />
+      <item itemvalue="Application.HDQIS (1)" />
+      <item itemvalue="Application.HPQIS (1)" />
+      <item itemvalue="Application.HDQIS2" />
+      <item itemvalue="JUnit.POVMMeasureTest.measurePOVMTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.POVMMeasureTest.measurePOVMTest" />
+        <item itemvalue="Application.HPQIS (1)" />
+        <item itemvalue="Application.HDQIS2" />
+        <item itemvalue="Application.HDQIS (1)" />
         <item itemvalue="Application.HPQIS" />
-        <item itemvalue="JUnit.MathOperationTest.testNormalizationNegative" />
-        <item itemvalue="Application.HDQIS" />
-        <item itemvalue="JUnit.ToolsTest.testRandInt" />
-        <item itemvalue="Application.Sender" />
       </list>
     </recent_temporary>
   </component>
@@ -888,9 +728,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="QuantumOperationTest_testQuantumSinglePerformH - 2018.12.06 at 11h 22m 43s.xml">
-      <configuration name="QuantumOperationTest.testQuantumSinglePerformH" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="QuantumOperationTest_testQuantumSinglePerformH - 2018.12.06 at 11h 23m 00s.xml">
       <configuration name="QuantumOperationTest.testQuantumSinglePerformH" configurationId="JUnit" />
     </history-entry>
@@ -918,6 +755,9 @@
     <history-entry file="MathOperationTest_testNormalizationNegative - 2018.12.21 at 18h 57m 59s.xml">
       <configuration name="MathOperationTest.testNormalizationNegative" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="POVMMeasureTest_measurePOVMTest - 2018.12.25 at 10h 25m 54s.xml">
+      <configuration name="POVMMeasureTest.measurePOVMTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -929,10 +769,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="274" y="47" width="1386" height="735" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.33333334" visible="true" weight="0.30635402" />
-      <window_info id="Structure" order="1" sideWeight="0.6666667" side_tool="true" weight="0.23146747" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8502496" visible="true" weight="0.23831071" />
+      <window_info id="Structure" order="1" sideWeight="0.14975041" side_tool="true" visible="true" weight="0.23831071" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" sideWeight="0.5027174" weight="0.29082426" />
@@ -940,17 +781,18 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49710983" weight="0.0" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.84266263" visible="true" weight="0.032786883" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.6679274" weight="0.40983605" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8378582" weight="0.17304492" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.6621418" visible="true" weight="0.0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.3295082" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.81921333" weight="0.57213116" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.15733737" side_tool="true" visible="true" weight="0.032786883" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49924356" weight="0.3295082" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.816944" weight="0.57213116" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.33785823" side_tool="true" visible="true" weight="0.0" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.48260212" weight="0.16229509" />
+      <window_info anchor="bottom" id="Statistic" order="11" sideWeight="0.8449319" weight="0.3229508" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" visible="true" weight="0.0052950075" />
+      <window_info anchor="right" id="Ant Build" order="1" visible="true" weight="0.0030165913" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
@@ -985,84 +827,46 @@
           <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/quantum/communication/HQIS.java</url>
-          <line>49</line>
-          <properties />
-          <option name="timeStamp" value="129" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/quantum/communication/HQIS.java</url>
-          <line>138</line>
-          <properties />
-          <option name="timeStamp" value="130" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/quantum/communication/HQIS.java</url>
-          <line>122</line>
-          <properties />
-          <option name="timeStamp" value="133" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/quantum/communication/HQIS.java</url>
-          <line>74</line>
-          <properties />
-          <option name="timeStamp" value="134" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/quantum/communication/HQIS.java</url>
-          <line>90</line>
-          <properties />
-          <option name="timeStamp" value="135" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/quantum/communication/HQIS.java</url>
-          <line>106</line>
-          <properties />
-          <option name="timeStamp" value="136" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/quantum/communication/HQIS.java</url>
-          <line>66</line>
-          <properties />
-          <option name="timeStamp" value="138" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/quantum/communication/HQIS.java</url>
-          <line>68</line>
-          <properties />
-          <option name="timeStamp" value="139" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/quantum/communication/HQIS.java</url>
-          <line>75</line>
-          <properties />
-          <option name="timeStamp" value="140" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/quantum/communication/HQIS.java</url>
-          <line>91</line>
-          <properties />
-          <option name="timeStamp" value="141" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/quantum/role/Sender.java</url>
-          <line>149</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/protocols/HPQIS/Sender.java</url>
+          <line>151</line>
           <properties />
           <option name="timeStamp" value="156" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/quantum/role/Sender.java</url>
-          <line>145</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/protocols/HPQIS/HighAgent.java</url>
+          <line>72</line>
           <properties />
-          <option name="timeStamp" value="157" />
+          <option name="timeStamp" value="158" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/com/quantum/role/HighAgent.java</url>
-          <line>24</line>
-          <properties class="com.quantum.role.HighAgent" method="measure">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="153" />
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/protocols/HDQIS/HDQIS.java</url>
+          <line>67</line>
+          <properties />
+          <option name="timeStamp" value="159" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/protocols/HDQIS/HDQIS.java</url>
+          <line>86</line>
+          <properties />
+          <option name="timeStamp" value="160" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/protocols/HDQIS/HDQIS.java</url>
+          <line>102</line>
+          <properties />
+          <option name="timeStamp" value="161" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/protocols/HPQIS/LowAgent.java</url>
+          <line>104</line>
+          <properties />
+          <option name="timeStamp" value="170" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/quantum/measure/POVMMeasureTest.java</url>
+          <line>44</line>
+          <properties />
+          <option name="timeStamp" value="171" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -1072,63 +876,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/ujmp/ujmp-core/0.3.0/ujmp-core-0.3.0.jar!/org/ujmp/core/doublematrix/stub/AbstractDoubleMatrix2D.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/ujmp/ujmp-core/0.3.0/ujmp-core-0.3.0.jar!/org/ujmp/core/numbermatrix/stub/AbstractNumberMatrix.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/ujmp/ujmp-core/0.3.0/ujmp-core-0.3.0.jar!/org/ujmp/core/genericmatrix/stub/AbstractGenericMatrix.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/ujmp/ujmp-core/0.3.0/ujmp-core-0.3.0.jar!/org/ujmp/core/AbstractMatrix.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="233" column="14" selection-start-line="233" selection-start-column="14" selection-end-line="233" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/quantum/communication/ProxyTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/quantum/state/CommonStateTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gui/tools/dialogFram/ExDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gui/tools/ArrayListComboBoxModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/quantum/measure/ProjectiveMeasureTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1140">
-          <caret line="61" column="38" selection-start-line="61" selection-start-column="38" selection-end-line="61" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/simulation/view/TextComponent.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="40">
@@ -1190,16 +937,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/communication/QuantumTeleportation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="89" column="26" selection-start-line="89" selection-end-line="92" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/gate/QuantumGate.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
@@ -1239,7 +976,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/quantum/communication/AliceTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/quantum/communication/QuantumTeleportationTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/protocols/HPQIS/QuantumTeleportationTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
           <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
@@ -1253,97 +990,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/communication/HQIS.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="541">
-          <caret line="151" column="53" selection-start-line="151" selection-start-column="46" selection-end-line="151" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1545012633459" expanded="false" signature="3035:7871" ph="{...}" />
-            <marker date="1545012633459" expanded="true" signature="7893:11965" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/measure/Measures.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-          <folding>
-            <element signature="e#729#730#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/communication/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="34" selection-start-line="34" selection-end-line="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/communication/Receiver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#222#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/communication/Senders.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="e#0#191#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/communication/Receiver.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/communication/Senders.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/state/CommonState.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="290">
           <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/state/MultiState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="e#471#472#0" expanded="true" />
-            <element signature="e#608#609#0" expanded="true" />
-            <element signature="e#645#646#0" expanded="true" />
-            <element signature="e#811#812#0" expanded="true" />
-            <element signature="e#852#853#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/tools/Tools.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/oparate/QuantumOperation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="78" selection-start-line="78" selection-end-line="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/measure/ProjectiveMeasure.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="65" column="27" lean-forward="true" selection-start-line="65" selection-start-column="27" selection-end-line="65" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -1354,265 +1006,320 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/oparate/MathOperation.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/role/OperateRule.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/state/ClusterState.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="121" column="23" selection-start-line="121" selection-start-column="23" selection-end-line="121" selection-end-column="23" />
+        <state relative-caret-position="720">
+          <caret line="48" column="9" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/tools/QuantumState.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/communication/HDQIS.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="1585" column="5" lean-forward="true" selection-start-line="1558" selection-start-column="3" selection-end-line="1585" selection-end-column="5" />
+        <state relative-caret-position="144">
+          <caret line="30" selection-start-line="30" selection-end-line="31" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#106421#106422#0" expanded="true" />
-            <element signature="e#106442#106443#0" expanded="true" />
-            <marker date="1545360757649" expanded="true" signature="2508:22860" ph="{...}" />
-            <marker date="1545360757649" expanded="false" signature="2908:4067" ph="{...}" />
-            <marker date="1545360757649" expanded="false" signature="4124:5283" ph="{...}" />
-            <marker date="1545360757649" expanded="false" signature="5340:6501" ph="{...}" />
-            <marker date="1545360757649" expanded="false" signature="6558:7719" ph="{...}" />
-            <marker date="1545360757649" expanded="false" signature="7776:8935" ph="{...}" />
-            <marker date="1545360757649" expanded="false" signature="8992:10152" ph="{...}" />
-            <marker date="1545360757649" expanded="false" signature="10209:11370" ph="{...}" />
-            <marker date="1545360757649" expanded="false" signature="11427:12588" ph="{...}" />
-            <marker date="1545360757649" expanded="false" signature="12645:13806" ph="{...}" />
-            <marker date="1545360757649" expanded="false" signature="13863:15024" ph="{...}" />
-            <marker date="1545360757649" expanded="false" signature="15081:16244" ph="{...}" />
-            <marker date="1545360757649" expanded="false" signature="16301:17464" ph="{...}" />
-            <marker date="1545360757649" expanded="false" signature="17521:18683" ph="{...}" />
-            <marker date="1545360757649" expanded="false" signature="18740:19901" ph="{...}" />
-            <marker date="1545360757649" expanded="false" signature="19958:21121" ph="{...}" />
-            <marker date="1545360757649" expanded="false" signature="21178:22341" ph="{...}" />
-            <marker date="1545360757649" expanded="true" signature="22886:105159" ph="{...}" />
-            <marker date="1545360757649" expanded="false" signature="23543:28574" ph="{...}" />
-            <marker date="1545360757649" expanded="true" signature="23601:24796" ph="{...}" />
-            <marker date="1545360757649" expanded="false" signature="24853:26050" ph="{...}" />
-            <marker date="1545360757649" expanded="false" signature="26107:27304" ph="{...}" />
-            <marker date="1545360757649" expanded="false" signature="27361:28560" ph="{...}" />
-            <marker date="1545360757649" expanded="false" signature="28625:33656" ph="{...}" />
-            <marker date="1545360757649" expanded="false" signature="33707:38738" ph="{...}" />
-            <marker date="1545360757649" expanded="false" signature="38789:43820" ph="{...}" />
-            <marker date="1545360757649" expanded="false" signature="43871:48902" ph="{...}" />
-            <marker date="1545360757649" expanded="false" signature="48953:53984" ph="{...}" />
-            <marker date="1545360757649" expanded="false" signature="54035:59066" ph="{...}" />
-            <marker date="1545360757649" expanded="false" signature="59117:64148" ph="{...}" />
-            <marker date="1545360757649" expanded="false" signature="64199:69230" ph="{...}" />
-            <marker date="1545360757649" expanded="false" signature="69281:74312" ph="{...}" />
-            <marker date="1545360757649" expanded="false" signature="74363:79394" ph="{...}" />
-            <marker date="1545360757649" expanded="false" signature="79445:84476" ph="{...}" />
-            <marker date="1545360757649" expanded="false" signature="82009:83208" ph="{...}" />
-            <marker date="1545360757649" expanded="false" signature="83265:84462" ph="{...}" />
-            <marker date="1545360757649" expanded="false" signature="84527:89558" ph="{...}" />
-            <marker date="1545360757649" expanded="false" signature="89609:94640" ph="{...}" />
-            <marker date="1545360757649" expanded="false" signature="94691:99722" ph="{...}" />
-            <marker date="1545360757649" expanded="false" signature="99773:104804" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/protocols/QuantumTeleportation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7">
+          <caret line="73" column="30" lean-forward="true" selection-start-line="73" selection-start-column="30" selection-end-line="73" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/protocols/HDQIS.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/role/Sender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/role/Agent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/state/SingleState.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="18" column="48" selection-start-line="18" selection-start-column="48" selection-end-line="18" selection-end-column="48" />
+        <state relative-caret-position="111">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+          <folding>
+            <element signature="e#717#718#0" expanded="true" />
+            <element signature="e#1400#1401#0" expanded="true" />
+            <element signature="e#1450#1451#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/protocols/HDQIS/Sender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="64" column="20" selection-start-line="64" selection-start-column="16" selection-end-line="64" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/state/MultiState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="e#438#439#0" expanded="true" />
+            <element signature="e#471#472#0" expanded="true" />
+            <element signature="e#645#646#0" expanded="true" />
+            <element signature="e#811#812#0" expanded="true" />
+            <element signature="e#852#853#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/oparate/MathOperation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/protocols/HPQIS/Sender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2089">
+          <caret line="147" selection-start-line="147" selection-end-line="147" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/protocols/HPQIS/HighAgent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1457#1458#0" expanded="true" />
+            <element signature="e#1507#1508#0" expanded="true" />
+            <marker date="1545628440025" expanded="true" signature="3186:4301" ph="{...}" />
+            <marker date="1545628440025" expanded="true" signature="4354:5469" ph="{...}" />
+            <marker date="1545628440025" expanded="false" signature="5522:6639" ph="{...}" />
+            <marker date="1545628440025" expanded="false" signature="6692:7809" ph="{...}" />
+            <marker date="1545628440025" expanded="false" signature="7862:8977" ph="{...}" />
+            <marker date="1545628440025" expanded="false" signature="9030:10146" ph="{...}" />
+            <marker date="1545628440025" expanded="false" signature="10199:11316" ph="{...}" />
+            <marker date="1545628440025" expanded="false" signature="11369:12486" ph="{...}" />
+            <marker date="1545628440025" expanded="false" signature="12539:13656" ph="{...}" />
+            <marker date="1545628440025" expanded="false" signature="13709:14826" ph="{...}" />
+            <marker date="1545628440025" expanded="false" signature="14879:15998" ph="{...}" />
+            <marker date="1545628440025" expanded="false" signature="16051:17170" ph="{...}" />
+            <marker date="1545628440025" expanded="false" signature="17223:18341" ph="{...}" />
+            <marker date="1545628440025" expanded="false" signature="18394:19511" ph="{...}" />
+            <marker date="1545628440025" expanded="false" signature="19564:20683" ph="{...}" />
+            <marker date="1545628440025" expanded="false" signature="20736:21855" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/protocols/HDQIS/LowAgent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1242">
+          <caret line="76" column="17" selection-start-line="76" selection-start-column="17" selection-end-line="76" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/protocols/HDQIS2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="361" selection-start-line="361" selection-end-line="363" selection-end-column="90" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1545630138300" expanded="true" signature="2389:22741" ph="{...}" />
+            <marker date="1545630138300" expanded="true" signature="2789:3948" ph="{...}" />
+            <marker date="1545630138300" expanded="false" signature="4005:5164" ph="{...}" />
+            <marker date="1545630138300" expanded="false" signature="5221:6382" ph="{...}" />
+            <marker date="1545630138300" expanded="false" signature="6439:7600" ph="{...}" />
+            <marker date="1545630138300" expanded="false" signature="7657:8816" ph="{...}" />
+            <marker date="1545630138300" expanded="false" signature="8873:10033" ph="{...}" />
+            <marker date="1545630138300" expanded="false" signature="10090:11251" ph="{...}" />
+            <marker date="1545630138300" expanded="false" signature="11308:12469" ph="{...}" />
+            <marker date="1545630138300" expanded="false" signature="12526:13687" ph="{...}" />
+            <marker date="1545630138300" expanded="false" signature="13744:14905" ph="{...}" />
+            <marker date="1545630138300" expanded="false" signature="14962:16125" ph="{...}" />
+            <marker date="1545630138300" expanded="false" signature="16182:17345" ph="{...}" />
+            <marker date="1545630138300" expanded="false" signature="17402:18564" ph="{...}" />
+            <marker date="1545630138300" expanded="false" signature="18621:19782" ph="{...}" />
+            <marker date="1545630138300" expanded="false" signature="19839:21002" ph="{...}" />
+            <marker date="1545630138300" expanded="true" signature="21059:22222" ph="{...}" />
+            <marker date="1545630138300" expanded="true" signature="22767:105040" ph="{...}" />
+            <marker date="1545630138300" expanded="false" signature="23424:28455" ph="{...}" />
+            <marker date="1545630138300" expanded="false" signature="23482:24677" ph="{...}" />
+            <marker date="1545630138300" expanded="false" signature="24734:25931" ph="{...}" />
+            <marker date="1545630138300" expanded="false" signature="25988:27185" ph="{...}" />
+            <marker date="1545630138300" expanded="false" signature="27242:28441" ph="{...}" />
+            <marker date="1545630138300" expanded="false" signature="28506:33537" ph="{...}" />
+            <marker date="1545630138300" expanded="false" signature="33588:38619" ph="{...}" />
+            <marker date="1545630138300" expanded="false" signature="38670:43701" ph="{...}" />
+            <marker date="1545630138300" expanded="false" signature="43752:48783" ph="{...}" />
+            <marker date="1545630138300" expanded="false" signature="48834:53865" ph="{...}" />
+            <marker date="1545630138300" expanded="false" signature="53916:58947" ph="{...}" />
+            <marker date="1545630138300" expanded="false" signature="58998:64029" ph="{...}" />
+            <marker date="1545630138300" expanded="false" signature="64080:69111" ph="{...}" />
+            <marker date="1545630138300" expanded="false" signature="69162:74193" ph="{...}" />
+            <marker date="1545630138300" expanded="false" signature="74244:79275" ph="{...}" />
+            <marker date="1545630138300" expanded="false" signature="79326:84357" ph="{...}" />
+            <marker date="1545630138300" expanded="false" signature="81890:83089" ph="{...}" />
+            <marker date="1545630138300" expanded="false" signature="83146:84343" ph="{...}" />
+            <marker date="1545630138300" expanded="false" signature="84408:89439" ph="{...}" />
+            <marker date="1545630138300" expanded="false" signature="89490:94521" ph="{...}" />
+            <marker date="1545630138300" expanded="false" signature="94572:99603" ph="{...}" />
+            <marker date="1545630138300" expanded="false" signature="99654:104685" ph="{...}" />
+            <marker date="1545630138300" expanded="false" signature="99712:100911" ph="{...}" />
+            <marker date="1545630138300" expanded="false" signature="100968:102165" ph="{...}" />
+            <marker date="1545630138300" expanded="true" signature="102222:103419" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/protocols/HPQIS/LowAgent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="610">
+          <caret line="110" column="71" selection-start-line="110" selection-start-column="71" selection-end-line="110" selection-end-column="71" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1427#1428#0" expanded="true" />
+            <element signature="e#1477#1478#0" expanded="true" />
+            <marker date="1545630820642" expanded="false" signature="88780:89145" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/protocols/HPQIS/HPQIS.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2560">
+          <caret line="135" column="5" selection-start-line="135" selection-start-column="5" selection-end-line="135" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1545630873274" expanded="true" signature="1260:2666" ph="{...}" />
+            <marker date="1545630873274" expanded="true" signature="2679:4387" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/measure/Measures.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+          <folding>
+            <element signature="e#729#730#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/tools/Tools.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="640">
+          <caret line="32" column="1" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/tools/QuantumState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/tools/Range.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/oparate/QuantumOperation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="34" column="125" selection-start-line="34" selection-start-column="70" selection-end-line="34" selection-end-column="125" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/protocols/HDQIS/HDQIS.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2400">
+          <caret line="131" column="18" selection-start-line="131" selection-start-column="18" selection-end-line="131" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1545627833904" expanded="true" signature="1291:2904" ph="{...}" />
+            <marker date="1545627833904" expanded="true" signature="2917:4612" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/protocols/HDQIS/HighAgent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1520">
+          <caret line="93" column="70" selection-start-line="92" selection-start-column="7" selection-end-line="93" selection-end-column="70" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/measure/ProjectiveMeasure.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="33" column="33" selection-start-line="33" selection-end-line="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/quantum/measure/ProjectiveMeasureTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1140">
+          <caret line="61" column="38" lean-forward="true" selection-start-line="61" selection-start-column="38" selection-end-line="61" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/state/DoubleState.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="27" column="40" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="40" />
+        <state relative-caret-position="-60">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
           <folding>
-            <element signature="e#905#906#0" expanded="true" />
-            <element signature="e#938#939#0" expanded="true" />
+            <element signature="e#963#964#0" expanded="true" />
             <element signature="e#996#997#0" expanded="true" />
-            <element signature="e#1030#1031#0" expanded="true" />
-            <element signature="e#1077#1078#0" expanded="true" />
-            <element signature="e#1114#1115#0" expanded="true" />
-            <element signature="e#1247#1248#0" expanded="true" />
-            <element signature="e#1288#1289#0" expanded="true" />
-            <element signature="e#1623#1624#0" expanded="true" />
-            <element signature="e#1673#1674#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/communication/HPQIS.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="140" column="32" lean-forward="true" selection-start-line="140" selection-start-column="32" selection-end-line="140" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1545394352850" expanded="true" signature="1315:2797" ph="{...}" />
-            <marker date="1545394352850" expanded="true" signature="2810:4702" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/role/OperateRule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/state/ClusterState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="48" column="9" lean-forward="true" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/role/Agent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="617">
-          <caret line="39" column="20" lean-forward="true" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/role/LowAgent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="66" selection-start-line="66" selection-end-line="67" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1407#1408#0" expanded="true" />
-            <element signature="e#1457#1458#0" expanded="true" />
-            <element signature="e#1823#1824#0" expanded="true" />
-            <element signature="e#1871#1872#0" expanded="true" />
-            <element signature="e#1995#1996#0" expanded="true" />
-            <element signature="e#2030#2031#0" expanded="true" />
-            <marker date="1545394046403" expanded="true" signature="3017:7980" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="3087:4254" ph="{...}" />
-            <marker date="1545394046403" expanded="true" signature="3159:3376" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="4323:5492" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="5561:6730" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="6799:7970" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="8097:9266" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="9335:10502" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="10571:11742" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="11811:12980" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="13107:14274" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="14343:15512" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="15581:16750" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="16819:17990" ph="{...}" />
-            <marker date="1545394046403" expanded="true" signature="18117:19286" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="19355:20522" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="20591:21762" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="21831:23000" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="23127:24296" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="24365:25536" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="25605:26772" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="26841:28010" ph="{...}" />
-            <marker date="1545394046403" expanded="true" signature="28067:33030" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="28137:29308" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="29377:30546" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="30615:31784" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="31853:33020" ph="{...}" />
-            <marker date="1545394046403" expanded="true" signature="33077:38040" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="33147:34316" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="34385:35556" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="35625:36792" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="36861:38030" ph="{...}" />
-            <marker date="1545394046403" expanded="true" signature="38087:43050" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="38157:39328" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="39397:40566" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="40635:41804" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="41873:43040" ph="{...}" />
-            <marker date="1545394046403" expanded="true" signature="43097:48060" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="43167:44334" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="44403:45572" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="45641:46810" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="46879:48050" ph="{...}" />
-            <marker date="1545394046403" expanded="true" signature="48107:53070" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="48177:49346" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="49415:50582" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="50651:51822" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="51891:53060" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="53187:54354" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="54423:55592" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="55661:56830" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="56899:58070" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="58197:59366" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="59435:60602" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="60671:61842" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="61911:63080" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="63207:64376" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="64445:65616" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="65685:66852" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="66921:68090" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="68217:69388" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="68289:68507" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="68578:68797" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="68868:69085" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="69156:69374" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="69457:70626" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="69529:69747" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="69818:70036" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="70107:70324" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="70395:70612" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="70695:71864" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="70767:70984" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="71055:71273" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="71344:71561" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="71632:71850" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="71933:73100" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="73227:74396" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="74465:75636" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="75705:76872" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="76941:78110" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="78237:79408" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="79477:80646" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="80715:81884" ph="{...}" />
-            <marker date="1545394046403" expanded="false" signature="81953:83120" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/role/HighAgent.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/measure/POVMMeasure.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="244">
-          <caret line="63" column="13" lean-forward="true" selection-start-line="63" selection-start-column="13" selection-end-line="63" selection-end-column="13" />
+          <caret line="22" column="58" selection-start-line="22" selection-start-column="58" selection-end-line="22" selection-end-column="85" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2004#2005#0" expanded="true" />
-            <element signature="e#2039#2040#0" expanded="true" />
-            <marker date="1545394046387" expanded="false" signature="2933:4048" ph="{...}" />
-            <marker date="1545394046387" expanded="false" signature="4101:5216" ph="{...}" />
-            <marker date="1545394046387" expanded="false" signature="5269:6386" ph="{...}" />
-            <marker date="1545394046387" expanded="false" signature="6439:7556" ph="{...}" />
-            <marker date="1545394046387" expanded="false" signature="7609:8724" ph="{...}" />
-            <marker date="1545394046387" expanded="false" signature="8777:9893" ph="{...}" />
-            <marker date="1545394046387" expanded="false" signature="9946:11063" ph="{...}" />
-            <marker date="1545394046387" expanded="false" signature="11116:12233" ph="{...}" />
-            <marker date="1545394046387" expanded="false" signature="12286:13403" ph="{...}" />
-            <marker date="1545394046387" expanded="false" signature="13456:14573" ph="{...}" />
-            <marker date="1545394046387" expanded="false" signature="14626:15745" ph="{...}" />
-            <marker date="1545394046387" expanded="false" signature="15798:16917" ph="{...}" />
-            <marker date="1545394046387" expanded="false" signature="16970:18088" ph="{...}" />
-            <marker date="1545394046387" expanded="false" signature="18141:19258" ph="{...}" />
-            <marker date="1545394046387" expanded="false" signature="19311:20430" ph="{...}" />
-            <marker date="1545394046387" expanded="false" signature="20483:21602" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/role/Sender.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/quantum/measure/POVMMeasureTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+        <state relative-caret-position="128">
+          <caret line="39" column="38" lean-forward="true" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

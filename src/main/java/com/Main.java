@@ -1,9 +1,5 @@
-package com.quantum.communication;
+package com;
 
-import com.quantum.gate.QuantumGate;
-import com.quantum.oparate.MathOperation;
-import com.sun.org.apache.xerces.internal.util.SynchronizedSymbolTable;
-import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
 import org.ujmp.core.DenseMatrix;
 import org.ujmp.core.Matrix;
 

@@ -1,18 +1,16 @@
-package com.quantum.communication;
+package com.protocols;
 
 import com.quantum.gate.QuantumGate;
 import com.quantum.measure.ProjectiveMeasure;
-import com.quantum.oparate.MathOperation;
 import com.quantum.oparate.QuantumOperation;
 import com.quantum.state.*;
 import com.quantum.tools.QuantumState;
 
 //Xu等人提出的确定性的分层量子信息拆分协议，下面是逻辑的实现。其中有一个权限高的代理者，两个权限低的代理者
-public class HDQIS {
+public class HDQIS2 {
     public static void run() {
         //准备要传送的秘密两量子比特
-        double[] secret = new double[]{0.5, 0.5, 0.5, 0.5};
-        DoubleState doubleState = new DoubleState(secret);
+        DoubleState doubleState = new DoubleState();
         doubleState.setParticlesName(1, "x");
         doubleState.setParticlesName(2, "y");
         System.out.println("要传送的秘密两量子比特为" + doubleState.showBinaryState());
@@ -1584,7 +1582,7 @@ public class HDQIS {
         }
         return binStr.charAt(pos-1)=='0';
     }
-    public static void main(String [] args){
+    public static void main(String[] args){
         run();
     }
 }

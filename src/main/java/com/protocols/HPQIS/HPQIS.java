@@ -1,9 +1,7 @@
-package com.quantum.communication;
+package com.protocols.HPQIS;
 
 import com.quantum.measure.Measures;
 import com.quantum.oparate.QuantumOperation;
-import com.quantum.role.*;
-import com.quantum.role.HighAgent;
 import com.quantum.state.DoubleState;
 import com.quantum.state.MultiState;
 import com.quantum.tools.QuantumState;
@@ -11,7 +9,7 @@ import com.quantum.tools.Tools;
 
 import java.util.ArrayList;
 
-//下面是概率型分层量子信息拆分协议，
+//下面仿真了论文中提出的概率型分层量子信息拆分协议的通信过程
 //todo：目前只实现了1个权限高的代理者2个权限低的代理者
 //todo：构成量子信道的为最大纠缠态，用于传送的秘密量子信息为固定的
 public class HPQIS {
@@ -34,7 +32,7 @@ public class HPQIS {
         lowAgents.add(David);
         Sender Alice = new Sender(highAgents, lowAgents);
         Alice.execute();  //Alice进行了操作,包括准备秘密量子比特、准备两个簇态、发送粒子以及测量等操作
-        boolean highAuthor=true;       //此变量用于标志哪一种权限的代理者来恢复秘密消息
+        boolean highAuthor=false;       //此变量用于标志哪一种权限的代理者来恢复秘密消息
         if(highAuthor){
             //协议中的权限高的代理者来恢复秘密量子比特
             System.out.println("权限高的代理者Bob恢复秘密量子比特");
@@ -47,9 +45,9 @@ public class HPQIS {
                 /*
                     用于测试的代码
                  */
-                System.out.println("此时系统的态为");
-                System.out.println(systemState.showBinaryState());
-                systemState.showParticleName();
+//                System.out.println("此时系统的态为");
+//                System.out.println(systemState.showBinaryState());
+//                systemState.showParticleName();
             }
             else{
                 System.out.println("权限低的代理者David对手中的粒子进行Z基测量");
@@ -59,14 +57,13 @@ public class HPQIS {
                 /*
                     用于测试的代码
                  */
-                System.out.println("此时系统的态为");
-                System.out.println(systemState.showBinaryState());
-                systemState.showParticleName();
+//                System.out.println("此时系统的态为");
+//                System.out.println(systemState.showBinaryState());
+//                systemState.showParticleName();
             }
             System.out.println("Bob收到代理者测量结果");
             System.out.println("Bob对手中的粒子进行操作，恢复秘密量子比特");
             Bob.restore();
-            System.out.println("----------------------------------------------------");
             System.out.println("此时Bob手中的粒子态为");
             System.out.println(getOwnSate(systemState,Bob.getParticleName()).showBinaryState());
         }
@@ -86,7 +83,6 @@ public class HPQIS {
                 System.out.println("Charlie收到代理者测量结果");
                 System.out.println("Charlie对手中的粒子进行操作，恢复秘密量子比特");
                 Charlie.restore();
-                System.out.println("----------------------------------------------------");
                 System.out.println("此时Charlie手中的粒子态为");
                 System.out.println(getOwnSate(systemState,Charlie.getParticleName()).showBinaryState());
             }
@@ -103,12 +99,13 @@ public class HPQIS {
                 System.out.println("David收到代理者测量结果");
                 System.out.println("David对手中的粒子进行操作，恢复秘密量子比特");
                 David.restore();
-                System.out.println("----------------------------------------------------");
                 System.out.println("此时David手中的粒子态为");
                 System.out.println(getOwnSate(systemState,David.getParticleName()).showBinaryState());
 
             }
         }
+        System.out.println("----------------------------------------------------");
+
     }
     public static DoubleState getOwnSate(QuantumState quantumState,ArrayList<String> particleNames){
         DoubleState state=new DoubleState();
@@ -138,7 +135,7 @@ public class HPQIS {
         return state;
     }
     public static void main(String[] args){
-        for (int i=0;i<16;i++) {
+        for (int i=0;i<10;i++) {
             run();
         }
     }

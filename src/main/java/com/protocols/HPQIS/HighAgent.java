@@ -1,16 +1,17 @@
-package com.quantum.role;
+package com.protocols.HPQIS;
 
-import com.quantum.communication.HPQIS;
+import com.protocols.HPQIS.HPQIS;
 import com.quantum.gate.QuantumGate;
 import com.quantum.measure.Measures;
 import com.quantum.measure.ProjectiveMeasure;
 import com.quantum.oparate.MathOperation;
 import com.quantum.oparate.QuantumOperation;
+import com.quantum.role.Agent;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import static com.quantum.communication.HPQIS.systemState;
+import static com.protocols.HPQIS.HPQIS.systemState;
 
 public class HighAgent implements Agent {
     private ArrayList<String> particleName = new ArrayList<String>(); //代理者手中的粒子
@@ -22,7 +23,7 @@ public class HighAgent implements Agent {
      * @return
      */
     @Override
-    public int measure(Measures measures) {
+    public void measure(Measures measures) {
         int index=measures.getIndex();
         int result=0;
         switch (index){
@@ -37,7 +38,6 @@ public class HighAgent implements Agent {
                 }
                 break;
         }
-        return result;
     }
 
     /**
@@ -95,6 +95,9 @@ public class HighAgent implements Agent {
         /**
          * 根据发送者的测量结果以及权限低的代理者的测量结果，对自己手中的秘密量子比特进行操作
          */
+        System.out.println("++++++++粒子X、粒子1的Bell态的测量结果为"+resultAliceX);
+        System.out.println("++++++++粒子Y、粒子5的Bell态的测量结果为"+resultAliceY);
+        System.out.println("++++++++权限低的代理者的第一个粒子测量结果为"+lowAgentParticle1+" 第二个粒子的测量结果为"+lowAgentParticle2);
         if (resultAliceX == 1 && resultAliceY == 1) {
             if (lowAgentParticle1 == 0 && lowAgentParticle2 == 0) {
                 QuantumOperation.quantumSinglePerform(systemState, "2", QuantumGate.Operator_I);

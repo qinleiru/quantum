@@ -388,6 +388,6 @@ public class HighAgent implements Agent {
                 QuantumOperation.quantumSinglePerform(systemState, "6", QuantumGate.Operator_X);
             }
         }
-        MathOperation.normalization(systemState.getState());
+//        MathOperation.normalization(systemState.getState());
     }
 }

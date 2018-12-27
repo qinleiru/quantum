@@ -13,6 +13,7 @@ public class ProjectiveMeasureTest {
      */
     @Test
     public void measureBaseZ() {
+        System.out.println("测试测试测试测试");
         //一个四粒子簇态，簇态的形式为：1/2（|0000>+|0011>+|1100>-|1111>）
         double A[]=new double[]{0.5,0,0,0.5,0,0,0,0,0,0,0,0,0.5,0,0,-0.5};
         ClusterState clusterState=new ClusterState(A,4);
@@ -25,6 +26,8 @@ public class ProjectiveMeasureTest {
             double[] expectResult=new double[]{Math.pow(2,-0.5),0,0,0,0,0,0,0,0,0,0,0,Math.pow(2,-0.5),0,0,0};
             assertArrayEquals(expectResult,clusterState.getState(),0.00001);
         }
+        System.out.println("测试测试测试测试");
+
     }
 
     /**

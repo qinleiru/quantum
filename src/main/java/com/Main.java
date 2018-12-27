@@ -1,66 +1,111 @@
 package com;
 
+import com.quantum.measure.POVMMeasure;
+import com.quantum.state.DoubleState;
+import com.quantum.state.MultiState;
 import org.ujmp.core.DenseMatrix;
 import org.ujmp.core.Matrix;
+
+import java.util.ArrayList;
 
 public class Main {
     //用于测试POVM测量之后系统态的形式
     public static void main(String[] args){
-        //定义POVM的测量算子为
-        //测量算子为O1
-//        Matrix matrix= DenseMatrix.Factory.zeros(4, 4);
-//        for (int i = 0; i < matrix.getRowCount(); ++i){
-//            for (int j = 0 ; j < matrix.getColumnCount(); ++j){
-//                //可以使用setXXX来进行矩阵的赋值，其中第一个参数是值，第二个参数是行，第三个参数是列
-//                matrix.setAsDouble(16, i , j);
-//            }
-//        }
-        //测量算子为O2
-        Matrix matrix= DenseMatrix.Factory.zeros(4, 4);
-        matrix.setAsDouble(16,0,0);
-        matrix.setAsDouble(16,0,1);
-        matrix.setAsDouble(-16,0,2);
-        matrix.setAsDouble(-16,0,3);
-        matrix.setAsDouble(16,1,0);
-        matrix.setAsDouble(16,1,1);
-        matrix.setAsDouble(-16,1,2);
-        matrix.setAsDouble(-16,1,3);
-        matrix.setAsDouble(-16,2,0);
-        matrix.setAsDouble(-16,2,1);
-        matrix.setAsDouble(16,2,2);
-        matrix.setAsDouble(16,2,3);
-        matrix.setAsDouble(-16,3,0);
-        matrix.setAsDouble(-16,3,1);
-        matrix.setAsDouble(16,3,2);
-        matrix.setAsDouble(16,3,3);
-        Matrix measure = matrix.times(1.0/64);
-        System.out.println("measure的值是");
-        System.out.println(measure);
-//        System.out.println("dense2的值是");
-//        System.out.println(dense2);
-        //那么作用在量子态上的量子操作为
-        double [][]operator=measure.toDoubleArray();
-//        operator=MathOperation.tensor(QuantumGate.Operator_I,MathOperation.tensor(QuantumGate.Operator_I,operator));
-        //要测量的两粒子的态为
-//        double[] state=new double[]{0.0625,0,0,0,0,0.0625,0,0,0,0,0.0625,0,0,0,0,0.0625};
-        //要测量的两粒子态为
-        double[] state=new double[]{0.0625,0.0625,0.0625,0.0625};
-        Matrix vector=Matrix.Factory.importFromArray(state).transpose();
-        //将二维数组转换为列向量
-        System.out.println("--------------");
-        System.out.println(measure);
-        Matrix fenZi=measure.mtimes(vector);  //将表示数组的态先转换为列向量并进行运算
-        System.out.println("分子的值是");
-        System.out.println(fenZi);
-        Matrix suanzi=measure.mtimes(measure.transpose());
-        System.out.println("算子的值是");
-        System.out.println(suanzi);
-        Matrix temp=(Matrix.Factory.importFromArray(state)).mtimes(suanzi.mtimes(Matrix.Factory.importFromArray(state).transpose()));
-        System.out.println("分母的值是");
-        System.out.println(temp);
-        Matrix result=fenZi.times(Math.sqrt(temp.getAsDouble(0,0)));
-        System.out.println("测量完成后量子谈坍缩到");
-        System.out.println(result);
+        /*
+           添加要区分的两粒子态,
+         */
+        //用于构建量子信道的簇态的系数
+        double a=0.25;
+        double b=Math.sqrt(0.5-Math.pow(a,2));
+        double c=b;
+        double d=a;
+        if(Math.pow(a,2)+Math.pow(b,2)!=0.5){
+            System.out.println("返回");
+            return;
+        }
+        ArrayList<DoubleState> doubleStates=new ArrayList<>();
+        double[] state=new double[]{a*c,a*d,b*c,b*d};
+        DoubleState doubleState=new DoubleState(state);
+        doubleState.setParticlesName(1,"m");
+        doubleState.setParticlesName(2,"n");
+        doubleStates.add(doubleState);
+        state=new double[]{a*c,a*d,-b*c,-b*d};
+        doubleState=new DoubleState(state);
+        doubleState.setParticlesName(1,"m");
+        doubleState.setParticlesName(2,"n");
+        doubleStates.add(doubleState);
+        state=new double[]{a*c,-a*d,b*c,-b*d};
+        doubleState=new DoubleState(state);
+        doubleState.setParticlesName(1,"m");
+        doubleState.setParticlesName(2,"n");
+        doubleStates.add(doubleState);
+        state=new double[]{a*c,-a*d,-b*c,b*d};
+        doubleState=new DoubleState(state);
+        doubleState.setParticlesName(1,"m");
+        doubleState.setParticlesName(2,"n");
+        doubleStates.add(doubleState);
+        /*
+           用于Bell态测量的测量算子,取值Omega为最小值，epsilon为固定值1/(4(abcd)^2)
+         */
+        double omega=getOmega(a,b,c,d);
+        double epsilon=1/(4*Math.pow(a*b*c*d,2));
+        ArrayList<Matrix> oparators=new ArrayList<>();
+        //算子1
+        Matrix vector1 = DenseMatrix.Factory.zeros(4, 1);
+        vector1.setAsDouble(1/(a*c), 0, 0);
+        vector1.setAsDouble(1/(a*d), 1, 0);
+        vector1.setAsDouble(1/(b*c), 2, 0);
+        vector1.setAsDouble(1/(b*d), 3, 0);
+        Matrix opera1=vector1.mtimes(vector1.transpose());
+        opera1=opera1.times(1/(omega*epsilon));
+        oparators.add(opera1);
+        //算子2
+        Matrix vector2 = DenseMatrix.Factory.zeros(4, 1);
+        vector2.setAsDouble(1/(a*c), 0, 0);
+        vector2.setAsDouble(1/(a*d), 1, 0);
+        vector2.setAsDouble(-1/(b*c), 2, 0);
+        vector2.setAsDouble(-1/(b*d), 3, 0);
+        Matrix opera2=vector2.mtimes(vector2.transpose());
+        opera2=opera2.times(1/(omega*epsilon));
+        oparators.add(opera2);
+        //算子3
+        Matrix vector3 = DenseMatrix.Factory.zeros(4, 1);
+        vector3.setAsDouble(1/(a*c), 0, 0);
+        vector3.setAsDouble(-1/(a*d), 1, 0);
+        vector3.setAsDouble(1/(b*c), 2, 0);
+        vector3.setAsDouble(-1/(b*d), 3, 0);
+        Matrix opera3=vector3.mtimes(vector3.transpose());
+        opera3=opera3.times(1/(omega*epsilon));
+        oparators.add(opera3);
+        //算子4
+        Matrix vector4 = DenseMatrix.Factory.zeros(4, 1);
+        vector4.setAsDouble(1/(a*c), 0, 0);
+        vector4.setAsDouble(-1/(a*d), 1, 0);
+        vector4.setAsDouble(-1/(b*c), 2, 0);
+        vector4.setAsDouble(1/(b*d), 3, 0);
+        Matrix opera4=vector4.mtimes(vector4.transpose());
+        opera4=opera4.times(1/(omega*epsilon));
+        oparators.add(opera4);
+        System.out.println("测量算子为");
+        System.out.println(oparators.get(0));
 
+        /*
+          调用方法
+         */
+        double[] multi=new double[]{0.25*a*c,0,0,0,0,0.25*a*d,0,0,0,0,0.25*b*c,0,0,0,0,0.25*b*d};
+        MultiState multiState=new MultiState(multi,4);
+        multiState.setParticlesName(1,"1");
+        multiState.setParticlesName(2,"2");
+        multiState.setParticlesName(3,"m");
+        multiState.setParticlesName(4,"n");
+        boolean temp= POVMMeasure.measurePOVMDouble(multiState,oparators,doubleStates);
+    }
+    //Omega的值>=16*max{(bd)^2,(ac)^2,(bc)^2,(ad)^2}
+    public static double  getOmega(double a,double b,double c,double d){
+        double max=Math.pow(b*d,2);
+        max=Math.pow(a*c,2)>max?Math.pow(a*c,2):max;
+        max=Math.pow(b*c,2)>max?Math.pow(b*c,2):max;
+        max=Math.pow(a*d,2)>max?Math.pow(a*d,2):max;
+        return 16*max;
     }
 }

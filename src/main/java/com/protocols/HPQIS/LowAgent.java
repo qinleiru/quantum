@@ -1293,6 +1293,6 @@ public class LowAgent implements Agent {
                 }
             }
         }
-        MathOperation.normalization(systemState.getState());
+//        MathOperation.normalization(systemState.getState());
     }
 }

@@ -1,28 +1,30 @@
 package com.quantum.tools;
 
-public class Range {
-    private double start;
+import java.math.BigDecimal;
 
-    public Range(double start, double end) {
+public class Range {
+    private BigDecimal start;
+
+    public Range(BigDecimal start, BigDecimal end) {
         this.start = start;
         this.end = end;
     }
 
-    private double end;
+    private BigDecimal end;
 
-    public double getStart() {
+    public BigDecimal getStart() {
         return start;
     }
 
-    public void setStart(double start) {
+    public void setStart(BigDecimal start) {
         this.start = start;
     }
 
-    public double getEnd() {
+    public BigDecimal getEnd() {
         return end;
     }
 
-    public void setEnd(double end) {
+    public void setEnd(BigDecimal end) {
         this.end = end;
     }
 }

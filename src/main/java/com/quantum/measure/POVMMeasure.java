@@ -10,6 +10,7 @@ import org.ujmp.core.Matrix;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
+import java.util.Random;
 
 public class POVMMeasure {
     /**
@@ -17,106 +18,110 @@ public class POVMMeasure {
      * @param state      系统的态
      * @param oparators   POVM 采用的算子
      * @param doubleStates    要区分的量子态，区分的量子态包含了粒子的名称
-     * @return
+     * @return      返回值为int类型，int的值与对应的要区分的量子态一一对应，超过doubleStates的长度，代表测量失败
      */
     //todo:需要整理
-    public static boolean measurePOVMDouble(QuantumState state, ArrayList<Matrix> oparators, ArrayList<DoubleState> doubleStates){
-        //计算进行量子门操作的算子，用于模拟坍缩
-        double[][] quantumGate={doubleStates.get(0).getState(),doubleStates.get(1).getState(),doubleStates.get(2).getState(),doubleStates.get(3).getState()};
-        LinkedHashMap<DoubleState, Range> probabilities=new LinkedHashMap<>();  //存取得到的不同的态的测量的概率
-        //计算坍缩到不同量子态的概率,使用公式进行计算考虑到精确度的原因使用BigDecimal
-        BigDecimal start=BigDecimal.ZERO;
+    public static int measurePOVMDouble(QuantumState state, ArrayList<Matrix> oparators, ArrayList<DoubleState> doubleStates){
+        //计算坍缩到不同量子态的概率
+        double[] probabilities=new double[doubleStates.size()];
         for(int i=0;i<doubleStates.size();i++){
             for(int j=0;j<oparators.size();j++){
-                double[] state1=doubleStates.get(i).getState();
-                Matrix temp=Matrix.Factory.importFromArray(state1).transpose();
-                System.out.println("列向量的值为\n"+temp);
-                Matrix condition=oparators.get(j).mtimes(temp);
-                System.out.println("算子与列向量的乘积为\n"+condition);
-                if(!isZeroMatrix(condition)){
-                    System.out.println("i的值为"+i);
-                    System.out.println("j的值为"+j);
-                    Matrix linshi=Matrix.Factory.importFromArray(doubleStates.get(i).getState());
-                    System.out.println("行向量为"+linshi);
-                    Matrix probability=linshi.mtimes(condition);
-                    System.out.println("最终求得的概率值为"+probability);
-                    System.out.println("测的概率为\n"+BigDecimal.valueOf(probability.getAsDouble(0,0)));
-                    Range range;
-                    if(i==0) {
-                        range=new Range(start,BigDecimal.valueOf(probability.doubleValue()));
-                        probabilities.put(doubleStates.get(i), range);
-                        start=start.add(BigDecimal.valueOf(probability.doubleValue()));
-                    }
-                    else{
-                        range=new Range(start,start.add(BigDecimal.valueOf(probability.doubleValue())));
-                        probabilities.put(doubleStates.get(i),range);
-                        start=start.add(BigDecimal.valueOf(probability.doubleValue()));                    }
+                double[] arrayState=doubleStates.get(i).getState();
+                //求对应每个态的概率
+                Matrix condition=Matrix.Factory.importFromArray(arrayState).mtimes(oparators.get(j).mtimes(Matrix.Factory.importFromArray(arrayState).transpose()));
+                BigDecimal bigDecimal=BigDecimal.valueOf(condition.getAsDouble(0,0));
+                double value=bigDecimal.setScale(10,BigDecimal.ROUND_HALF_UP).doubleValue();
+                if(value!=0){
+                    probabilities[i]=value;
                 }
             }
         }
-        //进行转换，要区别的量子态doubleState[0]对应|00>,doubleState[1]对应为|01>,doubleState[2]对应为|10>,doubleState[1]对应为|11>
-        QuantumOperation.quantumDoublePerform(state,doubleStates.get(0).getParticlesName().get(0),doubleStates.get(0).getParticlesName().get(1),quantumGate);
         //生成随机数，模拟测量结果
-        BigDecimal random=BigDecimal.valueOf(Math.random());
+        double random=new Random().nextDouble();
+        System.out.println("随机数的值为"+random);
         int index=0;   //索引值+测量结果
-        for (index=0;index<probabilities.size();index++){
-            BigDecimal borderStart=probabilities.get(doubleStates.get(index)).getStart();
-            BigDecimal borderEnd=probabilities.get(doubleStates.get(index)).getStart();
-            //生成的随机数在此范围内
-            if((random.compareTo(borderStart)==-1||random.compareTo(borderStart)==0)&&random.compareTo(borderEnd)==1){
-                 break;
+        double sum=0;
+        for (;index<probabilities.length;index++) {
+            if (index == 0) {
+                if (random >= 0 && random < probabilities[index])
+                    break;
+            } else {
+                if (random >= sum && random < ( probabilities[index] + sum )) {
+                    break;
+                }
+            }
+            sum += probabilities[index];
+        }
+        if(index==4){return 4;}
+        //todo:接下来模拟塌缩的过程有待验证
+        //计算进行量子门操作的算子，用于模拟坍缩
+        double[][] quantumOperation=new double[4][4];
+        for (int i=0;i<4;i++){
+            for(int j=0;j<4;j++){
+                quantumOperation[i][j]=1/(4*doubleStates.get(i).getState()[j]);
             }
         }
-        if(index==4)  return false;   //测量失败返回
-        int size=state.getParticlesName().size();
-        //将测量的两个粒子后置，便于进行坍缩的实现
-        QuantumOperation.quantumSwap(state,state.getParticlesName().get(size-2),doubleStates.get(0).getParticlesName().get(0));
-        QuantumOperation.quantumSwap(state,state.getParticlesName().get(size-1),doubleStates.get(0).getParticlesName().get(1));
-        switch(index){
+        /**
+          用于测试的代码，输出量子门
+         */
+        System.out.println("输出用于转换的算子");
+        for (int i=0;i<4;i++){
+            for(int j=0;j<4;j++){
+                System.out.print(quantumOperation[i][j]+"   ");
+            }
+            System.out.println();
+        }
+        System.out.println("对应的index的值为"+index);
+        //进行转换，要区别的量子态doubleState[0]对应|00>,doubleState[1]对应为|01>,doubleState[2]对应为|10>,doubleState[1]对应为|11>
+        String particle1=doubleStates.get(0).getParticlesName().get(0);
+        String particle2=doubleStates.get(1).getParticlesName().get(1);
+        System.out.println("量子塌缩前对应的量子态");
+        System.out.println(state.showBinaryState());
+        state.showParticleName();
+        System.out.println();
+        QuantumOperation.quantumDoublePerform(state,particle1,particle2,quantumOperation);
+        collapseSate(state,index);
+        MathOperation.normalization(state.getState());
+        System.out.println("经过POVM测量之后系统的态为");
+        System.out.println(state.showBinaryState());
+        state.showParticleName();
+        System.out.println();
+        return index;
+    }
+
+    public static void collapseSate(QuantumState state,int result){
+        int size=state.getParticles();
+        switch(result){
             case 0:
                 for(int i=0;i<state.getState().length;i++) {
-                    if (!ProjectiveMeasure.isBitZero(i, size-1, state.getParticles())&&ProjectiveMeasure.isBitZero(i,size,state.getParticles())) {
+                    if (!(ProjectiveMeasure.isBitZero(i, size-1, state.getParticles())&&(ProjectiveMeasure.isBitZero(i,size,state.getParticles())))) {
                         state.getState()[i]=0;
                     }
                 }
-                    break;
+                break;
             case 1:
                 for(int i=0;i<state.getState().length;i++) {
-                    if (!ProjectiveMeasure.isBitZero(i, size-1, state.getParticles())&&ProjectiveMeasure.isBitOne(i,size,state.getParticles())) {
+                    if (!(ProjectiveMeasure.isBitZero(i, size-1, state.getParticles())&&ProjectiveMeasure.isBitOne(i,size,state.getParticles()))) {
                         state.getState()[i]=0;
                     }
                 }
                 break;
             case 2:
                 for(int i=0;i<state.getState().length;i++) {
-                    if (!ProjectiveMeasure.isBitOne(i, size-1, state.getParticles())&&ProjectiveMeasure.isBitZero(i,size,state.getParticles())) {
+                    if (!(ProjectiveMeasure.isBitOne(i, size-1, state.getParticles())&&ProjectiveMeasure.isBitZero(i,size,state.getParticles()))) {
                         state.getState()[i]=0;
                     }
                 }
                 break;
             case 3:
                 for(int i=0;i<state.getState().length;i++) {
-                    if (!ProjectiveMeasure.isBitOne(i, size-1, state.getParticles())&&ProjectiveMeasure.isBitOne(i,size,state.getParticles())) {
+                    if (!(ProjectiveMeasure.isBitOne(i, size-1, state.getParticles())&&ProjectiveMeasure.isBitOne(i,size,state.getParticles()))) {
                         state.getState()[i]=0;
                     }
                 }
                 break;
         }
-        System.out.println("经过POVM测量之后系统的态为");
-        System.out.println(state.showBinaryState());
-        state.showParticleName();
-        return true;
+
     }
 
-    public static boolean isZeroMatrix(Matrix matrix){
-        for(int i=0;i<matrix.getRowCount();i++){
-            for(int j=0;j<matrix.getColumnCount();j++){
-                double result = (double)Math.round(matrix.getAsDouble(i,j)*10000)/10000;  //保留小数点后四位
-                if(result!=0){
-                    return false;
-                }
-            }
-        }
-        return true;
-    }
 }

@@ -101,7 +101,7 @@ public class POVMMeasureTest {
         multiState.setParticlesName(2,"2");
         multiState.setParticlesName(3,"m");
         multiState.setParticlesName(4,"n");
-        boolean temp=POVMMeasure.measurePOVMDouble(multiState,oparators,doubleStates);
+        POVMMeasure.measurePOVMDouble(multiState,oparators,doubleStates);
         System.out.println("测试测试测试测试");
 
     }

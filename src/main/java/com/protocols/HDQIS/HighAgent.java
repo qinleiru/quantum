@@ -1,6 +1,5 @@
 package com.protocols.HDQIS;
 
-import com.protocols.HPQIS.HPQIS;
 import com.quantum.gate.QuantumGate;
 import com.quantum.measure.Measures;
 import com.quantum.measure.ProjectiveMeasure;

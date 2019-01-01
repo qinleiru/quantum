@@ -7,7 +7,7 @@ import com.quantum.state.*;
 import com.quantum.tools.QuantumState;
 
 //Xu等人提出的确定性的分层量子信息拆分协议，下面是逻辑的实现。其中有一个权限高的代理者，两个权限低的代理者
-public class HDQIS2 {
+public class HDQIS3 {
     public static void run() {
         //准备要传送的秘密两量子比特
         DoubleState doubleState = new DoubleState();

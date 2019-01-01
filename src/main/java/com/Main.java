@@ -86,19 +86,19 @@ public class Main {
         Matrix opera4=vector4.mtimes(vector4.transpose());
         opera4=opera4.times(1/(omega*epsilon));
         oparators.add(opera4);
-        System.out.println("测量算子为");
-        System.out.println(oparators.get(0));
 
         /*
           调用方法
          */
-        double[] multi=new double[]{0.25*a*c,0,0,0,0,0.25*a*d,0,0,0,0,0.25*b*c,0,0,0,0,0.25*b*d};
-        MultiState multiState=new MultiState(multi,4);
-        multiState.setParticlesName(1,"1");
-        multiState.setParticlesName(2,"2");
-        multiState.setParticlesName(3,"m");
-        multiState.setParticlesName(4,"n");
-        boolean temp= POVMMeasure.measurePOVMDouble(multiState,oparators,doubleStates);
+        for(int i=0;i<100;i++) {
+            double[] multi=new double[]{0.25*a*c,0,0,0,0,0.25*a*d,0,0,0,0,0.25*b*c,0,0,0,0,0.25*b*d};
+            MultiState multiState=new MultiState(multi,4);
+            multiState.setParticlesName(1,"1");
+            multiState.setParticlesName(2,"2");
+            multiState.setParticlesName(3,"m");
+            multiState.setParticlesName(4,"n");
+            POVMMeasure.measurePOVMDouble(multiState, oparators, doubleStates);
+        }
     }
     //Omega的值>=16*max{(bd)^2,(ac)^2,(bc)^2,(ad)^2}
     public static double  getOmega(double a,double b,double c,double d){

@@ -1,4 +1,4 @@
-package com.protocols.HPQIS;
+package com.protocols.HDQIS2;
 
 import org.junit.Test;
 

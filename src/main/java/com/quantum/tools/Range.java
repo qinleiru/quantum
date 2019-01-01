@@ -3,28 +3,28 @@ package com.quantum.tools;
 import java.math.BigDecimal;
 
 public class Range {
-    private BigDecimal start;
+    private double start;
+    private double end;
 
-    public Range(BigDecimal start, BigDecimal end) {
+
+    public Range(double start, double end) {
         this.start = start;
         this.end = end;
     }
 
-    private BigDecimal end;
-
-    public BigDecimal getStart() {
+    public double getStart() {
         return start;
     }
 
-    public void setStart(BigDecimal start) {
+    public void setStart(double start) {
         this.start = start;
     }
 
-    public BigDecimal getEnd() {
+    public double getEnd() {
         return end;
     }
 
-    public void setEnd(BigDecimal end) {
+    public void setEnd(double end) {
         this.end = end;
     }
 }

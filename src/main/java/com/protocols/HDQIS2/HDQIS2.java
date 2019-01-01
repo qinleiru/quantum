@@ -1,7 +1,6 @@
-package com.protocols.HPQIS;
+package com.protocols.HDQIS2;
 
 import com.quantum.measure.Measures;
-import com.quantum.oparate.MathOperation;
 import com.quantum.oparate.QuantumOperation;
 import com.quantum.state.DoubleState;
 import com.quantum.state.MultiState;
@@ -10,17 +9,15 @@ import com.quantum.tools.Tools;
 
 import java.util.ArrayList;
 
-//下面仿真本论文中提出的概率型分层量子信息拆分协议
+//下面仿真Xu等人提出的分层量子信息拆分协议
 //todo：目前只实现了1个权限高的代理者2个权限低的代理者
-//todo：用于传送的秘密量子信息为固定的
-public class HPQIS {
+public class HDQIS2 {
     /**
      * 定义变量用于存储测量结果
      */
     public static MultiState systemState;  //记录系统的态
     public static int resultX;  //对粒子x、粒子1进行Bell态的测量结果
     public static int resultY;  //对粒子y、粒子5进行Bell态的测量结果
-    public static final double [] coefficients=getCoefficients();//构建量子信道的两个簇态的系数，分别对应a、b、c、d\
     public static void run() {
         ArrayList<HighAgent> highAgents = new ArrayList<>();   //用于存储权限高的代理者
         ArrayList<LowAgent> lowAgents = new ArrayList<>();    //用于存储权限低的代理者
@@ -134,28 +131,8 @@ public class HPQIS {
         state.setState(ownState);
         return state;
     }
-
-    /**
-     * 此方法用于返回构建信道的两个非最大纠缠态使用的系数
-     * @return
-     */
-    public static double[] getCoefficients(){
-        double a=Math.random();
-        double b=Math.random();
-        double clusterState1[]=new double[]{a,a,b,b};
-        MathOperation.normalization(clusterState1);
-        a=clusterState1[0];
-        b=clusterState1[2];
-        double c=Math.random();
-        double d=Math.random();
-        double clusterState2[]=new double[]{c,c,d,d};
-        MathOperation.normalization(clusterState2);
-        c=clusterState1[0];
-        d=clusterState1[2];
-        return new double[]{a,b,c,d};
-    }
     public static void main(String[] args){
-        for (int i=0;i<100;i++) {
+        for (int i=0;i<10;i++) {
             run();
         }
     }

@@ -5,6 +5,7 @@ import com.quantum.measure.ProjectiveMeasure;
 import com.quantum.oparate.QuantumOperation;
 import com.quantum.state.*;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 import static com.protocols.HPQIS.HPQIS.coefficients;
@@ -18,6 +19,8 @@ public class Sender implements com.quantum.role.Sender {
     private ClusterState clusterState2;
     private ArrayList<HighAgent> highAgents;
     private ArrayList<LowAgent> lowAgents;
+    public  String printMessage="";
+
 
     public Sender(ArrayList<HighAgent> highAgents, ArrayList<LowAgent> lowAgents){
         this.highAgents=highAgents;
@@ -43,7 +46,8 @@ public class Sender implements com.quantum.role.Sender {
         /**
          * 用于测试的代码
          */
-        System.out.println("Alice准备的秘密量子态为"+doubleState.showBinaryState());
+        SimpleDateFormat df=new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+        printMessage+=df.format(System.currentTimeMillis())+" "+ "Alice准备秘密量子态为"+doubleState.showBinaryState()+"\n";
     }
 
     /**
@@ -125,13 +129,8 @@ public class Sender implements com.quantum.role.Sender {
         /**
          * 测试
          */
-        System.out.println("准备的第一个簇态为\n"+clusterState1.showBinaryState());
-        clusterState1.showParticleName();
-        System.out.println();
-
-        System.out.println("准备的第二个簇态为\n"+clusterState2.showBinaryState());
-        clusterState2.showParticleName();
-        System.out.println();
+        SimpleDateFormat df=new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+        printMessage+=df.format(System.currentTimeMillis())+" "+ "Alice准备量子信道需要的两个簇态，第一个簇态为"+clusterState1.showBinaryState()+"第二个簇态为"+clusterState2.showBinaryState()+"\n";
     }
 
     /**
@@ -140,6 +139,7 @@ public class Sender implements com.quantum.role.Sender {
     public void send(){
         int highParticle=this.highAgents.size();
         int particle=this.highAgents.size()+this.lowAgents.size()+1;
+        SimpleDateFormat df=new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
         //发送粒子给高权限的代理者
         for(int i=0;i<highAgents.size();i++){
             ArrayList<String> particlesName=new ArrayList<>();
@@ -150,6 +150,7 @@ public class Sender implements com.quantum.role.Sender {
             //簇态2中的粒子
             particlesName.add(""+(particle+(i+2)));
             highAgents.get(i).recieveParticles(particlesName);
+            printMessage+=df.format(System.currentTimeMillis())+" "+ "Alice发送粒子"+(i+2)+"、粒子"+(particle+(i+2))+"给权限高的代理者Bob\n";
         }
         //发送粒子给低权限的代理者
         for(int i=0;i<lowAgents.size();i++){
@@ -162,6 +163,9 @@ public class Sender implements com.quantum.role.Sender {
             particlesName.add(""+(particle+highParticle+(i+2)));
             lowAgents.get(i).recieveParticles(particlesName);
         }
+        printMessage+=df.format(System.currentTimeMillis())+" "+ "Alice发送粒子3、粒子7给权限低的代理者Charlie\n";
+        printMessage+=df.format(System.currentTimeMillis())+" "+ "Alice发送粒子4、粒子8给权限低的代理者David\n";
+
     }
 
     /**
@@ -172,6 +176,7 @@ public class Sender implements com.quantum.role.Sender {
         int lowParticle=this.lowAgents.size();
         //整个系统的初始状态为
         systemState=QuantumOperation.quantumTensor(QuantumOperation.quantumTensor(doubleState,clusterState1),clusterState2);
+        SimpleDateFormat df=new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
         /*
            测试代码
          */
@@ -192,5 +197,7 @@ public class Sender implements com.quantum.role.Sender {
 //        System.out.println("发送者测量完成之后系统的态为");
 //        System.out.println(systemState.showBinaryState());
 //        systemState.showParticleName();
+        printMessage+=df.format(System.currentTimeMillis())+" "+ "Alice对手中的粒子x、粒子1以及粒子y、粒子5分别进行Bell态测量，并公布测量结果";
+
     }
 }

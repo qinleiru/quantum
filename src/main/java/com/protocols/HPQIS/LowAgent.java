@@ -21,6 +21,7 @@ import static com.protocols.HPQIS.HPQIS.systemState;
 public class LowAgent implements Agent {
     private ArrayList<String> particleName=new ArrayList<String>(); //代理者手中的粒子
     private HashMap<String,Integer> measureResult=new HashMap<String,Integer>();  //不同粒子的测量结果
+    public boolean POVMResult=true;
     /**
      * 代理者对手中的所有粒子进行单粒子测量
      * @param measures
@@ -755,6 +756,7 @@ public class LowAgent implements Agent {
 
     public void performOperation(int situation,int result){
         if(result==4){
+            POVMResult=false;
             System.out.println("((((((((((((POVM测量失败)))))))))))))))");
             return;
         }

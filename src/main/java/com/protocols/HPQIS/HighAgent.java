@@ -23,6 +23,7 @@ import static com.protocols.HPQIS.HPQIS.systemState;
 public class HighAgent implements Agent {
     private ArrayList<String> particleName = new ArrayList<String>(); //代理者手中的粒子
     private HashMap<String, Integer> measureResult = new HashMap<String, Integer>();  //不同粒子的测量结果
+    public boolean POVMResult=true;  //用于存储POVM测量之后的结果
 
     /**
      * 代理者对手中的所有粒子进行单粒子测量
@@ -400,6 +401,10 @@ public class HighAgent implements Agent {
         double c=coefficients[2];
         double d=coefficients[3];
         int result=performPOVM(a*c,a*d,b*c,b*d);
+        if(result==4){
+            POVMResult=false;
+            System.out.println("(((((((((((((测量失败)))))))))))");
+        }
         //POVM测量之后进行量子操作
         if((resultAliceX == 1 && resultAliceY == 1)||(resultAliceX == 1 && resultAliceY == 3)||(resultAliceX == 3 && resultAliceY == 1)||(resultAliceX == 3 && resultAliceY == 3)){
             if (result==0){

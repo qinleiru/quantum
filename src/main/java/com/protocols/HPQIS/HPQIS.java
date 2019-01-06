@@ -7,7 +7,10 @@ import com.quantum.state.DoubleState;
 import com.quantum.state.MultiState;
 import com.quantum.tools.QuantumState;
 import com.quantum.tools.Tools;
+import com.view.component.TextComponent;
 
+import java.awt.*;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 //下面仿真本论文中提出的概率型分层量子信息拆分协议
@@ -21,7 +24,7 @@ public class HPQIS {
     public static int resultX;  //对粒子x、粒子1进行Bell态的测量结果
     public static int resultY;  //对粒子y、粒子5进行Bell态的测量结果
     public static final double [] coefficients=getCoefficients();//构建量子信道的两个簇态的系数，分别对应a、b、c、d\
-    public static void run() {
+    public static void run(TextComponent textArea,String agents) {
         ArrayList<HighAgent> highAgents = new ArrayList<>();   //用于存储权限高的代理者
         ArrayList<LowAgent> lowAgents = new ArrayList<>();    //用于存储权限低的代理者
         HighAgent Bob=new HighAgent();
@@ -32,15 +35,25 @@ public class HPQIS {
         lowAgents.add(David);
         Sender Alice = new Sender(highAgents, lowAgents);
         Alice.execute();  //Alice进行了操作,包括准备秘密量子比特、准备两个簇态、发送粒子以及测量等操作
+        SimpleDateFormat df=new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+        textArea.setCommText(Alice.printMessage);
         boolean highAuthor=false;       //此变量用于标志哪一种权限的代理者来恢复秘密消息
+        switch (agents) {
+            case "权限高":
+                highAuthor=true;
+                break;
+            case "权限低":
+                highAuthor=false;
+                break;
+        }
         if(highAuthor){
             //协议中的权限高的代理者来恢复秘密量子比特
-            System.out.println("权限高的代理者Bob恢复秘密量子比特");
+            textArea.setCommText(df.format(System.currentTimeMillis())+" "+ "权限高的代理者Bob恢复秘密量子比特");
             int random=Tools.randInt(1,2);
             if(random==1){
-                System.out.println("权限低的代理者Charlie对手中的粒子进行Z基测量");
+                textArea.setCommText(df.format(System.currentTimeMillis())+" "+ "Charlie对手中的粒子进行Z基测");
                 Charlie.measure(Measures.Z);  //对手中的粒子进行测量
-                System.out.println("Charlie将测量结果发送给Bob");
+                textArea.setCommText(df.format(System.currentTimeMillis())+" "+ "Charlie将测量结果发送给Bob");
                 Charlie.sendResult(Bob);
                 /*
                     用于测试的代码
@@ -50,9 +63,9 @@ public class HPQIS {
 //                systemState.showParticleName();
             }
             else{
-                System.out.println("权限低的代理者David对手中的粒子进行Z基测量");
+                textArea.setCommText(df.format(System.currentTimeMillis())+" "+ "David对手中的粒子进行Z基测量");
                 David.measure(Measures.Z);    //对手中的粒子进行测量
-                System.out.println("David将测量结果发送给Bob");
+                textArea.setCommText(df.format(System.currentTimeMillis())+" "+ "David将测量结果发送给Bob");
                 David.sendResult(Bob);
                 /*
                     用于测试的代码
@@ -61,47 +74,58 @@ public class HPQIS {
 //                System.out.println(systemState.showBinaryState());
 //                systemState.showParticleName();
             }
-            System.out.println("Bob收到代理者测量结果");
-            System.out.println("Bob对手中的粒子进行操作，恢复秘密量子比特");
+            textArea.setCommText(df.format(System.currentTimeMillis())+" "+ "Bob收到代理者测量结果");
+            textArea.setCommText(df.format(System.currentTimeMillis())+" "+ "Bob对手中的粒子进行操作，恢复秘密量子比特");
             Bob.restore();
-            System.out.println("此时Bob手中的粒子态为");
-            System.out.println(getOwnSate(systemState,Bob.getParticleName()).showBinaryState());
+            textArea.setCommText(df.format(System.currentTimeMillis())+" "+ "Bob引入辅助粒子m、辅助粒子n执行POVM测量并进行操作恢复秘密量子比特");
+           if(Bob.POVMResult==false){
+               textArea.setCommText(df.format(System.currentTimeMillis())+" "+ "Bob进行POVM测量失败");
+               return;
+           }
+            textArea.setCommText(df.format(System.currentTimeMillis())+" "+ "Bob手中的粒子态为"+getOwnSate(systemState,Bob.getParticleName()).showBinaryState());
         }
         else{
             //协议中权限低的代理者来恢复秘密量子比特
             int random=Tools.randInt(1,2);
             if(random==1){
-                System.out.println("权限低的代理者Charlie来恢复秘密量子比特");
-                System.out.println("Bob对手中的粒子进行X基测量");
+                textArea.setCommText(df.format(System.currentTimeMillis())+" "+ "Charlie来恢复秘密量子比特");
+                textArea.setCommText(df.format(System.currentTimeMillis())+" "+ "Bob对手中的粒子进行X基测量");
                 Bob.measure(Measures.X);
-                System.out.println("Bob将测量结果发送给Charlie");
+                textArea.setCommText(df.format(System.currentTimeMillis())+" "+ "Bob将测量结果发送给Charlie");
                 Bob.sendResult(Charlie);
-                System.out.println("David对手中的粒子进行X基测量");
+                textArea.setCommText(df.format(System.currentTimeMillis())+" "+ "David对手中的粒子进行X基测量");
                 David.measure(Measures.X);
-                System.out.println("David将测量结果发送给Charlie");
+                textArea.setCommText(df.format(System.currentTimeMillis())+" "+ "David将测量结果发送给Charlie");
                 David.sendResult(Charlie);
-                System.out.println("Charlie收到代理者测量结果");
-                System.out.println("Charlie对手中的粒子进行操作，恢复秘密量子比特");
+                textArea.setCommText(df.format(System.currentTimeMillis())+" "+ "Charlie收到代理者测量结果");
+                textArea.setCommText(df.format(System.currentTimeMillis())+" "+ "Charlie对手中的粒子进行操作，恢复秘密量子比特");
                 Charlie.restore();
-                System.out.println("此时Charlie手中的粒子态为");
-                System.out.println(getOwnSate(systemState,Charlie.getParticleName()).showBinaryState());
+                textArea.setCommText(df.format(System.currentTimeMillis())+" "+ "Charlie引入辅助粒子m、辅助粒子n执行POVM测量并进行操作恢复秘密量子比特");
+                if(Charlie.POVMResult==false){
+                    textArea.setCommText(df.format(System.currentTimeMillis())+" "+ "Charlie进行POVM测量失败");
+                    return;
+                }
+                textArea.setCommText(df.format(System.currentTimeMillis())+" "+ "Charlie手中的粒子态为"+getOwnSate(systemState,Charlie.getParticleName()).showBinaryState());
             }
             else{
-                System.out.println("权限低的代理者David来恢复秘密量子比特");
-                System.out.println("Bob对手中的粒子进行X基测量");
+                textArea.setCommText(df.format(System.currentTimeMillis())+" "+ "David来恢复秘密量子比特");
+                textArea.setCommText(df.format(System.currentTimeMillis())+" "+ "Bob对手中的粒子进行X基测量");
                 Bob.measure(Measures.X);
-                System.out.println("Bob将测量结果发送给David");
+                textArea.setCommText(df.format(System.currentTimeMillis())+" "+ "Bob将测量结果发送给David");
                 Bob.sendResult(David);
-                System.out.println("Charlie对手中的粒子进行X基测量");
+                textArea.setCommText(df.format(System.currentTimeMillis())+" "+ "Charlie对手中的粒子进行X基测量");
                 Charlie.measure(Measures.X);
-                System.out.println("Charlie将测量结果发送给David");
+                textArea.setCommText(df.format(System.currentTimeMillis())+" "+ "Charlie将测量结果发送给David");
                 Charlie.sendResult(David);
-                System.out.println("David收到代理者测量结果");
-                System.out.println("David对手中的粒子进行操作，恢复秘密量子比特");
+                textArea.setCommText(df.format(System.currentTimeMillis())+" "+ "David收到代理者测量结果");
+                textArea.setCommText(df.format(System.currentTimeMillis())+" "+ "David对手中的粒子进行操作，恢复秘密量子比特");
                 David.restore();
-                System.out.println("此时David手中的粒子态为");
-                System.out.println(getOwnSate(systemState,David.getParticleName()).showBinaryState());
-
+                textArea.setCommText(df.format(System.currentTimeMillis())+" "+ "David引入辅助粒子m、辅助粒子n执行POVM测量并进行操作恢复秘密量子比特");
+                if(David.POVMResult==false){
+                    textArea.setCommText(df.format(System.currentTimeMillis())+" "+ "David进行POVM测量失败");
+                    return;
+                }
+                textArea.setCommText(df.format(System.currentTimeMillis())+" "+ "David手中的粒子态为"+getOwnSate(systemState,David.getParticleName()).showBinaryState());
             }
         }
         System.out.println("----------------------------------------------------");
@@ -154,9 +178,9 @@ public class HPQIS {
         d=clusterState1[2];
         return new double[]{a,b,c,d};
     }
-    public static void main(String[] args){
-        for (int i=0;i<100;i++) {
-            run();
-        }
-    }
+//    public static void main(String[] args){
+//        for (int i=0;i<100;i++) {
+//            run();
+//        }
+//    }
 }

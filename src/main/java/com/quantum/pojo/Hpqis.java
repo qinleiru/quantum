@@ -1,10 +1,25 @@
 package com.quantum.pojo;
 
+/**
+ * 对应数据库中的表
+ */
 public class Hpqis {
     private  long id;
     private double value_of_a;
     private double value_of_b;
     private double value_of_c;
+    private double value_of_d;
+    private double value_of_omega;
+    private int result;    //1表示成功，0表示失败
+    private int authority;   //1表示权限高，0表示权限低
+
+    public int getAuthority() {
+        return authority;
+    }
+
+    public void setAuthority(int authority) {
+        this.authority = authority;
+    }
 
     public long getId() {
         return id;
@@ -62,7 +77,4 @@ public class Hpqis {
         this.result = result;
     }
 
-    private double value_of_d;
-    private double value_of_omega;
-    private int result;
 }

@@ -36,6 +36,8 @@ public class HpqisTest {
         System.out.println(hpqis.getValue_of_c());
         System.out.println(hpqis.getValue_of_d());
         System.out.println(hpqis.getResult());
+        System.out.println(hpqis.getAuthority());
+
         //关闭session
         session.close();
     }

@@ -61,7 +61,7 @@ public class Sender implements com.quantum.role.Sender {
         clusterState.setParticlesName(3,"C");
         clusterState.setParticlesName(4,"D");
         SimpleDateFormat df=new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
-        printMessage+=df.format(System.currentTimeMillis())+" "+ "Alice准备量子信道需要的两个簇态\n";
+        printMessage+=df.format(System.currentTimeMillis())+" "+ "Alice准备量子信道需要的纠缠态\n";
     }
 
     /**

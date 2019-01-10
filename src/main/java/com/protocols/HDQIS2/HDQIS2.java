@@ -131,9 +131,9 @@ public class HDQIS2 {
         state.setState(ownState);
         return state;
     }
-    public static void main(String[] args){
-        for (int i=0;i<10;i++) {
-            run();
-        }
-    }
+//    public static void main(String[] args){
+//        for (int i=0;i<10;i++) {
+//            run();
+//        }
+//    }
 }

@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 public class Main {
     //用于测试POVM测量之后系统态的形式
-    public static void main(String[] args){
+    public static void mains(String[] args){
         /*
            添加要区分的两粒子态,
          */

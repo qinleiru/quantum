@@ -1,4 +1,4 @@
-package com.quantum.pojo;
+package com.protocols.pojo;
 
 /**
  * 对应数据库中的表
@@ -12,6 +12,18 @@ public class Hpqis {
     private double value_of_omega;
     private int result;    //1表示成功，0表示失败
     private int authority;   //1表示权限高，0表示权限低
+    public  Hpqis(){
+
+    }
+    public  Hpqis(double value_of_a,double value_of_b,double value_of_c,double value_of_d,double value_of_omega,int result,int authority){
+        this.value_of_a=value_of_a;
+        this.value_of_b=value_of_b;
+        this.value_of_c=value_of_c;
+        this.value_of_d=value_of_d;
+        this.value_of_omega=value_of_omega;
+        this.result=result;
+        this.authority=authority;
+    }
 
     public int getAuthority() {
         return authority;
@@ -75,6 +87,10 @@ public class Hpqis {
 
     public void setResult(int result) {
         this.result = result;
+    }
+    @Override
+    public  String toString(){
+        return this.value_of_a+" "+this.value_of_b+" "+this.value_of_c+" "+this.value_of_d+" "+this.value_of_omega+" "+this.result+" "+this.authority;
     }
 
 }

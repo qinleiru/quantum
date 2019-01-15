@@ -5,7 +5,7 @@ import com.quantum.measure.Measures;
 import com.quantum.measure.POVMMeasure;
 import com.quantum.measure.ProjectiveMeasure;
 import com.quantum.oparate.QuantumOperation;
-import com.quantum.role.Agent;
+import com.protocols.role.Agent;
 import com.quantum.state.CommonState;
 import com.quantum.state.DoubleState;
 import com.quantum.state.SingleState;
@@ -694,7 +694,8 @@ public class LowAgent implements Agent {
     }
 
     public  ArrayList<Matrix> getOparators(double argu1,double argu2,double argu3,double argu4){
-        double omega=getOmega(argu1,argu2,argu3,argu4);
+//        double omega=getOmega(argu1,argu2,argu3,argu4);
+        double omega=1.5;
         double epsilon=1/(4*Math.pow(coefficients[0]*coefficients[1]*coefficients[2]*coefficients[3],2));
         ArrayList<Matrix> oparators=new ArrayList<>();
         //算子1

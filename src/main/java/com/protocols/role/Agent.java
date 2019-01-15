@@ -1,4 +1,4 @@
-package com.quantum.role;
+package com.protocols.role;
 
 import com.quantum.measure.Measures;
 

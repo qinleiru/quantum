@@ -4,7 +4,7 @@ import com.quantum.gate.QuantumGate;
 import com.quantum.measure.Measures;
 import com.quantum.measure.ProjectiveMeasure;
 import com.quantum.oparate.QuantumOperation;
-import com.quantum.role.Agent;
+import com.protocols.role.Agent;
 
 import java.util.ArrayList;
 import java.util.HashMap;

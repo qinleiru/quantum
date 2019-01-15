@@ -1,5 +1,7 @@
 package com.protocols.HPQIS;
 
+import com.protocols.dao.HpqisDAO;
+import com.protocols.pojo.Hpqis;
 import com.quantum.measure.Measures;
 import com.quantum.oparate.MathOperation;
 import com.quantum.oparate.QuantumOperation;
@@ -80,8 +82,14 @@ public class HPQIS {
             textArea.setCommText(df.format(System.currentTimeMillis())+" "+ "Bob引入辅助粒子m、辅助粒子n执行POVM测量并进行操作恢复秘密量子比特");
            if(Bob.POVMResult==false){
                textArea.setCommText(df.format(System.currentTimeMillis())+" "+ "Bob进行POVM测量失败");
+               Hpqis hpqis=new Hpqis(coefficients[0],coefficients[1],coefficients[2],coefficients[3],1.5,0,1);
+               HpqisDAO hpqisDAO=new HpqisDAO();
+               hpqisDAO.addResult(hpqis);
                return;
            }
+            Hpqis hpqis=new Hpqis(coefficients[0],coefficients[1],coefficients[2],coefficients[3],1.5,1,1);
+            HpqisDAO hpqisDAO=new HpqisDAO();
+            hpqisDAO.addResult(hpqis);
             textArea.setCommText(df.format(System.currentTimeMillis())+" "+ "Bob手中的粒子态为"+getOwnSate(systemState,Bob.getParticleName()).showBinaryState());
         }
         else{
@@ -103,8 +111,14 @@ public class HPQIS {
                 textArea.setCommText(df.format(System.currentTimeMillis())+" "+ "Charlie引入辅助粒子m、辅助粒子n执行POVM测量并进行操作恢复秘密量子比特");
                 if(Charlie.POVMResult==false){
                     textArea.setCommText(df.format(System.currentTimeMillis())+" "+ "Charlie进行POVM测量失败");
+                    Hpqis hpqis=new Hpqis(coefficients[0],coefficients[1],coefficients[2],coefficients[3],1.5,0,0);
+                    HpqisDAO hpqisDAO=new HpqisDAO();
+                    hpqisDAO.addResult(hpqis);
                     return;
                 }
+                Hpqis hpqis=new Hpqis(coefficients[0],coefficients[1],coefficients[2],coefficients[3],1.5,1,0);
+                HpqisDAO hpqisDAO=new HpqisDAO();
+                hpqisDAO.addResult(hpqis);
                 textArea.setCommText(df.format(System.currentTimeMillis())+" "+ "Charlie手中的粒子态为"+getOwnSate(systemState,Charlie.getParticleName()).showBinaryState());
             }
             else{
@@ -123,8 +137,14 @@ public class HPQIS {
                 textArea.setCommText(df.format(System.currentTimeMillis())+" "+ "David引入辅助粒子m、辅助粒子n执行POVM测量并进行操作恢复秘密量子比特");
                 if(David.POVMResult==false){
                     textArea.setCommText(df.format(System.currentTimeMillis())+" "+ "David进行POVM测量失败");
+                    Hpqis hpqis=new Hpqis(coefficients[0],coefficients[1],coefficients[2],coefficients[3],1.5,0,0);
+                    HpqisDAO hpqisDAO=new HpqisDAO();
+                    hpqisDAO.addResult(hpqis);
                     return;
                 }
+                Hpqis hpqis=new Hpqis(coefficients[0],coefficients[1],coefficients[2],coefficients[3],1.5,1,0);
+                HpqisDAO hpqisDAO=new HpqisDAO();
+                hpqisDAO.addResult(hpqis);
                 textArea.setCommText(df.format(System.currentTimeMillis())+" "+ "David手中的粒子态为"+getOwnSate(systemState,David.getParticleName()).showBinaryState());
             }
         }
@@ -164,23 +184,28 @@ public class HPQIS {
      * @return
      */
     public static double[] getCoefficients(){
-        double a=Math.random();
-        double b=Math.random();
+//        double a=Math.random();
+//        double b=Math.random();
+        double a=0.5;
+        double b=0.5;
+        double c=0.5;
+        double d=0.5;
         double clusterState1[]=new double[]{a,a,b,b};
         MathOperation.normalization(clusterState1);
         a=clusterState1[0];
         b=clusterState1[2];
-        double c=Math.random();
-        double d=Math.random();
+//        double c=Math.random();
+//        double d=Math.random();
         double clusterState2[]=new double[]{c,c,d,d};
         MathOperation.normalization(clusterState2);
         c=clusterState1[0];
         d=clusterState1[2];
         return new double[]{a,b,c,d};
     }
-//    public static void main(String[] args){
-//        for (int i=0;i<100;i++) {
-//            run();
-//        }
-//    }
+    public static void main(String[] args){
+        TextComponent textComponent=new TextComponent();
+        for (int i=0;i<1000;i++) {
+            run(textComponent,"权限低");
+        }
+    }
 }

@@ -11,7 +11,7 @@ import static com.protocols.HDQIS2.HDQIS2.systemState;
 
 //概率型分层量子信息拆分协议
 //发送者的角色
-public class Sender implements com.quantum.role.Sender {
+public class Sender implements com.protocols.role.Sender {
     private DoubleState doubleState;
     private ClusterState clusterState1;
     private ClusterState clusterState2;

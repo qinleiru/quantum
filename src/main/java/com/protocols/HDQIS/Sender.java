@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 import static com.protocols.HDQIS.HDQIS.systemState;
 
-public class Sender implements com.quantum.role.Sender {
+public class Sender implements com.protocols.role.Sender {
     private SingleState singleState;
     private ClusterState clusterState;
     private ArrayList<HighAgent> highAgents;

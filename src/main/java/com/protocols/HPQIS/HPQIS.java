@@ -7,11 +7,11 @@ import com.quantum.oparate.MathOperation;
 import com.quantum.oparate.QuantumOperation;
 import com.quantum.state.DoubleState;
 import com.quantum.state.MultiState;
-import com.quantum.tools.QuantumState;
+import com.quantum.state.QuantumState;
+import com.quantum.tools.QuantumTools;
 import com.quantum.tools.Tools;
 import com.view.component.TextComponent;
 
-import java.awt.*;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
@@ -90,7 +90,7 @@ public class HPQIS {
             Hpqis hpqis=new Hpqis(coefficients[0],coefficients[1],coefficients[2],coefficients[3],1.5,1,1);
             HpqisDAO hpqisDAO=new HpqisDAO();
             hpqisDAO.addResult(hpqis);
-            textArea.setCommText(df.format(System.currentTimeMillis())+" "+ "Bob手中的粒子态为"+getOwnSate(systemState,Bob.getParticleName()).showBinaryState());
+            textArea.setCommText(df.format(System.currentTimeMillis())+" "+ "Bob手中的粒子态为"+QuantumTools.showBinaryState(getOwnSate(systemState,Bob.getParticleName())));
         }
         else{
             //协议中权限低的代理者来恢复秘密量子比特
@@ -119,7 +119,7 @@ public class HPQIS {
                 Hpqis hpqis=new Hpqis(coefficients[0],coefficients[1],coefficients[2],coefficients[3],1.5,1,0);
                 HpqisDAO hpqisDAO=new HpqisDAO();
                 hpqisDAO.addResult(hpqis);
-                textArea.setCommText(df.format(System.currentTimeMillis())+" "+ "Charlie手中的粒子态为"+getOwnSate(systemState,Charlie.getParticleName()).showBinaryState());
+                textArea.setCommText(df.format(System.currentTimeMillis())+" "+ "Charlie手中的粒子态为"+ QuantumTools.showBinaryState(getOwnSate(systemState,Charlie.getParticleName())));
             }
             else{
                 textArea.setCommText(df.format(System.currentTimeMillis())+" "+ "David来恢复秘密量子比特");
@@ -145,7 +145,7 @@ public class HPQIS {
                 Hpqis hpqis=new Hpqis(coefficients[0],coefficients[1],coefficients[2],coefficients[3],1.5,1,0);
                 HpqisDAO hpqisDAO=new HpqisDAO();
                 hpqisDAO.addResult(hpqis);
-                textArea.setCommText(df.format(System.currentTimeMillis())+" "+ "David手中的粒子态为"+getOwnSate(systemState,David.getParticleName()).showBinaryState());
+                textArea.setCommText(df.format(System.currentTimeMillis())+" "+ "David手中的粒子态为"+QuantumTools.showBinaryState(getOwnSate(systemState,David.getParticleName())));
             }
         }
         System.out.println("----------------------------------------------------");

@@ -1,7 +1,6 @@
 package com.quantum.state;
 
 import com.quantum.oparate.MathOperation;
-import com.quantum.tools.QuantumState;
 import com.quantum.tools.Tools;
 
 import java.util.ArrayList;
@@ -9,7 +8,7 @@ import java.util.ArrayList;
 /**
  * 两粒子纠缠态
  */
-public class DoubleState extends QuantumState {
+public class DoubleState implements QuantumState {
     private final int particles=2;
     private double[] state;
     private ArrayList<String> particlesName;

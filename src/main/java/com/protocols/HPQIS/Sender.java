@@ -4,6 +4,7 @@ import com.quantum.gate.QuantumGate;
 import com.quantum.measure.ProjectiveMeasure;
 import com.quantum.oparate.QuantumOperation;
 import com.quantum.state.*;
+import com.quantum.tools.QuantumTools;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -47,7 +48,7 @@ public class Sender implements com.protocols.role.Sender {
          * 用于测试的代码
          */
         SimpleDateFormat df=new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
-        printMessage+=df.format(System.currentTimeMillis())+" "+ "Alice准备秘密量子态为"+doubleState.showBinaryState()+"\n";
+        printMessage+=df.format(System.currentTimeMillis())+" "+ "Alice准备秘密量子态为"+QuantumTools.showBinaryState(doubleState)+"\n";
     }
 
     /**
@@ -130,7 +131,7 @@ public class Sender implements com.protocols.role.Sender {
          * 测试
          */
         SimpleDateFormat df=new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
-        printMessage+=df.format(System.currentTimeMillis())+" "+ "Alice准备量子信道需要的两个簇态，第一个簇态为"+clusterState1.showBinaryState()+"第二个簇态为"+clusterState2.showBinaryState()+"\n";
+        printMessage+=df.format(System.currentTimeMillis())+" "+ "Alice准备量子信道需要的两个簇态，第一个簇态为"+ QuantumTools.showBinaryState(clusterState1)+"第二个簇态为"+QuantumTools.showBinaryState(clusterState2)+"\n";
     }
 
     /**

@@ -3,9 +3,7 @@ package com.quantum.measure;
 import com.quantum.gate.QuantumGate;
 import com.quantum.oparate.MathOperation;
 import com.quantum.oparate.QuantumOperation;
-import com.quantum.tools.QuantumState;
-
-import java.util.ArrayList;
+import com.quantum.state.QuantumState;
 
 public class ProjectiveMeasure {
 
@@ -48,7 +46,6 @@ public class ProjectiveMeasure {
             result=0;
         else
             result=1;
-
         //发生测量坍缩
         if (result==0){
             for(int i=0;i<states.length;i++){

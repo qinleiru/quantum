@@ -1,13 +1,11 @@
 package com.quantum.state;
 
-import com.quantum.tools.QuantumState;
-
 import java.util.ArrayList;
 
 /**
  * 单量子态
  */
-public class SingleState extends QuantumState {
+public class SingleState implements QuantumState {
 
     private final int particles=1;
     private double[] state;

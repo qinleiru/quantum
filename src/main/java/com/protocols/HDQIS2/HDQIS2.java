@@ -4,7 +4,7 @@ import com.quantum.measure.Measures;
 import com.quantum.oparate.QuantumOperation;
 import com.quantum.state.DoubleState;
 import com.quantum.state.MultiState;
-import com.quantum.tools.QuantumState;
+import com.quantum.state.QuantumState;
 import com.quantum.tools.Tools;
 
 import java.util.ArrayList;

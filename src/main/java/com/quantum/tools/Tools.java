@@ -3,6 +3,7 @@ package com.quantum.tools;
 import java.util.Random;
 
 public class Tools {
+
     /**
      * 转换为定长的字符串
      * @param value

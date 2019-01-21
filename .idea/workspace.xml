@@ -5,47 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0107f73b-b637-466b-ab78-4661faee2752" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/protocols/dao/HpqisDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/protocols/mysql/MysqlSession.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/protocols/graphics/GraphicsTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/quantum/pojo/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/quantum/tools/QuantumTools.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/view/component/ChartComponent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/protocols/graphics/LineChart_AWT.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/project.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/protocols/HDQIS/HighAgent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/protocols/HDQIS/HighAgent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/protocols/HDQIS/LowAgent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/protocols/HDQIS/LowAgent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/protocols/HDQIS/HDQIS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/protocols/HDQIS/HDQIS.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/protocols/HDQIS/Sender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/protocols/HDQIS/Sender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/protocols/HDQIS2/HighAgent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/protocols/HDQIS2/HighAgent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/protocols/HDQIS2/LowAgent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/protocols/HDQIS2/LowAgent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/protocols/HDQIS2/HDQIS2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/protocols/HDQIS2/HDQIS2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/protocols/HDQIS2/Sender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/protocols/HDQIS2/Sender.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/protocols/HPQIS/HPQIS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/protocols/HPQIS/HPQIS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/protocols/HPQIS/HighAgent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/protocols/HPQIS/HighAgent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/protocols/HPQIS/LowAgent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/protocols/HPQIS/LowAgent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/protocols/HPQIS/Sender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/protocols/HPQIS/Sender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantum/pojo/Hpqis.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantum/role/Agent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/protocols/role/Agent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantum/role/Sender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/protocols/role/Sender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/protocols/QuantumTeleportation/QuantumTeleportation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/protocols/QuantumTeleportation/QuantumTeleportation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/protocols/role/Sender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/protocols/role/Sender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantum/measure/POVMMeasure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quantum/measure/POVMMeasure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantum/measure/ProjectiveMeasure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quantum/measure/ProjectiveMeasure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantum/oparate/MathOperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quantum/oparate/MathOperation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantum/oparate/QuantumOperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quantum/oparate/QuantumOperation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantum/state/ClusterState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quantum/state/ClusterState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantum/state/DoubleState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quantum/state/DoubleState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantum/state/MultiState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quantum/state/MultiState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantum/state/SingleState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quantum/state/SingleState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantum/tools/QuantumState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quantum/state/QuantumState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantum/tools/Tools.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quantum/tools/Tools.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/view/simulation/AnalyPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/view/simulation/AnalyPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/HpqisMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/HpqisMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/quantum/pojo/HpqisTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/quantum/pojo/HpqisTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/protocols/HDQIS/HDQIS.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/protocols/HDQIS/HDQIS.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/protocols/HDQIS/HighAgent.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/protocols/HDQIS/HighAgent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/protocols/HDQIS/LowAgent.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/protocols/HDQIS/LowAgent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/protocols/HDQIS/Sender.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/protocols/HDQIS/Sender.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/protocols/HDQIS2/HDQIS2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/protocols/HDQIS2/HDQIS2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/protocols/HDQIS2/HighAgent.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/protocols/HDQIS2/HighAgent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/protocols/HDQIS2/LowAgent.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/protocols/HDQIS2/LowAgent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/protocols/HDQIS2/Sender.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/protocols/HDQIS2/Sender.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/protocols/HPQIS/HPQIS.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/protocols/HPQIS/HPQIS.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/protocols/HPQIS/HighAgent.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/protocols/HPQIS/HighAgent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/protocols/HPQIS/LowAgent.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/protocols/HPQIS/LowAgent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/protocols/HPQIS/Sender.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/protocols/HPQIS/Sender.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quantum/pojo/Hpqis.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quantum/role/Agent.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quantum/role/Sender.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/protocols/graphics/GraphicsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/protocols/graphics/GraphicsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/quantum/oparate/QuantumOperationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/quantum/oparate/QuantumOperationTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/view/simulation/AnalyPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/view/simulation/AnalyPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/HpqisMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/HpqisMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/quantum/pojo/HpqisTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/protocols/graphics/GraphicsTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/protocols/graphics/GraphicsTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -67,11 +53,11 @@
     <session id="700561954">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="34" />
+          <entry key="project.closed" value="36" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="8" />
-          <entry key="project.open.time.11" value="9" />
-          <entry key="project.open.time.12" value="3" />
+          <entry key="project.open.time.11" value="11" />
+          <entry key="project.open.time.12" value="5" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.15" value="1" />
@@ -85,7 +71,7 @@
           <entry key="project.open.time.73" value="1" />
           <entry key="project.open.time.8" value="5" />
           <entry key="project.open.time.9" value="13" />
-          <entry key="project.opened" value="50" />
+          <entry key="project.opened" value="54" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -94,9 +80,9 @@
           <entry key="form" value="2" />
           <entry key="fxml" value="1" />
           <entry key="groovy" value="1" />
-          <entry key="java" value="550" />
+          <entry key="java" value="588" />
           <entry key="properties" value="2" />
-          <entry key="xml" value="13" />
+          <entry key="xml" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -104,16 +90,16 @@
           <entry key="CLASS" value="112" />
           <entry key="GUI_DESIGNER_FORM" value="2" />
           <entry key="Groovy" value="1" />
-          <entry key="JAVA" value="550" />
+          <entry key="JAVA" value="588" />
           <entry key="Properties" value="2" />
-          <entry key="XML" value="14" />
+          <entry key="XML" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="150" />
           <entry key="groovy" value="1" />
-          <entry key="java" value="64890" />
+          <entry key="java" value="65427" />
           <entry key="properties" value="18" />
           <entry key="xml" value="618" />
         </counts>
@@ -121,7 +107,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Groovy" value="1" />
-          <entry key="JAVA" value="64890" />
+          <entry key="JAVA" value="65427" />
           <entry key="PLAIN_TEXT" value="150" />
           <entry key="Properties" value="18" />
           <entry key="XML" value="618" />
@@ -132,25 +118,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/view/simulation/QuantumSimulation.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/state/SingleState.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="10" column="43" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="260">
+              <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/view/simulation/SimulationTabPanel.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/gate/QuantumGate.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="20" selection-start-line="20" selection-end-line="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="336">
+              <caret line="19" column="35" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -158,7 +138,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/view/simulation/DoSimulation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
+            <state relative-caret-position="640">
               <caret line="37" selection-start-line="37" selection-end-line="38" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -168,90 +148,64 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/view/simulation/CommPanel.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/state/ClusterState.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="17" selection-start-line="17" selection-end-line="18" selection-end-column="55" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#init_panel#0;class#CommPanel#0" />
-              </folding>
+            <state relative-caret-position="80">
+              <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/protocols/HPQIS/HighAgent.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/measure/POVMMeasure.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="508" column="23" selection-start-line="508" selection-start-column="23" selection-end-line="508" selection-end-column="23" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <marker date="1547467964496" expanded="true" signature="3439:4684" ph="{...}" />
-                <marker date="1547467964496" expanded="true" signature="4737:5988" ph="{...}" />
-                <marker date="1547467964496" expanded="false" signature="6041:7284" ph="{...}" />
-                <marker date="1547467964496" expanded="false" signature="7337:8580" ph="{...}" />
-                <marker date="1547467964496" expanded="false" signature="8633:9876" ph="{...}" />
-                <marker date="1547467964496" expanded="false" signature="9929:11173" ph="{...}" />
-                <marker date="1547467964496" expanded="false" signature="11226:12469" ph="{...}" />
-                <marker date="1547467964496" expanded="false" signature="12522:13765" ph="{...}" />
-                <marker date="1547467964496" expanded="false" signature="13818:15061" ph="{...}" />
-                <marker date="1547467964496" expanded="false" signature="15114:16357" ph="{...}" />
-                <marker date="1547467964496" expanded="false" signature="16410:17653" ph="{...}" />
-                <marker date="1547467964496" expanded="false" signature="17706:18949" ph="{...}" />
-                <marker date="1547467964496" expanded="false" signature="19002:20246" ph="{...}" />
-                <marker date="1547467964496" expanded="false" signature="20299:21542" ph="{...}" />
-                <marker date="1547467964496" expanded="false" signature="21595:22838" ph="{...}" />
-                <marker date="1547467964496" expanded="true" signature="22891:24134" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/protocols/HPQIS/LowAgent.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="697" column="23" selection-start-line="697" selection-start-column="23" selection-end-line="697" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/protocols/HPQIS/HPQIS.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="202" column="37" selection-start-line="202" selection-start-column="37" selection-end-line="202" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/view/simulation/AnalyPanel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="12" column="41" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
+            <state relative-caret-position="360">
+              <caret line="80" column="32" selection-start-line="80" selection-start-column="27" selection-end-line="80" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/protocols/graphics/GraphicsTest.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/protocols/role/Agent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1000">
-              <caret line="61" selection-start-line="61" selection-end-line="62" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="220">
+              <caret line="14" column="34" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="34" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/protocols/role/Sender.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="54" column="20" lean-forward="true" selection-start-line="54" selection-start-column="20" selection-end-line="54" selection-end-column="20" />
+            <state relative-caret-position="400">
+              <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/protocols/HDQIS2/HighAgent.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1820">
+              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/measure/ProjectiveMeasure.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="104" column="87" selection-start-line="104" selection-start-column="87" selection-end-line="104" selection-end-column="87" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/measure/Measures.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="40">
+              <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -314,22 +268,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/db.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/quantum/pojo/hqis.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/quantum/pojo/Hqis.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mappers/hqis.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/com/quantum/pojo/HqisTest.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mappers/hpqis.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/simulation/view/SimulationTabPanel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/simulation/view/QuantumSimulation.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/simulation/view/SimulationFrame.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/simulation/view/AnalyPanel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/simulation/view/CommPanel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/view/component/SelectComponent.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/view/component/SimulationTabPanel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/view/component/SimulationPanel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/view/component/used/ProgressComponent.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/view/component/used/SimulationPanel.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/view/component/SimulationFrame.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/view/component/RadioComponent.java" />
@@ -342,13 +280,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/view/component/CommPanel.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/view/component/DoSimulation.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gui/tools/dialogFram/ExDialog.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/protocols/HPQIS/Sender.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/view/component/unused/ArrayListComboBoxModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/view/component/GBC.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/view/component/ExGridBagConstraints.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/protocols/HDQIS2/HDQIS2.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/protocols/HDQIS/Sender.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/quantum/pojo/IHpqisOperation.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/protocols/tool/GetSession.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/protocols/tool/MysqlSession.java" />
@@ -360,11 +296,29 @@
         <option value="$PROJECT_DIR$/src/main/java/com/protocols/pojo/Hpqis.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/protocols/HPQIS/HighAgent.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/protocols/HPQIS/LowAgent.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/protocols/HPQIS/HPQIS.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/view/simulation/AnalyPanel.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/protocols/graphics/graphicsTest.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/com/protocols/graphics/GraphicsTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/protocols/graphics/LineChart_AWT.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/view/component/ChartPanelComponent.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/view/component/ChartComponent.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/view/simulation/SimulationTabPanel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/view/simulation/AnalyPanel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/quantum/tools/Tools.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/quantum/state/QuantumState.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/quantum/state/ClusterState.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/quantum/state/DoubleState.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/quantum/state/MultiState.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/quantum/state/SingleState.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/quantum/tools/QuantumTools.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/protocols/HPQIS/Sender.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/protocols/HDQIS2/Sender.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/protocols/HDQIS/Sender.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/quantum/oparate/MathOperation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/protocols/HPQIS/HPQIS.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/quantum/measure/ProjectiveMeasure.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/quantum/measure/POVMMeasure.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/protocols/role/Sender.java" />
       </list>
     </option>
   </component>
@@ -394,11 +348,11 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-6" />
-    <option name="y" value="19" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-176" />
+    <option name="y" value="77" />
     <option name="width" value="1386" />
-    <option name="height" value="788" />
+    <option name="height" value="785" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -426,6 +380,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -475,6 +430,36 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="protocols" type="462c0819:PsiDirectoryNode" />
+              <item name="HDQIS2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="protocols" type="462c0819:PsiDirectoryNode" />
+              <item name="HPQIS" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="protocols" type="462c0819:PsiDirectoryNode" />
+              <item name="role" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="quantum" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -484,7 +469,47 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="quantum" type="462c0819:PsiDirectoryNode" />
+              <item name="measure" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="quantum" type="462c0819:PsiDirectoryNode" />
+              <item name="state" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="view" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="component" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="simulation" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="project" type="b2602c69:ProjectViewProjectNode" />
@@ -543,6 +568,15 @@
             </path>
             <path>
               <item name="project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="quantum" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
@@ -550,7 +584,6 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -558,7 +591,7 @@
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH" value="8" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.STATE" value="left" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="409" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547472262081" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547559853999" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Groovy JUnit" value="groovy.util.GroovyTestCase" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
@@ -577,23 +610,23 @@
       <recent name="com.quantum.communication" />
       <recent name="com.quantum.oparate" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\project\src\main\java\com\view\component\unused" />
-      <recent name="D:\project\src\main\resources" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.quantum.state" />
       <recent name="com.protocols.role" />
       <recent name="com.view.simulation" />
       <recent name="com.view.component" />
       <recent name="com.protocols.QuantumTeleportation" />
-      <recent name="com.view.component.unused" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.protocols.HPQIS" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
       <recent name="groovy.util.GroovyTestCase" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.protocols.HPQIS" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\project\src\main\java\com\view\component\unused" />
+      <recent name="D:\project\src\main\resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -608,7 +641,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.GraphicsTest">
+  <component name="RunManager" selected="Application.QuantumSimulation">
     <configuration name="GraphicsTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.protocols.graphics.GraphicsTest" />
       <module name="project" />
@@ -641,6 +674,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.protocols.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LineChart_AWT" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.protocols.graphics.LineChart_AWT" />
+      <module name="project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.protocols.graphics.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -687,36 +733,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HpqisTest.updateResultTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.quantum.pojo.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.quantum.pojo" />
-      <option name="MAIN_CLASS_NAME" value="com.quantum.pojo.HpqisTest" />
-      <option name="METHOD_NAME" value="updateResultTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
-      <item itemvalue="JUnit.HpqisTest.updateResultTest" />
       <item itemvalue="Application.HpqisDAO" />
       <item itemvalue="Application.HPQIS" />
       <item itemvalue="Application.QuantumSimulation" />
       <item itemvalue="Application.GraphicsTest" />
+      <item itemvalue="Application.LineChart_AWT" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.GraphicsTest" />
         <item itemvalue="Application.QuantumSimulation" />
+        <item itemvalue="Application.GraphicsTest" />
+        <item itemvalue="Application.LineChart_AWT" />
         <item itemvalue="Application.HPQIS" />
         <item itemvalue="Application.HpqisDAO" />
-        <item itemvalue="JUnit.HpqisTest.updateResultTest" />
       </list>
     </recent_temporary>
   </component>
@@ -775,10 +805,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="19" width="1386" height="788" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4408397" visible="true" weight="0.17119156" />
-      <window_info id="Structure" order="1" sideWeight="0.5591603" side_tool="true" visible="true" weight="0.17119156" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.71532845" visible="true" weight="0.3260212" />
+      <window_info id="Structure" order="1" sideWeight="0.28467155" side_tool="true" visible="true" weight="0.3260212" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" sideWeight="0.5027174" weight="0.29082426" />
@@ -786,16 +817,16 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49245852" weight="0.35168195" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8680241" weight="0.19877675" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.8472012" weight="0.39508197" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.86535555" weight="0.19836065" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.8464448" weight="0.39508197" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4969834" weight="0.78583765" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.8078669" weight="0.10655738" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.13197587" side_tool="true" visible="true" weight="0.19877675" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.8071104" weight="0.11147541" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.16490166" side_tool="true" visible="true" weight="0.101639345" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.4773071" weight="0.07540984" />
-      <window_info anchor="bottom" id="Statistic" order="11" sideWeight="0.8366112" weight="0.35081968" />
+      <window_info anchor="bottom" id="Statistic" order="11" sideWeight="0.8350983" visible="true" weight="0.101639345" />
       <window_info anchor="right" id="Coverage" order="0" sideWeight="0.50285715" side_tool="true" visible="true" weight="0.0030257185" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" sideWeight="0.49714285" weight="0.002269289" />
@@ -804,7 +835,7 @@
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Maven Projects" order="8" visible="true" weight="0.011312217" />
+      <window_info anchor="right" id="Maven Projects" order="8" visible="true" weight="0.0113464445" />
       <window_info anchor="right" id="UML design tool window" order="9" />
     </layout>
   </component>
@@ -822,19 +853,19 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/quantum/oparate/QuantumOperationTest.java</url>
-          <line>25</line>
+          <line>23</line>
           <properties />
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/quantum/oparate/QuantumOperationTest.java</url>
-          <line>95</line>
+          <line>93</line>
           <properties />
           <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/protocols/HDQIS2/Sender.java</url>
-          <line>147</line>
+          <line>148</line>
           <properties />
           <option name="timeStamp" value="156" />
         </line-breakpoint>
@@ -846,13 +877,13 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/protocols/HDQIS/HDQIS.java</url>
-          <line>88</line>
+          <line>82</line>
           <properties />
           <option name="timeStamp" value="160" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/protocols/HDQIS/HDQIS.java</url>
-          <line>105</line>
+          <line>99</line>
           <properties />
           <option name="timeStamp" value="161" />
         </line-breakpoint>
@@ -882,7 +913,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/quantum/measure/POVMMeasure.java</url>
-          <line>82</line>
+          <line>80</line>
           <properties />
           <option name="timeStamp" value="225" />
         </line-breakpoint>
@@ -922,6 +953,18 @@
           <properties />
           <option name="timeStamp" value="232" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/view/simulation/CommPanel.java</url>
+          <line>101</line>
+          <properties />
+          <option name="timeStamp" value="233" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/quantum/oparate/MathOperation.java</url>
+          <line>6</line>
+          <properties />
+          <option name="timeStamp" value="234" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
@@ -938,182 +981,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.6/mybatis-3.4.6.jar!/org/apache/ibatis/reflection/wrapper/DefaultObjectWrapperFactory.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.6/mybatis-3.4.6.jar!/org/apache/ibatis/logging/jdk14/Jdk14LoggingImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.6/mybatis-3.4.6.jar!/org/apache/ibatis/logging/LogFactory.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.6/mybatis-3.4.6.jar!/org/apache/ibatis/javassist/util/proxy/ProxyFactory.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="220" selection-start-line="220" selection-end-line="220" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.6/mybatis-3.4.6.jar!/org/apache/ibatis/io/ClassLoaderWrapper.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="97" selection-start-line="97" selection-end-line="97" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.6/mybatis-3.4.6.jar!/org/apache/ibatis/io/Resources.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="130" selection-start-line="130" selection-end-line="130" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.6/mybatis-3.4.6.jar!/org/apache/ibatis/executor/loader/javassist/JavassistProxyFactory.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="37" selection-start-line="37" selection-end-line="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.6/mybatis-3.4.6.jar!/org/apache/ibatis/session/Configuration.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="156" selection-start-line="156" selection-end-line="156" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/config.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="1" column="56" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.6/mybatis-3.4.6.jar!/org/apache/ibatis/session/defaults/DefaultSqlSessionFactory.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_91/src.zip!/javax/swing/JScrollPane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2600">
-          <caret line="170" column="13" selection-start-line="170" selection-start-column="13" selection-end-line="170" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/view/component/unused/ProgressComponent.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/view/component/unused/SimulationPanel.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/view/component/SelectComponent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/view/component/unused/ButtonComponent.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/view/component/RadioComponent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="20" column="9" lean-forward="true" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/view/component/unused/DoComm.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/protocols/HDQIS/HighAgent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/tools/QuantumState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/protocols/HDQIS/LowAgent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="700">
-          <caret line="43" column="16" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/view/simulation/SimulationFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/view/component/TextComponent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/protocols/HDQIS/HDQIS.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="39" column="32" selection-start-line="39" selection-end-line="40" />
-          <folding>
-            <marker date="1546766437017" expanded="true" signature="1777:3291" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/view/component/DialogComponent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/protocols/HPQIS/Sender.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="199" column="110" selection-start-line="199" selection-start-column="110" selection-end-line="199" selection-end-column="110" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/protocols/HDQIS3.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/view/component/unused/ArrayListComboBoxModel.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/view/component/ExGridBagConstraints.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="52" selection-start-line="7" selection-start-column="52" selection-end-line="7" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1131,20 +1002,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/protocols/HDQIS/Sender.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1100">
-          <caret line="63" column="82" selection-start-line="63" selection-start-column="82" selection-end-line="63" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/pojo/IHpqisOperation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="36" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/pojo/IHpqisOperation.java" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-config.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
@@ -1156,27 +1014,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="316">
           <caret line="20" column="32" lean-forward="true" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/pojo/Hpqis.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="84" selection-start-line="84" selection-end-line="84" />
-          <folding>
-            <element signature="e#514#515#0" expanded="true" />
-            <element signature="e#539#540#0" expanded="true" />
-            <element signature="e#573#574#0" expanded="true" />
-            <element signature="e#601#602#0" expanded="true" />
-            <element signature="e#1555#1556#0" expanded="true" />
-            <element signature="e#1591#1592#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/pojo/Hpqis.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/com/quantum/pojo/Test.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="257">
@@ -1188,9 +1029,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="67" selection-start-line="67" selection-end-line="78" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1205,9 +1043,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
           <caret line="20" selection-start-line="20" selection-start-column="2" selection-end-line="31" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1218,47 +1053,140 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/view/simulation/QuantumSimulation.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/protocols/HPQIS/LowAgent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="43" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
+        <state relative-caret-position="13500">
+          <caret line="697" column="23" selection-start-line="697" selection-start-column="23" selection-end-line="697" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/protocols/graphics/LineChart_AWT.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="48" column="1" selection-start-line="48" selection-start-column="1" selection-end-line="48" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/protocols/graphics/GraphicsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="65" column="5" lean-forward="true" selection-start-line="43" selection-start-column="4" selection-end-line="65" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/view/component/RadioComponent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="20" column="9" lean-forward="true" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/view/component/DialogComponent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="8" column="33" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/view/component/ExGridBagConstraints.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" column="52" selection-start-line="7" selection-start-column="52" selection-end-line="7" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/view/component/TextComponent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="640">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/view/component/SelectComponent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="9" selection-start-line="9" selection-end-line="21" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/view/component/ChartComponent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="13" column="18" lean-forward="true" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/view/simulation/SimulationFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/view/simulation/SimulationTabPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="20" selection-start-line="20" selection-end-line="21" />
+        <state relative-caret-position="300">
+          <caret line="18" column="33" lean-forward="true" selection-start-line="18" selection-end-line="19" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/view/simulation/DoSimulation.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/view/simulation/CommPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="37" selection-start-line="37" selection-end-line="38" />
+        <state relative-caret-position="256">
+          <caret line="104" selection-start-line="104" selection-end-line="106" selection-end-column="73" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/protocols/HPQIS/LowAgent.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/view/simulation/AnalyPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="697" column="23" selection-start-line="697" selection-start-column="23" selection-end-line="697" selection-end-column="23" />
+        <state relative-caret-position="276">
+          <caret line="29" column="106" lean-forward="true" selection-start-line="29" selection-start-column="106" selection-end-line="29" selection-end-column="106" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/tools/Range.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/tools/Tools.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-60">
+          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/state/MultiState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="34" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/protocols/HPQIS/HighAgent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="508" column="23" selection-start-line="508" selection-start-column="23" selection-end-line="508" selection-end-column="23" />
+        <state relative-caret-position="2060">
+          <caret line="125" selection-start-line="125" selection-end-line="126" />
           <folding>
             <element signature="imports" expanded="true" />
             <marker date="1547467964496" expanded="true" signature="3439:4684" ph="{...}" />
@@ -1281,45 +1209,170 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/protocols/HPQIS/HPQIS.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/protocols/HPQIS/Sender.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="202" column="37" selection-start-line="202" selection-start-column="37" selection-end-line="202" selection-end-column="37" />
+        <state relative-caret-position="3800">
+          <caret line="200" column="112" selection-start-line="200" selection-start-column="112" selection-end-line="200" selection-end-column="112" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/view/simulation/CommPanel.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/protocols/HDQIS2/Sender.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="17" selection-start-line="17" selection-end-line="18" selection-end-column="55" />
+        <state relative-caret-position="700">
+          <caret line="43" column="86" selection-start-line="43" selection-start-column="86" selection-end-line="43" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/protocols/HDQIS/Sender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1460">
+          <caret line="82" column="32" selection-start-line="82" selection-start-column="32" selection-end-line="82" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/state/CommonState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/oparate/MathOperation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#init_panel#0;class#CommPanel#0" />
+            <element signature="method#tensor#1;class#MathOperation#0" />
+            <element signature="method#tensor#2;class#MathOperation#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/view/simulation/AnalyPanel.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/oparate/QuantumOperation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="35" column="73" selection-start-line="18" selection-end-line="36" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/view/simulation/QuantumSimulation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" column="43" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/tools/QuantumTools.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
-          <caret line="12" column="41" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
+          <caret line="12" selection-start-line="12" selection-end-line="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="54" column="20" lean-forward="true" selection-start-line="54" selection-start-column="20" selection-end-line="54" selection-end-column="20" />
+        <state relative-caret-position="159">
+          <caret line="35" column="32" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/protocols/graphics/GraphicsTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/state/QuantumState.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1000">
-          <caret line="61" selection-start-line="61" selection-end-line="62" />
+        <state relative-caret-position="80">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/protocols/HPQIS/HPQIS.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2680">
+          <caret line="147" column="172" selection-start-line="147" selection-start-column="172" selection-end-line="147" selection-end-column="172" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/state/DoubleState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/state/SingleState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/view/simulation/DoSimulation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="640">
+          <caret line="37" selection-start-line="37" selection-end-line="38" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/state/ClusterState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/measure/Measures.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/measure/ProjectiveMeasure.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="104" column="87" selection-start-line="104" selection-start-column="87" selection-end-line="104" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/gate/QuantumGate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="19" column="35" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quantum/measure/POVMMeasure.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="80" column="32" selection-start-line="80" selection-start-column="27" selection-end-line="80" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/protocols/HDQIS2/HighAgent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1820">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/protocols/role/Sender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/protocols/role/Agent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="14" column="34" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="34" />
         </state>
       </provider>
     </entry>

@@ -7,7 +7,7 @@ import com.quantum.oparate.QuantumOperation;
 import com.quantum.state.DoubleState;
 import com.quantum.state.MultiState;
 import com.quantum.state.SingleState;
-import com.quantum.tools.QuantumState;
+import com.quantum.state.QuantumState;
 
 /**
  * 实现了量子分层信息拆分协议的基础，量子隐形传态协议

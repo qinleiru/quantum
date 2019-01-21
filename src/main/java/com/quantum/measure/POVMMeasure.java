@@ -3,13 +3,12 @@ package com.quantum.measure;
 import com.quantum.oparate.MathOperation;
 import com.quantum.oparate.QuantumOperation;
 import com.quantum.state.DoubleState;
-import com.quantum.tools.QuantumState;
-import com.quantum.tools.Range;
+import com.quantum.state.QuantumState;
+import com.quantum.tools.QuantumTools;
 import org.ujmp.core.Matrix;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
-import java.util.LinkedHashMap;
 import java.util.Random;
 
 public class POVMMeasure {
@@ -76,15 +75,13 @@ public class POVMMeasure {
         String particle1=doubleStates.get(0).getParticlesName().get(0);
         String particle2=doubleStates.get(1).getParticlesName().get(1);
         System.out.println("量子塌缩前对应的量子态");
-        System.out.println(state.showBinaryState());
-        state.showParticleName();
+        System.out.println(QuantumTools.showBinaryState(state));
         System.out.println();
         QuantumOperation.quantumDoublePerform(state,particle1,particle2,quantumOperation);
         collapseSate(state,index);
         MathOperation.normalization(state.getState());
         System.out.println("经过POVM测量之后系统的态为");
-        System.out.println(state.showBinaryState());
-        state.showParticleName();
+        System.out.println(QuantumTools.showBinaryState(state));
         System.out.println();
         return index;
     }

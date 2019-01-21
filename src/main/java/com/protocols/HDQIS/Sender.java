@@ -4,6 +4,7 @@ import com.quantum.measure.ProjectiveMeasure;
 import com.quantum.oparate.MathOperation;
 import com.quantum.oparate.QuantumOperation;
 import com.quantum.state.*;
+import com.quantum.tools.QuantumTools;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -35,7 +36,7 @@ public class Sender implements com.protocols.role.Sender {
         singleState=new SingleState();
         singleState.setParticlesName(1,"S");
         SimpleDateFormat df=new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
-        printMessage+=df.format(System.currentTimeMillis())+" "+ "Alice准备秘密量子态为"+singleState.showBinaryState()+"\n";
+        printMessage+=df.format(System.currentTimeMillis())+" "+ "Alice准备秘密量子态为"+ QuantumTools.showBinaryState(singleState)+"\n";
     }
 
     /**

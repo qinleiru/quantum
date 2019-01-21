@@ -1,24 +1,24 @@
-package com.protocols.graphics;
+package com.view.component;
 
-import java.awt.Color;
-import java.awt.BasicStroke;
+import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
+import org.jfree.chart.plot.PlotOrientation;
+import org.jfree.chart.plot.XYPlot;
+import org.jfree.chart.renderer.xy.XYLineAndShapeRenderer;
 import org.jfree.data.xy.XYDataset;
 import org.jfree.data.xy.XYSeries;
-import org.jfree.ui.ApplicationFrame;
-import org.jfree.ui.RefineryUtilities;
-import org.jfree.chart.plot.XYPlot;
-import org.jfree.chart.ChartFactory;
-import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.data.xy.XYSeriesCollection;
-import org.jfree.chart.renderer.xy.XYLineAndShapeRenderer;
 
-public class GraphicsTest extends ApplicationFrame
-{
-    public GraphicsTest(String applicationTitle, String chartTitle )
-    {
-        super(applicationTitle);
+import javax.swing.*;
+import java.awt.*;
+
+public class ChartComponent {
+
+    private static ChartPanel chartPanel;
+
+    //获取ChartPanel
+    public static ChartPanel getChartPanel(String chartTitle) {
         JFreeChart xylineChart = ChartFactory.createXYLineChart(
                 chartTitle ,
                 "欧米伽的取值" ,
@@ -27,7 +27,7 @@ public class GraphicsTest extends ApplicationFrame
                 PlotOrientation.VERTICAL ,
                 true , true , false);
 
-        ChartPanel chartPanel = new ChartPanel( xylineChart );
+        chartPanel = new ChartPanel( xylineChart );
         chartPanel.setPreferredSize( new java.awt.Dimension( 560 , 367 ) );
         final XYPlot plot = xylineChart.getXYPlot( );
         XYLineAndShapeRenderer renderer = new XYLineAndShapeRenderer( );
@@ -38,10 +38,9 @@ public class GraphicsTest extends ApplicationFrame
         renderer.setSeriesStroke( 1 , new BasicStroke( 3.0f ) );
         renderer.setSeriesStroke( 2 , new BasicStroke( 2.0f ) );
         plot.setRenderer( renderer );
-        setContentPane( chartPanel );
+        return chartPanel;
     }
-
-    private XYDataset createDataset( )
+    private static XYDataset createDataset( )
     {
         //红色线
         final XYSeries curveOne = new XYSeries( "a^2=c^2=1/4" );
@@ -65,11 +64,4 @@ public class GraphicsTest extends ApplicationFrame
         return dataset;
     }
 
-    public static void main( String[ ] args )
-    {
-        GraphicsTest chart = new GraphicsTest("成功概率与欧米伽的取值关系", "成功概率与欧米伽的取值关系");
-        chart.pack( );
-        RefineryUtilities.centerFrameOnScreen( chart );
-        chart.setVisible( true );
-    }
 }

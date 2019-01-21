@@ -2,11 +2,9 @@ package com.quantum.oparate;
 
 import com.quantum.gate.QuantumGate;
 import com.quantum.state.*;
-import com.quantum.tools.QuantumState;
 import org.junit.Test;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
 import static org.junit.Assert.*;
 

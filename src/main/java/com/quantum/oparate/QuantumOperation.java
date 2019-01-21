@@ -2,7 +2,7 @@ package com.quantum.oparate;
 
 import com.quantum.gate.QuantumGate;
 import com.quantum.state.MultiState;
-import com.quantum.tools.QuantumState;
+import com.quantum.state.QuantumState;
 import com.quantum.tools.Tools;
 import org.ujmp.core.Matrix;
 

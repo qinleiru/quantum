@@ -3,6 +3,7 @@ import com.quantum.gate.QuantumGate;
 import com.quantum.measure.ProjectiveMeasure;
 import com.quantum.oparate.QuantumOperation;
 import com.quantum.state.*;
+import com.quantum.tools.QuantumTools;
 
 import java.util.ArrayList;
 
@@ -40,7 +41,7 @@ public class Sender implements com.protocols.role.Sender {
         /**
          * 用于测试的代码
          */
-        System.out.println("Alice准备的秘密量子态为"+doubleState.showBinaryState());
+        System.out.println("Alice准备的秘密量子态为"+ QuantumTools.showBinaryState(doubleState));
     }
 
     /**

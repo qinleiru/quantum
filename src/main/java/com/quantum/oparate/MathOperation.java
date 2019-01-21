@@ -1,40 +1,25 @@
 package com.quantum.oparate;
 
-import com.quantum.gate.QuantumGate;
-import com.quantum.tools.QuantumState;
-import org.ujmp.core.Matrix;
-
 public class MathOperation {
 
     //张量积的运算,矩阵之间的张量积，因为会量子门的操作也会使用张量积
     public static double[][] tensor(double[][] A, double[][] B) {
-
         final int m = A.length;
         final int n = A[0].length;
         final int p = B.length;
         final int q = B[0].length;
         double[][] result = new double[m * p][n * q];
         for (int i = 0; i < m; i++) {
-
             final int iOffset = i * p;
             for (int j = 0; j < n; j++) {
-
                 final int jOffset = j * q;
                 final double aij = A[i][j];
-
                 for (int k = 0; k < p; k++) {
-
                     for (int l = 0; l < q; l++) {
-
                         result[iOffset + k][jOffset + l] = aij * B[k][l];
-
                     }
-
                 }
-
-
             }
-
         }
         return result;
     }

@@ -1,10 +1,8 @@
 package com.quantum.state;
 
-import com.quantum.tools.QuantumState;
-
 import java.util.ArrayList;
 
-public class MultiState extends QuantumState {
+public class MultiState implements QuantumState {
     private int particles;
     private double[] state;
     private ArrayList<String> particlesName;

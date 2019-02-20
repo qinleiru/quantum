@@ -1,7 +1,10 @@
 package com.protocols.role;
 
-public interface Sender {
+public abstract class Sender {
 
+    public final void excute(){
+
+    }
     /**
      * 准备要传送的秘密量子比特
      */

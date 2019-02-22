@@ -5,6 +5,7 @@ import com.protocols.HPQIS.HPQIS;
 import com.view.component.DialogComponent;
 import com.view.component.TextComponent;
 
+import java.io.UnsupportedEncodingException;
 import java.text.SimpleDateFormat;
 
 /**
@@ -13,7 +14,9 @@ import java.text.SimpleDateFormat;
 public class DoSimulation {
     private  String protocolType;
     private  String agents;
-    private TextComponent textArea;
+    private  TextComponent textArea;
+    private  String secret;
+    public  String recieveSercet="";
     public DoSimulation(String protocols, String attacks, String agents, String secret){
         /*
             此部分代码用于测试
@@ -24,6 +27,10 @@ public class DoSimulation {
         System.out.println("++++++要恢复的秘密消息为++++++"+secret);
         this.protocolType=protocols;
         this.agents=agents;
+        this.secret=secret;
+        if(secret==null||"".equals(secret.trim())){
+            return;
+        }
 
         //获取通信的协议
         textArea = new TextComponent();
@@ -41,10 +48,10 @@ public class DoSimulation {
             e.printStackTrace();
         }
     }
-    private void comm(){
+    private void comm() throws UnsupportedEncodingException {
         switch(protocolType){
             case "确定型分层量子信息拆分协议":
-                HDQIS.run(textArea,agents);
+                recieveSercet=HDQIS.sendSecret(textArea,agents,secret);
                 break;
             case "概率型分层量子信息拆分协议":
                 HPQIS.run(textArea,agents);

@@ -7,6 +7,9 @@
     <select id="findResultById" parameterType="int" resultType="com.protocols.pojo.Hpqis">
         select * from hpqis where id = #{id}
     </select>
+    <select id="findResultAmount"  resultType="int" >
+        select count(*) from hpqis where value_of_a=#{0} and value_of_c=#{1} and value_of_omega=#{2} and result=#{3} and authority=#{4}
+    </select>
     <insert id="addResult" parameterType="com.protocols.pojo.Hpqis" useGeneratedKeys="true" keyProperty="id">
         insert into hpqis(value_of_a,value_of_b,value_of_c,value_of_d,value_of_omega,result,authority) values(#{value_of_a},#{value_of_b},#{value_of_c},#{value_of_d},#{value_of_omega},#{result},#{authority})
     </insert>

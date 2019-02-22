@@ -2,6 +2,7 @@ package com.quantum.oparate;
 
 import com.quantum.gate.QuantumGate;
 import com.quantum.state.*;
+import com.quantum.tools.QuantumTools;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -91,7 +92,7 @@ public class QuantumOperationTest {
         clusterState.setParticlesName(3,"x");
         clusterState.setParticlesName(4,"y");
         QuantumOperation.quantumSinglePerform(clusterState,"1", QuantumGate.Operator_I);
-        System.out.println(clusterState.showBinaryState());
+        System.out.println(QuantumTools.showBinaryState(clusterState));
         assertArrayEquals(states,clusterState.getState(),0);
     }
 
@@ -112,7 +113,7 @@ public class QuantumOperationTest {
         clusterState.setParticlesName(3,"x");
         clusterState.setParticlesName(4,"y");
         QuantumOperation.quantumSinglePerform(clusterState,"2", QuantumGate.Operator_X);
-        System.out.println(clusterState.showBinaryState());
+        System.out.println(QuantumTools.showBinaryState(clusterState));
 //        assertArrayEquals(states,clusterState.getState(),0);
     }
 
@@ -130,7 +131,7 @@ public class QuantumOperationTest {
         clusterState.setParticlesName(3,"x");
         clusterState.setParticlesName(4,"y");
         QuantumOperation.quantumSinglePerform(clusterState,"2", QuantumGate.Operator_iY);
-        System.out.println(clusterState.showBinaryState());
+        System.out.println(QuantumTools.showBinaryState(clusterState));
 //        assertArrayEquals(states,clusterState.getState(),0);
     }
     @Test
@@ -162,12 +163,10 @@ public class QuantumOperationTest {
         clusterState.setParticlesName(2,"2");
         clusterState.setParticlesName(3,"x");
         clusterState.setParticlesName(4,"y");
-        System.out.println(clusterState.showBinaryState());
-        clusterState.showParticleName();
+        System.out.println(QuantumTools.showBinaryState(clusterState));
         System.out.println();
         QuantumOperation.quantumDoublePerform(clusterState,"2","y",QuantumGate.Operator_CNOT);
-        System.out.println(clusterState.showBinaryState());
-        clusterState.showParticleName();
+        System.out.println(QuantumTools.showBinaryState(clusterState));
         double []resultStates=new double[]{0.5,0,0,0,0,0.5,0,0,0,0,0,0.5,0,0,-0.5,0};
         assertArrayEquals(resultStates,clusterState.getState(),0);
     }

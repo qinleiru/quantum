@@ -1,11 +1,11 @@
 package com.protocols.HPQIS;
 
+import com.protocols.role.AbstractAgent;
 import com.quantum.gate.QuantumGate;
 import com.quantum.measure.Measures;
 import com.quantum.measure.POVMMeasure;
 import com.quantum.measure.ProjectiveMeasure;
 import com.quantum.oparate.QuantumOperation;
-import com.protocols.role.Agent;
 import com.quantum.state.CommonState;
 import com.quantum.state.DoubleState;
 import com.quantum.state.SingleState;
@@ -13,15 +13,13 @@ import org.ujmp.core.DenseMatrix;
 import org.ujmp.core.Matrix;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
+import static com.protocols.HPQIS.HPQIS.OMEGA;
 import static com.protocols.HPQIS.HPQIS.coefficients;
 import static com.protocols.HPQIS.HPQIS.systemState;
 
 
-public class HighAgent implements Agent {
-    private ArrayList<String> particleName = new ArrayList<String>(); //代理者手中的粒子
-    private HashMap<String, Integer> measureResult = new HashMap<String, Integer>();  //不同粒子的测量结果
+public class HighAgent extends AbstractAgent {
     public boolean POVMResult=true;  //用于存储POVM测量之后的结果
 
     /**
@@ -48,39 +46,6 @@ public class HighAgent implements Agent {
     }
 
     /**
-     * 将测量结果发送给要恢复秘密消息的代理者
-     */
-    @Override
-    public void sendResult(Agent agent){
-        agent.recieveResult(measureResult);
-    }
-
-    /**
-     * 接收来自其他代理者的测量结果
-     */
-    @Override
-    public void recieveResult(HashMap<String, Integer> measureResult){
-        for(String key:measureResult.keySet()){
-            this.measureResult.put(key,measureResult.get(key));
-        }
-    }
-
-    /**
-     * 接收发送来的粒子
-     */
-    @Override
-    public void recieveParticles(ArrayList<String> particleName) {
-        this.particleName = particleName;
-    }
-
-    /**
-     * 手中的粒子
-     */
-    public ArrayList<String> getParticleName() {
-        return particleName;
-    }
-
-    /**
      * 实现父类的抽象方法，权限高的代理者与权限低的代理者的实现是不同的,权限高的代理者进行恢复只需要一个权限低的代理者进行测量即可
      */
     @Override
@@ -102,8 +67,8 @@ public class HighAgent implements Agent {
         /**
          * 根据发送者的测量结果以及权限低的代理者的测量结果，对自己手中的秘密量子比特进行操作
          */
-        System.out.println("++++++++粒子X、粒子1的Bell态的测量结果为"+resultAliceX);
-        System.out.println("++++++++粒子Y、粒子5的Bell态的测量结果为"+resultAliceY);
+//        System.out.println("++++++++粒子X、粒子1的Bell态的测量结果为"+resultAliceX);
+//        System.out.println("++++++++粒子Y、粒子5的Bell态的测量结果为"+resultAliceY);
         System.out.println("++++++++权限低的代理者的第一个粒子测量结果为"+lowAgentParticle1+" 第二个粒子的测量结果为"+lowAgentParticle2);
         if (resultAliceX == 1 && resultAliceY == 1) {
             if (lowAgentParticle1 == 0 && lowAgentParticle2 == 0) {
@@ -506,7 +471,7 @@ public class HighAgent implements Agent {
 
     public  ArrayList<Matrix> getOparators(double argu1,double argu2,double argu3,double argu4){
 //        double omega=getOmega(argu1,argu2,argu3,argu4);
-        double omega=1.5;
+        double omega=OMEGA;
         double epsilon=1/(4*Math.pow(coefficients[0]*coefficients[1]*coefficients[2]*coefficients[3],2));
         ArrayList<Matrix> oparators=new ArrayList<>();
         //算子1

@@ -1,4 +1,5 @@
 package com.protocols.HDQIS2;
+import com.protocols.role.AbstractSender;
 import com.quantum.gate.QuantumGate;
 import com.quantum.measure.ProjectiveMeasure;
 import com.quantum.oparate.QuantumOperation;
@@ -12,7 +13,7 @@ import static com.protocols.HDQIS2.HDQIS2.systemState;
 
 //概率型分层量子信息拆分协议
 //发送者的角色
-public class Sender implements com.protocols.role.Sender {
+public class Sender extends AbstractSender {
     private DoubleState doubleState;
     private ClusterState clusterState1;
     private ClusterState clusterState2;
@@ -24,12 +25,6 @@ public class Sender implements com.protocols.role.Sender {
         this.lowAgents=lowAgents;
     }
 
-    public void execute(){
-        secret();
-        prepareState();
-        send();
-        measure();
-    }
     /**
      * 发送者准备秘密态用于代理者们的共享n
      */

@@ -1,5 +1,6 @@
 package com.protocols.HDQIS;
 
+import com.protocols.role.AbstractSender;
 import com.quantum.measure.ProjectiveMeasure;
 import com.quantum.oparate.MathOperation;
 import com.quantum.oparate.QuantumOperation;
@@ -11,29 +12,29 @@ import java.util.ArrayList;
 
 import static com.protocols.HDQIS.HDQIS.systemState;
 
-public class Sender implements com.protocols.role.Sender {
+public class Sender extends AbstractSender {
     private SingleState singleState;
     private ClusterState clusterState;
+    public  String printMessage="";
     private ArrayList<HighAgent> highAgents;
     private ArrayList<LowAgent> lowAgents;
-    public  String printMessage="";
 
     public Sender(ArrayList<HighAgent> highAgents, ArrayList<LowAgent> lowAgents){
+        singleState=new SingleState();
         this.highAgents=highAgents;
         this.lowAgents=lowAgents;
     }
 
-    public void execute(){
-        secret();
-        prepareState();
-        send();
-        measure();
+    public Sender(ArrayList<HighAgent> highAgents, ArrayList<LowAgent> lowAgents,SingleState singleState){
+        this.highAgents=highAgents;
+        this.lowAgents=lowAgents;
+        this.singleState=singleState;
     }
+
     /**
      * 发送者准备秘密态用于代理者们的共享
      */
     public void secret() {
-        singleState=new SingleState();
         singleState.setParticlesName(1,"S");
         SimpleDateFormat df=new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
         printMessage+=df.format(System.currentTimeMillis())+" "+ "Alice准备秘密量子态为"+ QuantumTools.showBinaryState(singleState)+"\n";

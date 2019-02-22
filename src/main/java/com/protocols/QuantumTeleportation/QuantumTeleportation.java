@@ -8,6 +8,7 @@ import com.quantum.state.DoubleState;
 import com.quantum.state.MultiState;
 import com.quantum.state.SingleState;
 import com.quantum.state.QuantumState;
+import com.quantum.tools.QuantumTools;
 
 /**
  * 实现了量子分层信息拆分协议的基础，量子隐形传态协议
@@ -17,12 +18,12 @@ public class QuantumTeleportation {
     public static void run() {
         SingleState oneState = new SingleState();
         oneState.setParticlesName(1, "x");
-        System.out.println("发送者要传送粒子x的量子态为：" + oneState.showBinaryState());
+        System.out.println("发送者要传送粒子x的量子态为：" + QuantumTools.showBinaryState(oneState));
         double[] bell = new double[]{Math.pow(2, -0.5), 0, 0, Math.pow(2, -0.5)};
         DoubleState twoState = new DoubleState(bell);
         twoState.setParticlesName(1,"1");
         twoState.setParticlesName(2,"2");
-        System.out.println("发送者准备用于构造量子信道粒子1和粒子2的Bell态为：" + twoState.showBinaryState());
+        System.out.println("发送者准备用于构造量子信道粒子1和粒子2的Bell态为：" + QuantumTools.showBinaryState(twoState));
         //当前系统所处的整个量子态为
         //todo：在计算系统的张量积的过程中可能还会需要归一化
         MultiState systemState = QuantumOperation.quantumTensor(oneState, twoState);
@@ -65,7 +66,7 @@ public class QuantumTeleportation {
         MathOperation.normalization(secret);
         SingleState secretState = new SingleState(secret);
         secretState.setParticlesName(1,"2");
-        System.out.println("接收者得到的量子秘密态为" + secretState.showBinaryState());
+        System.out.println("接收者得到的量子秘密态为" + QuantumTools.showBinaryState(secretState));
     }
     public static double[] getOwnState(QuantumState quantumState,String particle){
         int index=quantumState.getParticlesName().indexOf(particle);

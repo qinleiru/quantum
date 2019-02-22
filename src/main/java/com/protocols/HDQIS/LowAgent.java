@@ -1,20 +1,19 @@
 package com.protocols.HDQIS;
 
+import com.protocols.role.AbstractAgent;
 import com.quantum.gate.QuantumGate;
 import com.quantum.measure.Measures;
 import com.quantum.measure.ProjectiveMeasure;
 import com.quantum.oparate.MathOperation;
 import com.quantum.oparate.QuantumOperation;
-import com.protocols.role.Agent;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 
 import static com.protocols.HDQIS.HDQIS.systemState;
 
-public class LowAgent implements Agent{
-    private ArrayList<String> particleName=new ArrayList<String>(); //代理者手中的粒子
-    private HashMap<String,Integer> measureResult=new HashMap<String,Integer>();  //不同粒子的测量结果
+public class LowAgent extends AbstractAgent {
+
     /**
      * 代理者对手中的所有粒子进行单粒子测量
      * @param measures
@@ -37,44 +36,12 @@ public class LowAgent implements Agent{
         }
     }
 
-    /**
-     * 将测量结果发送给要恢复秘密消息的代理者
-     */
-    @Override
-    public void sendResult(Agent agent){
-        agent.recieveResult(measureResult);
-    }
-
-    /**
-     * 接收来自其他代理者的测量结果
-     */
-    @Override
-    public void recieveResult(HashMap<String, Integer> measureResult){
-        for(String key:measureResult.keySet()){
-            this.measureResult.put(key,measureResult.get(key));
-        }
-    }
-
-    /**
-     * 接收发送来的粒子
-     */
-    @Override
-    public void recieveParticles(ArrayList<String> particleName) {
-        this.particleName = particleName;
-    }
-
-    /**
-     * 手中的粒子
-     */
-    public ArrayList<String> getParticleName() {
-        return particleName;
-    }
 
     /**
      * 秘密量子比特的恢复
      */
     @Override
-    public void  restore(){
+    public void restore(){
         int resultAliceSA=HDQIS.resultSA;   //粒子S、粒子A的Bell态的测量结果
         int lowAgentParticle;   //权限低的粒子的测量结果
         int highAgentParticle;  //权限高的粒子的测量结果

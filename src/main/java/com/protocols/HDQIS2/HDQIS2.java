@@ -5,6 +5,7 @@ import com.quantum.oparate.QuantumOperation;
 import com.quantum.state.DoubleState;
 import com.quantum.state.MultiState;
 import com.quantum.state.QuantumState;
+import com.quantum.tools.QuantumTools;
 import com.quantum.tools.Tools;
 
 import java.util.ArrayList;
@@ -62,7 +63,7 @@ public class HDQIS2 {
             System.out.println("Bob对手中的粒子进行操作，恢复秘密量子比特");
             Bob.restore();
             System.out.println("此时Bob手中的粒子态为");
-            System.out.println(getOwnSate(systemState,Bob.getParticleName()).showBinaryState());
+            System.out.println(QuantumTools.showBinaryState(getOwnSate(systemState,Bob.particleName)));
         }
         else{
             //协议中权限低的代理者来恢复秘密量子比特
@@ -81,7 +82,7 @@ public class HDQIS2 {
                 System.out.println("Charlie对手中的粒子进行操作，恢复秘密量子比特");
                 Charlie.restore();
                 System.out.println("此时Charlie手中的粒子态为");
-                System.out.println(getOwnSate(systemState,Charlie.getParticleName()).showBinaryState());
+                System.out.println(QuantumTools.showBinaryState(getOwnSate(systemState,Charlie.particleName)));
             }
             else{
                 System.out.println("权限低的代理者David来恢复秘密量子比特");
@@ -97,7 +98,7 @@ public class HDQIS2 {
                 System.out.println("David对手中的粒子进行操作，恢复秘密量子比特");
                 David.restore();
                 System.out.println("此时David手中的粒子态为");
-                System.out.println(getOwnSate(systemState,David.getParticleName()).showBinaryState());
+                System.out.println(QuantumTools.showBinaryState(getOwnSate(systemState,David.particleName)));
 
             }
         }

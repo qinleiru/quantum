@@ -1,5 +1,6 @@
 package com.protocols.HPQIS;
 
+import com.protocols.role.AbstractSender;
 import com.quantum.gate.QuantumGate;
 import com.quantum.measure.ProjectiveMeasure;
 import com.quantum.oparate.QuantumOperation;
@@ -14,7 +15,7 @@ import static com.protocols.HPQIS.HPQIS.systemState;
 
 //概率型分层量子信息拆分协议
 //发送者的角色
-public class Sender implements com.protocols.role.Sender {
+public class Sender extends AbstractSender {
     private DoubleState doubleState;
     private ClusterState clusterState1;
     private ClusterState clusterState2;
@@ -28,12 +29,6 @@ public class Sender implements com.protocols.role.Sender {
         this.lowAgents=lowAgents;
     }
 
-    public void execute(){
-        secret();
-        prepareState();
-        send();
-        measure();
-    }
     /**
      * 发送者准备秘密态用于代理者们的共享n
      */
@@ -47,8 +42,10 @@ public class Sender implements com.protocols.role.Sender {
         /**
          * 用于测试的代码
          */
-        SimpleDateFormat df=new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
-        printMessage+=df.format(System.currentTimeMillis())+" "+ "Alice准备秘密量子态为"+QuantumTools.showBinaryState(doubleState)+"\n";
+//        SimpleDateFormat df=new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+//        printMessage+=df.format(System.currentTimeMillis())+" "+ "Alice准备秘密量子态为"+QuantumTools.showBinaryState(doubleState)+"\n";
+        System.out.println("Alice准备的秘密量子比特为");
+        System.out.println(QuantumTools.showBinaryState(doubleState));
     }
 
     /**
@@ -130,8 +127,14 @@ public class Sender implements com.protocols.role.Sender {
         /**
          * 测试
          */
-        SimpleDateFormat df=new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
-        printMessage+=df.format(System.currentTimeMillis())+" "+ "Alice准备量子信道需要的两个簇态，第一个簇态为"+ QuantumTools.showBinaryState(clusterState1)+"第二个簇态为"+QuantumTools.showBinaryState(clusterState2)+"\n";
+//        SimpleDateFormat df=new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+//        printMessage+=df.format(System.currentTimeMillis())+" "+ "Alice准备量子信道需要的两个簇态，第一个簇态为"+ QuantumTools.showBinaryState(clusterState1)+"第二个簇态为"+QuantumTools.showBinaryState(clusterState2)+"\n";
+        /**
+         * 测试
+         */
+        System.out.println("Alice准备的用于构建量子信道的两个簇态为");
+        System.out.println(QuantumTools.showBinaryState(clusterState1));
+        System.out.println(QuantumTools.showBinaryState(clusterState2));
     }
 
     /**
@@ -151,7 +154,7 @@ public class Sender implements com.protocols.role.Sender {
             //簇态2中的粒子
             particlesName.add(""+(particle+(i+2)));
             highAgents.get(i).recieveParticles(particlesName);
-            printMessage+=df.format(System.currentTimeMillis())+" "+ "Alice发送粒子"+(i+2)+"、粒子"+(particle+(i+2))+"给权限高的代理者Bob\n";
+//            printMessage+=df.format(System.currentTimeMillis())+" "+ "Alice发送粒子"+(i+2)+"、粒子"+(particle+(i+2))+"给权限高的代理者Bob\n";
         }
         //发送粒子给低权限的代理者
         for(int i=0;i<lowAgents.size();i++){
@@ -164,8 +167,8 @@ public class Sender implements com.protocols.role.Sender {
             particlesName.add(""+(particle+highParticle+(i+2)));
             lowAgents.get(i).recieveParticles(particlesName);
         }
-        printMessage+=df.format(System.currentTimeMillis())+" "+ "Alice发送粒子3、粒子7给权限低的代理者Charlie\n";
-        printMessage+=df.format(System.currentTimeMillis())+" "+ "Alice发送粒子4、粒子8给权限低的代理者David\n";
+//        printMessage+=df.format(System.currentTimeMillis())+" "+ "Alice发送粒子3、粒子7给权限低的代理者Charlie\n";
+//        printMessage+=df.format(System.currentTimeMillis())+" "+ "Alice发送粒子4、粒子8给权限低的代理者David\n";
 
     }
 
@@ -181,9 +184,8 @@ public class Sender implements com.protocols.role.Sender {
         /*
            测试代码
          */
-//        System.out.println("初始状态系统的态为");
-//        System.out.println(systemState.showBinaryState());
-//        systemState.showParticleName();
+        System.out.println("初始状态系统的态为");
+        System.out.println(QuantumTools.showBinaryState(systemState));
         //Alice对粒子x和粒子1，进行Bell态测量
         int resultX=ProjectiveMeasure.measureBeseBell(systemState,"x","1");
         //公布测量结果
@@ -195,10 +197,11 @@ public class Sender implements com.protocols.role.Sender {
         /*
            此部分的代码是测试的内容
          */
-//        System.out.println("发送者测量完成之后系统的态为");
-//        System.out.println(systemState.showBinaryState());
-//        systemState.showParticleName();
-        printMessage+=df.format(System.currentTimeMillis())+" "+ "Alice对手中的粒子x、粒子1以及粒子y、粒子5分别进行Bell态测量，并公布测量结果";
+        System.out.println("Alice对粒子x、粒子1的测量结果为"+HPQIS.resultX);
+        System.out.println("Alice对粒子y、粒子5的测量结果为"+HPQIS.resultY);
+        System.out.println("发送者测量完成之后系统的态为");
+        System.out.println(QuantumTools.showBinaryState(systemState));
+//        printMessage+=df.format(System.currentTimeMillis())+" "+ "Alice对手中的粒子x、粒子1以及粒子y、粒子5分别进行Bell态测量，并公布测量结果";
 
     }
 }

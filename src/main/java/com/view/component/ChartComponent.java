@@ -21,7 +21,7 @@ public class ChartComponent {
     public static ChartPanel getChartPanel(String chartTitle) {
         JFreeChart xylineChart = ChartFactory.createXYLineChart(
                 chartTitle ,
-                "欧米伽的取值" ,
+                "omega" ,
                 "成功恢复的概率" ,
                 createDataset() ,
                 PlotOrientation.VERTICAL ,
@@ -34,8 +34,8 @@ public class ChartComponent {
         renderer.setSeriesPaint( 0 , Color.RED );
         renderer.setSeriesPaint( 1 , Color.GREEN );
         renderer.setSeriesPaint( 2 , Color.YELLOW );
-        renderer.setSeriesStroke( 0 , new BasicStroke( 4.0f ) );
-        renderer.setSeriesStroke( 1 , new BasicStroke( 3.0f ) );
+        renderer.setSeriesStroke( 0 , new BasicStroke( 2.0f ) );
+        renderer.setSeriesStroke( 1 , new BasicStroke( 2.0f ) );
         renderer.setSeriesStroke( 2 , new BasicStroke( 2.0f ) );
         plot.setRenderer( renderer );
         return chartPanel;

@@ -1,11 +1,11 @@
 package com.protocols.HPQIS;
 
+import com.protocols.role.AbstractAgent;
 import com.quantum.gate.QuantumGate;
 import com.quantum.measure.Measures;
 import com.quantum.measure.POVMMeasure;
 import com.quantum.measure.ProjectiveMeasure;
 import com.quantum.oparate.QuantumOperation;
-import com.protocols.role.Agent;
 import com.quantum.state.CommonState;
 import com.quantum.state.DoubleState;
 import com.quantum.state.SingleState;
@@ -15,12 +15,11 @@ import org.ujmp.core.Matrix;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import static com.protocols.HPQIS.HPQIS.OMEGA;
 import static com.protocols.HPQIS.HPQIS.coefficients;
 import static com.protocols.HPQIS.HPQIS.systemState;
 
-public class LowAgent implements Agent {
-    private ArrayList<String> particleName=new ArrayList<String>(); //代理者手中的粒子
-    private HashMap<String,Integer> measureResult=new HashMap<String,Integer>();  //不同粒子的测量结果
+public class LowAgent extends AbstractAgent {
     public boolean POVMResult=true;
     /**
      * 代理者对手中的所有粒子进行单粒子测量
@@ -45,43 +44,10 @@ public class LowAgent implements Agent {
     }
 
     /**
-     * 将测量结果发送给要恢复秘密消息的代理者
-     */
-    @Override
-    public void sendResult(Agent agent){
-        agent.recieveResult(measureResult);
-    }
-
-    /**
-     * 接收来自其他代理者的测量结果
-     */
-    @Override
-    public void recieveResult(HashMap<String, Integer> measureResult){
-        for(String key:measureResult.keySet()){
-            this.measureResult.put(key,measureResult.get(key));
-        }
-    }
-
-    /**
-     * 接收发送来的粒子
-     */
-    @Override
-    public void recieveParticles(ArrayList<String> particleName) {
-        this.particleName = particleName;
-    }
-
-    /**
-     * 手中的粒子
-     */
-    public ArrayList<String> getParticleName() {
-        return particleName;
-    }
-
-    /**
      * 秘密量子比特的恢复
      */
     @Override
-    public void  restore(){
+    public void restore(){
         int resultAliceX = HPQIS.resultX;   //粒子x、粒子1的Bell态的测量结果
         int resultAliceY = HPQIS.resultY;   //粒子y、粒子5的Bell态的测量结果
         int lowAgentParticle1;   //权限低的clusterState1态中的粒子的测量结果
@@ -695,7 +661,7 @@ public class LowAgent implements Agent {
 
     public  ArrayList<Matrix> getOparators(double argu1,double argu2,double argu3,double argu4){
 //        double omega=getOmega(argu1,argu2,argu3,argu4);
-        double omega=1.5;
+        double omega=OMEGA;
         double epsilon=1/(4*Math.pow(coefficients[0]*coefficients[1]*coefficients[2]*coefficients[3],2));
         ArrayList<Matrix> oparators=new ArrayList<>();
         //算子1

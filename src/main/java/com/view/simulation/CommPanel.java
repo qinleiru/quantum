@@ -70,7 +70,7 @@ public class CommPanel extends JPanel {
         comboAttacks = new JComboBox<String>(attacks);;
 
         //代理者初始化
-        String[] agents=new String[]{"权限高","权限低"};
+        String[] agents=new String[]{"Bob","Charlie","David"};
         comboAgents =new JComboBox<String>(agents);
 
         // 开始按钮初始化,并添加事件
@@ -80,7 +80,9 @@ public class CommPanel extends JPanel {
             Runnable r = () -> {
                 try {
                     //进行执行
-                    new DoSimulation((String)comboProtocols.getSelectedItem(),(String)comboAttacks.getSelectedItem(),(String)comboAgents.getSelectedItem(),textFieldAgentSecret.getText());
+                    textFieldAgentSecret.setText("");
+                    DoSimulation simulation=new DoSimulation((String)comboProtocols.getSelectedItem(),(String)comboAttacks.getSelectedItem(),(String)comboAgents.getSelectedItem(),textFieldSendSecret.getText());
+                    textFieldAgentSecret.setText(simulation.recieveSercet);
                     Thread.sleep(500);
                 } catch (Exception e1) {
                     e1.printStackTrace();

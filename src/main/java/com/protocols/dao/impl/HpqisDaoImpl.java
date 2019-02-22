@@ -18,16 +18,17 @@ public class HpqisDAO {
         //关闭session
         sqlSession.close();
     }
-//    public static void main(String[] args){
-//        HpqisDAO hpqisDAO=new HpqisDAO();
-//        Hpqis hpqis=new Hpqis();
-//        hpqis.setValue_of_a(0.5);
-//        hpqis.setValue_of_b(0.5);
-//        hpqis.setValue_of_c(0.5);
-//        hpqis.setValue_of_d(0.5);
-//        hpqis.setValue_of_omega(1);
-//        hpqis.setAuthority(1);
-//        hpqis.setResult(1);
-//        hpqisDAO.addResult(hpqis);
-//    }
+    /*
+        查询结果的值
+     */
+    public  int findResultAmount(double a,double c,double omega,int result,int authority){
+        if(sqlSession==null) {
+            sqlSession=MysqlSession.getSession();
+        }
+        sqlSession.insert("findResultAmount");
+        //关闭session
+        sqlSession.close();
+        return 0;
+    }
+
 }

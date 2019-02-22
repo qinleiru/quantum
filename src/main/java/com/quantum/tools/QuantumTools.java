@@ -29,7 +29,7 @@ public class QuantumTools {
 
         ArrayList<String> arrayList=quantumState.getParticlesName();
         Iterator iterator=arrayList.iterator();
-        result+="对应的粒子为";
+        result+="  对应的粒子为";
         while(iterator.hasNext()){
             result+=iterator.next()+"  ";
         }

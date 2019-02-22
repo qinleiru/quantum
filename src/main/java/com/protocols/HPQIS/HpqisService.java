@@ -1,4 +1,7 @@
 package com.protocols.HPQIS;
 
-public class HPQISService {
+public class HpqisService {
+    public static void getHighAgentData(){
+
+    }
 }

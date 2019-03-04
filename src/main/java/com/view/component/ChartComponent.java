@@ -1,8 +1,12 @@
 package com.view.component;
 
+import com.protocols.HPQIS.HpqisService;
+import com.protocols.pojo.DataPoint;
+import com.quantum.oparate.MathOperation;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
+import org.jfree.chart.StandardChartTheme;
 import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.chart.plot.XYPlot;
 import org.jfree.chart.renderer.xy.XYLineAndShapeRenderer;
@@ -18,12 +22,23 @@ public class ChartComponent {
     private static ChartPanel chartPanel;
 
     //获取ChartPanel
-    public static ChartPanel getChartPanel(String chartTitle) {
+    public static ChartPanel getChartPanel(String chartTitle,int authority) {
+        //创建主题样式
+        StandardChartTheme standardChartTheme=new StandardChartTheme("CN");
+//设置标题字体
+        standardChartTheme.setExtraLargeFont(new Font("隶书",Font.BOLD,20));
+//设置图例的字体
+        standardChartTheme.setRegularFont(new Font("宋书",Font.PLAIN,15));
+//设置轴向的字体
+        standardChartTheme.setLargeFont(new Font("宋书",Font.PLAIN,15));
+//应用主题样式
+        ChartFactory.setChartTheme(standardChartTheme);
+        String descY="成功恢复的概率";
         JFreeChart xylineChart = ChartFactory.createXYLineChart(
                 chartTitle ,
-                "omega" ,
+                "ω的取值" ,
                 "成功恢复的概率" ,
-                createDataset() ,
+                createDataset(authority) ,
                 PlotOrientation.VERTICAL ,
                 true , true , false);
 
@@ -40,23 +55,49 @@ public class ChartComponent {
         plot.setRenderer( renderer );
         return chartPanel;
     }
-    private static XYDataset createDataset( )
+    private static XYDataset createDataset(int authority )
     {
         //红色线
         final XYSeries curveOne = new XYSeries( "a^2=c^2=1/4" );
-        curveOne.add( 1.0 , 1.0 );
-        curveOne.add( 2.0 , 4.0 );
-        curveOne.add( 3.0 , 3.0 );
+        DataPoint dataPoint;
+        dataPoint= HpqisService.getPointData(0.5,0.5,1,authority);
+        curveOne.add( dataPoint.getX() , dataPoint.getY() );
+        dataPoint= HpqisService.getPointData(0.5,0.5,1.5,authority);
+        curveOne.add( dataPoint.getX(),dataPoint.getY());
+        dataPoint= HpqisService.getPointData(0.5,0.5,2,authority);
+        curveOne.add( dataPoint.getX(),dataPoint.getY());
+        dataPoint= HpqisService.getPointData(0.5,0.5,2.5,authority);
+        curveOne.add( dataPoint.getX(),dataPoint.getY());
+        dataPoint= HpqisService.getPointData(0.5,0.5,3,authority);
+        curveOne.add( dataPoint.getX(),dataPoint.getY());
         //绿色线
         final XYSeries curveTwo = new XYSeries( "a^2=1/3,c^2=1/4" );
-        curveTwo.add( 1.0 , 4.0 );
-        curveTwo.add( 2.0 , 5.0 );
-        curveTwo.add( 3.0 , 6.0 );
+        double a=Math.pow(3,-0.5);
+        double b=Math.sqrt(0.5-Math.pow(a,2));
+        double clusterState1[]=new double[]{a,a,b,b};
+        MathOperation.normalization(clusterState1);
+        a=clusterState1[0];
+        dataPoint= HpqisService.getPointData(a,0.5,1.5,authority);
+        curveTwo.add( dataPoint.getX() , dataPoint.getY() );
+        dataPoint= HpqisService.getPointData(a,0.5,2,authority);
+        curveTwo.add( dataPoint.getX() , dataPoint.getY() );
+        dataPoint= HpqisService.getPointData(a,0.5,2.5,authority);
+        curveTwo.add( dataPoint.getX() , dataPoint.getY() );
+        dataPoint= HpqisService.getPointData(a,0.5,3,authority);
+        curveTwo.add( dataPoint.getX() , dataPoint.getY() );
         //黄色线
         final XYSeries curveThree = new XYSeries( "a^2=c^2=1/3" );
-        curveThree.add( 3.0 , 4.0 );
-        curveThree.add( 4.0 , 5.0 );
-        curveThree.add( 5.0 , 4.0 );
+        double c=Math.pow(3,-0.5);
+        double d=Math.sqrt(0.5-Math.pow(a,2));
+        double clusterState2[]=new double[]{c,c,d,d};
+        MathOperation.normalization(clusterState2);
+        c=clusterState1[0];
+        dataPoint= HpqisService.getPointData(a,c,2,authority);
+        curveThree.add( dataPoint.getX() , dataPoint.getY() );
+        dataPoint= HpqisService.getPointData(a,c,2.5,authority);
+        curveThree.add( dataPoint.getX() , dataPoint.getY() );
+        dataPoint= HpqisService.getPointData(a,c,3,authority);
+        curveThree.add( dataPoint.getX() , dataPoint.getY() );
         final XYSeriesCollection dataset = new XYSeriesCollection( );
         dataset.addSeries( curveOne );
         dataset.addSeries( curveTwo );

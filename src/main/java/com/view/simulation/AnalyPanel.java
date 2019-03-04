@@ -20,8 +20,8 @@ public class AnalyPanel extends JPanel {
        初始化组件，相应组件添加事件
      */
     public AnalyPanel() {
-        panelHighAgents= ChartComponent.getChartPanel("权限高的");
-        panellLowAgents=ChartComponent.getChartPanel("权限低的");
+        panelHighAgents= ChartComponent.getChartPanel("权限高的代理者的测量参数取值与成功概率关系图",1);
+        panellLowAgents=ChartComponent.getChartPanel("权限低的代理者的测量参数取值于成功概率关系图",0);
         //设置面板边框
         panelHighAgents.setBorder(BorderFactory.createEtchedBorder());
         panellLowAgents.setBorder(BorderFactory.createEtchedBorder());

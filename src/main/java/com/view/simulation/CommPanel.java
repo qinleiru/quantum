@@ -29,8 +29,8 @@ public class CommPanel extends JPanel {
     private static JComboBox<String> comboProtocols;    //协议
     private static JComboBox<String> comboAttacks;       //攻击
     private static JComboBox<String> comboAgents;        //代理者
-    private static JRadioButton radioButtonIdeal;   //理想信道
-    private static JRadioButton radioButtonNoise;   //噪声信道
+//    private static JRadioButton radioButtonIdeal;   //理想信道
+//    private static JRadioButton radioButtonNoise;   //噪声信道
     private static ButtonGroup radioChannel;    //信道
 
     private static JTextField textFieldSendSecret;   //发送者发送的秘密消息
@@ -54,11 +54,11 @@ public class CommPanel extends JPanel {
         labelAgentSecret=new JLabel("恢复的秘密消息：");
         textFieldAgentSecret=new JTextField();
         textFieldSendSecret=new JTextField();
-        radioButtonIdeal=new JRadioButton("理想信道",true);
-        radioButtonNoise=new JRadioButton("噪声信道",false);
+//        radioButtonIdeal=new JRadioButton("理想信道",true);
+//        radioButtonNoise=new JRadioButton("噪声信道",false);
         ArrayList<JRadioButton> jRadioButtons=new ArrayList<>();
-        jRadioButtons.add(radioButtonNoise);
-        jRadioButtons.add(radioButtonIdeal);
+//        jRadioButtons.add(radioButtonNoise);
+//        jRadioButtons.add(radioButtonIdeal);
         radioChannel= RadioComponent.getButtonGroup(jRadioButtons);
 
         // 协议初始化
@@ -132,8 +132,8 @@ public class CommPanel extends JPanel {
 //        while(radioChannel.getElements().hasMoreElements()){
 //            panelController.add(radioChannel.getElements().nextElement(),new ExGridBagConstraints(i++,0).setFill(ExGridBagConstraints.BOTH).setInsets(5,10,5,10));
 //        }
-        panelController.add(radioButtonIdeal,new ExGridBagConstraints(3,0).setFill(ExGridBagConstraints.BOTH).setInsets(5,10,5,10));
-        panelController.add(radioButtonNoise,new ExGridBagConstraints(4,0).setFill(ExGridBagConstraints.BOTH).setInsets(5,10,5,10));
+//        panelController.add(radioButtonIdeal,new ExGridBagConstraints(3,0).setFill(ExGridBagConstraints.BOTH).setInsets(5,10,5,10));
+//        panelController.add(radioButtonNoise,new ExGridBagConstraints(4,0).setFill(ExGridBagConstraints.BOTH).setInsets(5,10,5,10));
         panelController.add(labelAgent,new ExGridBagConstraints(3,2).setFill(ExGridBagConstraints.BOTH).setInsets(5,10,5,10));
         panelController.add(comboAgents,new ExGridBagConstraints(4,2,1,1).setFill(ExGridBagConstraints.BOTH).setInsets(5,10,5,10));
         panelController.add(buttonStart,new ExGridBagConstraints(3,3,2,1).setFill(ExGridBagConstraints.BOTH).setInsets(5,50,5,50));

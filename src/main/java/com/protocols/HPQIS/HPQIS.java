@@ -1,6 +1,6 @@
 package com.protocols.HPQIS;
 
-import com.protocols.dao.HpqisDAO;
+import com.protocols.dao.impl.HpqisDaoImpl;
 import com.protocols.pojo.Hpqis;
 import com.quantum.measure.Measures;
 import com.quantum.oparate.MathOperation;
@@ -12,7 +12,6 @@ import com.quantum.tools.QuantumTools;
 import com.quantum.tools.Tools;
 import com.view.component.TextComponent;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 //下面仿真本论文中提出的概率型分层量子信息拆分协议
@@ -91,12 +90,12 @@ public class HPQIS {
            if(Bob.POVMResult==false){
 //               textArea.setCommText(df.format(System.currentTimeMillis())+" "+ "Bob进行POVM测量失败");
                Hpqis hpqis=new Hpqis(coefficients[0],coefficients[1],coefficients[2],coefficients[3],OMEGA,0,1);
-               HpqisDAO hpqisDAO=new HpqisDAO();
+               HpqisDaoImpl hpqisDAO=new HpqisDaoImpl();
                hpqisDAO.addResult(hpqis);
                return;
            }
             Hpqis hpqis=new Hpqis(coefficients[0],coefficients[1],coefficients[2],coefficients[3],OMEGA,1,1);
-            HpqisDAO hpqisDAO=new HpqisDAO();
+            HpqisDaoImpl hpqisDAO=new HpqisDaoImpl();
             hpqisDAO.addResult(hpqis);
             DoubleState doubleState=getOwnSate(systemState,Bob.particleName);
             MathOperation.normalization(doubleState.getState());
@@ -132,12 +131,12 @@ public class HPQIS {
 //                    textArea.setCommText(df.format(System.currentTimeMillis())+" "+ "Charlie进行POVM测量失败");
                     System.out.println("Charlie进行POVM测量失败");
                     Hpqis hpqis=new Hpqis(coefficients[0],coefficients[1],coefficients[2],coefficients[3],OMEGA,0,0);
-                    HpqisDAO hpqisDAO=new HpqisDAO();
+                    HpqisDaoImpl hpqisDAO=new HpqisDaoImpl();
                     hpqisDAO.addResult(hpqis);
                     return;
                 }
                 Hpqis hpqis=new Hpqis(coefficients[0],coefficients[1],coefficients[2],coefficients[3],OMEGA,1,0);
-                HpqisDAO hpqisDAO=new HpqisDAO();
+                HpqisDaoImpl hpqisDAO=new HpqisDaoImpl();
                 hpqisDAO.addResult(hpqis);
                 DoubleState doubleState=getOwnSate(systemState,Charlie.particleName);
                 MathOperation.normalization(doubleState.getState());
@@ -170,12 +169,12 @@ public class HPQIS {
                     System.out.println("David进行POVM测量失败");
 //                    textArea.setCommText(df.format(System.currentTimeMillis())+" "+ "David进行POVM测量失败");
                     Hpqis hpqis=new Hpqis(coefficients[0],coefficients[1],coefficients[2],coefficients[3],OMEGA,0,0);
-                    HpqisDAO hpqisDAO=new HpqisDAO();
+                    HpqisDaoImpl hpqisDAO=new HpqisDaoImpl();
                     hpqisDAO.addResult(hpqis);
                     return;
                 }
                 Hpqis hpqis=new Hpqis(coefficients[0],coefficients[1],coefficients[2],coefficients[3],OMEGA,1,0);
-                HpqisDAO hpqisDAO=new HpqisDAO();
+                HpqisDaoImpl hpqisDAO=new HpqisDaoImpl();
                 hpqisDAO.addResult(hpqis);
                 DoubleState doubleState=getOwnSate(systemState,David.particleName);
                 MathOperation.normalization(doubleState.getState());
@@ -221,20 +220,23 @@ public class HPQIS {
     public static double[] getCoefficients(){
 //        double a=Math.random();
 //        double b=Math.random();
-        double a=0.5;
-        double b=0.5;
-        double c=0.5;
-        double d=0.5;
+        double a=Math.pow(3,-0.5);
+        System.out.println(a);
+        double b=Math.sqrt(0.5-Math.pow(a,2));
+        double c=Math.pow(3,-0.5);
+        double d=Math.sqrt(0.5-Math.pow(a,2));
         double clusterState1[]=new double[]{a,a,b,b};
         MathOperation.normalization(clusterState1);
         a=clusterState1[0];
+        System.out.println(a);
         b=clusterState1[2];
+        System.out.println(b);
 //        double c=Math.random();
 //        double d=Math.random();
         double clusterState2[]=new double[]{c,c,d,d};
         MathOperation.normalization(clusterState2);
-        c=clusterState1[0];
-        d=clusterState1[2];
+        c=clusterState2[0];
+        d=clusterState2[2];
         return new double[]{a,b,c,d};
     }
 
@@ -244,7 +246,7 @@ public class HPQIS {
      */
     public static void main(String[] args){
         //插入的数据包含a^2=c^2=1/4
-        //a^2=1/3,c^2=1/4
+        //a^2=1/3,c^2=1/4i
         //a^2=1/3,c^2=1/3
         TextComponent textComponent=new TextComponent();
         for (int i=0;i<1000;i++) {
